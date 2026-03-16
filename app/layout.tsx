@@ -12,20 +12,19 @@ const geistMono = Geist_Mono({
   subsets: ["latin"],
 });
 
-export const metadata: Metadata = {
-  title: "Harbor Point Merchant Services",
+export const metadata = {
+  title: "Harbor Point Marketing",
   description:
-    "Harbor Point Merchant Services provides merchant payment solutions and business services for growing companies.",
-
+    "Harbor Point Marketing Services helps businesses grow with marketing strategy, automation, and digital solutions.",
   keywords:
-    "Harbor Point Merchant Services, merchant services, payment processing, business payment solutions, merchant payment solutions",
+    "Harbor Point Marketing Services, digital marketing agency, marketing automation, lead generation, small business marketing",
 
   openGraph: {
-    title: "Harbor Point Merchant Services",
+    title: "Harbor Point Marketing Services",
     description:
-      "Merchant payment solutions and business services for growing companies.",
+      "Marketing strategy, automation, and digital solutions for growing businesses.",
     url: "https://nb-digital-viw1.vercel.app",
-    siteName: "Harbor Point Merchant Services",
+    siteName: "Harbor Point Marketing Services",
     type: "website",
   },
 
