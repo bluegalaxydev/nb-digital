@@ -389,36 +389,95 @@ We help small businesses grow with smart marketing strategy, lead generation, au
   </div>
 </div>
     {/* Tier 3 */}
-    <div className="rounded-3xl bg-white p-8 shadow-sm ring-1 ring-black/5 transition hover:shadow-md">
-      <div className="flex items-center justify-between">
-        <div className="flex h-16 w-16 items-center justify-center rounded-2xl bg-gradient-to-br from-blue-500 to-purple-500 text-2xl text-white">
-          ✦
-        </div>
-        <span className="rounded-full bg-black px-4 py-1 text-sm font-medium text-white">
-          Tier 3
-        </span>
-      </div>
-
-      <h3 className="mt-8 text-3xl font-semibold leading-tight text-black">
-        AI Revenue Scaling Partner
-      </h3>
-
-      <p className="mt-3 text-2xl font-semibold text-[#05051c]">
-        $8,000–$15,000<span className="text-base font-medium text-gray-500"> / month</span>
-      </p>
-
-      <p className="mt-1 text-sm font-medium text-[#6a5cff]">
-        Setup Fee: $8,000–$15,000
-      </p>
-
-      <p className="mt-6 text-lg leading-8 text-gray-600">
-        Our highest-level service for companies focused on rapid growth. We act
-        as your external growth team, managing full-funnel marketing, advanced
-        automation, native traffic strategy, conversion optimization, audience
-        targeting, and performance analytics to maximize revenue.
-      </p>
+<div className="rounded-3xl bg-white p-8 shadow-sm ring-1 ring-black/5">
+  <div className="flex items-center justify-between">
+    <div className="flex h-16 w-16 items-center justify-center rounded-2xl bg-gradient-to-br from-blue-500 to-purple-500 text-2xl text-white">
+      ✦
     </div>
+
+    <span className="rounded-full bg-black px-4 py-1 text-sm font-medium text-white">
+      Tier 3
+    </span>
   </div>
+
+  <h3 className="mt-8 text-3xl font-semibold text-black">
+    Tier 3 — AI Revenue Scaling Partner
+  </h3>
+
+  <p className="mt-2 text-gray-500 text-sm">
+    (High revenue peptide companies doing $1M+ yearly)
+  </p>
+
+  <p className="mt-4 font-semibold text-lg">Goal</p>
+  <p className="text-gray-600">
+    Turn your agency into their growth department.
+  </p>
+
+  <p className="mt-5 font-semibold text-lg">Services</p>
+
+  <p className="text-gray-600 text-sm">
+    Everything above PLUS:
+  </p>
+
+  <ul className="mt-2 space-y-1 text-gray-600 text-sm">
+    <li>• Full funnel growth strategy</li>
+    <li>• AI predictive marketing</li>
+    <li>• Influencer network management</li>
+    <li>• Affiliate network creation</li>
+    <li>• High-volume advertorial campaigns</li>
+    <li>• Advanced CRO</li>
+    <li>• Product launch campaigns</li>
+    <li>• UGC ad production</li>
+    <li>• Brand positioning strategy</li>
+    <li>• AI audience targeting models</li>
+  </ul>
+
+  <p className="mt-5 font-semibold text-lg">Traffic Sources</p>
+
+  <p className="text-gray-600 text-sm">
+    High-volume channels:
+  </p>
+
+  <ul className="mt-2 space-y-1 text-gray-600 text-sm">
+    <li>• Taboola</li>
+    <li>• Outbrain</li>
+    <li>• Reddit Ads</li>
+    <li>• SEO content farms</li>
+    <li>• Influencer networks</li>
+    <li>• Email + SMS scaling</li>
+  </ul>
+
+  <p className="mt-4 text-gray-600 text-sm">
+    You basically run all acquisition channels except restricted ones like
+    Facebook for peptides.
+  </p>
+
+  <p className="mt-5 font-semibold text-lg">AI Automation Used</p>
+
+  <ul className="mt-2 space-y-1 text-gray-600 text-sm">
+    <li>• AI customer segmentation</li>
+    <li>• Automated ad testing</li>
+    <li>• AI ad creatives</li>
+    <li>• AI customer lifetime value modeling</li>
+    <li>• Predictive campaign scaling</li>
+  </ul>
+
+  <div className="mt-6 border-t pt-4">
+    <p className="text-sm text-gray-500">Setup Fee</p>
+    <p className="font-semibold">$8,000 – $15,000</p>
+
+    <p className="mt-2 text-sm text-gray-500">Monthly</p>
+    <p className="font-semibold">$8,000 – $15,000</p>
+
+    <p className="mt-3 text-sm text-gray-500">Performance Bonus</p>
+    <p className="font-semibold">5–12% of revenue generated</p>
+  </div>
+
+  <p className="mt-4 text-sm text-gray-500 italic">
+    This is where real money is.
+  </p>
+</div>
+</div>
 
   <div className="mt-14 flex justify-center">
     <a
