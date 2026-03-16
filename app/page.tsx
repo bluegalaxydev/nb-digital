@@ -298,36 +298,96 @@ We help small businesses grow with smart marketing strategy, lead generation, au
   </div>
 </div>
     {/* Tier 2 */}
-    <div className="rounded-3xl bg-white p-8 shadow-sm ring-1 ring-black/5 transition hover:shadow-md">
-      <div className="flex items-center justify-between">
-        <div className="flex h-16 w-16 items-center justify-center rounded-2xl bg-gradient-to-br from-blue-500 to-purple-500 text-2xl text-white">
-          ✦
-        </div>
-        <span className="rounded-full bg-black px-4 py-1 text-sm font-medium text-white">
-          Tier 2
-        </span>
-      </div>
-
-      <h3 className="mt-8 text-3xl font-semibold leading-tight text-black">
-        AI Lead Generation Engine
-      </h3>
-
-      <p className="mt-3 text-2xl font-semibold text-[#05051c]">
-        $3,000–$6,000<span className="text-base font-medium text-gray-500"> / month</span>
-      </p>
-
-      <p className="mt-1 text-sm font-medium text-[#6a5cff]">
-        Setup Fee: $4,000–$7,000
-      </p>
-
-      <p className="mt-6 text-lg leading-8 text-gray-600">
-        Designed for businesses ready to aggressively scale lead generation. We
-        build high-converting funnels, implement AI chatbots, automate SMS and
-        email follow-up, manage retargeting systems, and optimize conversion
-        rates with continuous testing for stronger ROI.
-      </p>
+<div className="rounded-3xl bg-white p-8 shadow-sm ring-1 ring-black/5">
+  <div className="flex items-center justify-between">
+    <div className="flex h-16 w-16 items-center justify-center rounded-2xl bg-gradient-to-br from-blue-500 to-purple-500 text-2xl text-white">
+      ✦
     </div>
 
+    <span className="rounded-full bg-black px-4 py-1 text-sm font-medium text-white">
+      Tier 2
+    </span>
+  </div>
+
+  <h3 className="mt-8 text-3xl font-semibold text-black">
+    Tier 2 — AI Lead Generation Engine
+  </h3>
+
+  <p className="mt-2 text-gray-500 text-sm">
+    (Most of your clients will land here)
+  </p>
+
+  <p className="mt-4 font-semibold text-lg">Goal</p>
+  <p className="text-gray-600">
+    Generate consistent qualified leads + repeat buyers.
+  </p>
+
+  <p className="mt-5 font-semibold text-lg">Services</p>
+  <p className="text-gray-600 text-sm">
+    Everything in Tier 1 PLUS:
+  </p>
+
+  <ul className="mt-2 space-y-1 text-gray-600 text-sm">
+    <li>• AI lead generation funnels</li>
+    <li>• Influencer / affiliate program setup</li>
+    <li>• Conversion rate optimization</li>
+    <li>• AI chatbot for customer questions</li>
+    <li>• SMS marketing automation</li>
+    <li>• Retargeting campaigns</li>
+    <li>• Landing page A/B testing</li>
+    <li>• Advanced analytics dashboards</li>
+    <li>• Review / reputation automation</li>
+  </ul>
+
+  <p className="mt-5 font-semibold text-lg">Ad Platforms</p>
+
+  <p className="text-gray-600 text-sm">
+    You can legally advertise peptides indirectly through:
+  </p>
+
+  <ul className="mt-2 space-y-1 text-gray-600 text-sm">
+    <li>• Taboola native ads</li>
+    <li>• Outbrain native ads</li>
+    <li>• Reddit Ads</li>
+    <li>• SEO + advertorial pages</li>
+    <li>• Influencer traffic</li>
+    <li>• Email list building</li>
+  </ul>
+
+  <p className="mt-4 text-gray-600 text-sm">
+    Avoid direct peptide claims. Instead run educational ads like:
+  </p>
+
+  <ul className="mt-2 space-y-1 text-gray-600 text-sm">
+    <li>• “Longevity research peptides explained”</li>
+    <li>• “Anti-aging research compounds”</li>
+  </ul>
+
+  <p className="mt-4 text-gray-600 text-sm">
+    Then send traffic to an education page → store.
+  </p>
+
+  <p className="mt-5 font-semibold text-lg">AI Automation Used</p>
+
+  <ul className="mt-2 space-y-1 text-gray-600 text-sm">
+    <li>• AI chatbots</li>
+    <li>• AI ad optimization</li>
+    <li>• Automated retargeting</li>
+    <li>• AI copywriting</li>
+    <li>• Predictive analytics</li>
+  </ul>
+
+  <div className="mt-6 border-t pt-4">
+    <p className="text-sm text-gray-500">Setup Fee</p>
+    <p className="font-semibold">$4,000 – $7,000</p>
+
+    <p className="mt-2 text-sm text-gray-500">Monthly</p>
+    <p className="font-semibold">$3,000 – $6,000</p>
+
+    <p className="mt-3 text-sm text-gray-500">Optional</p>
+    <p className="font-semibold">5–10% ad spend management</p>
+  </div>
+</div>
     {/* Tier 3 */}
     <div className="rounded-3xl bg-white p-8 shadow-sm ring-1 ring-black/5 transition hover:shadow-md">
       <div className="flex items-center justify-between">
