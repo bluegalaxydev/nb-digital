@@ -237,36 +237,66 @@ We help small businesses grow with smart marketing strategy, lead generation, au
 
   <div className="mt-16 grid gap-8 md:grid-cols-3">
     {/* Tier 1 */}
-    <div className="rounded-3xl bg-white p-8 shadow-sm ring-1 ring-black/5 transition hover:shadow-md">
-      <div className="flex items-center justify-between">
-        <div className="flex h-16 w-16 items-center justify-center rounded-2xl bg-gradient-to-br from-blue-500 to-purple-500 text-2xl text-white">
-          ✦
-        </div>
-        <span className="rounded-full bg-black px-4 py-1 text-sm font-medium text-white">
-          Tier 1
-        </span>
-      </div>
-
-      <h3 className="mt-8 text-3xl font-semibold leading-tight text-black">
-        AI Growth Foundation
-      </h3>
-
-      <p className="mt-3 text-2xl font-semibold text-[#05051c]">
-        $1,500–$2,500<span className="text-base font-medium text-gray-500"> / month</span>
-      </p>
-
-      <p className="mt-1 text-sm font-medium text-[#6a5cff]">
-        Setup Fee: $2,500–$4,000
-      </p>
-
-      <p className="mt-6 text-lg leading-8 text-gray-600">
-        Perfect for established businesses that need stronger marketing systems.
-        We set up AI-powered foundations including landing page optimization,
-        email automation, CRM pipelines, retargeting pixels, and AI-assisted
-        content to create a scalable customer acquisition system.
-      </p>
+<div className="rounded-3xl bg-white p-8 shadow-sm ring-1 ring-black/5">
+  <div className="flex items-center justify-between">
+    <div className="flex h-16 w-16 items-center justify-center rounded-2xl bg-gradient-to-br from-blue-500 to-purple-500 text-2xl text-white">
+      ✦
     </div>
+    <span className="rounded-full bg-black px-4 py-1 text-sm font-medium text-white">
+      Tier 1
+    </span>
+  </div>
 
+  <h3 className="mt-8 text-3xl font-semibold text-black">
+    Tier 1 — AI Growth Foundation
+  </h3>
+
+  <p className="mt-2 text-gray-500 text-sm">
+    (For companies already selling but with weak marketing systems)
+  </p>
+
+  <p className="mt-4 font-semibold text-lg">Goal</p>
+  <p className="text-gray-600">
+    Fix their funnel and automate customer acquisition basics.
+  </p>
+
+  <p className="mt-5 font-semibold text-lg">Services</p>
+  <ul className="mt-2 space-y-1 text-gray-600 text-sm">
+    <li>• AI-generated ad creatives (images + copy)</li>
+    <li>• Landing page optimization</li>
+    <li>• Email marketing automation</li>
+    <li>• Basic CRM funnel setup</li>
+    <li>• Retargeting pixel installation</li>
+    <li>• Weekly analytics reports</li>
+    <li>• SEO blog content (AI assisted)</li>
+    <li>• Compliance-safe messaging guidance</li>
+  </ul>
+
+  <p className="mt-5 font-semibold text-lg">Platforms</p>
+  <ul className="mt-2 space-y-1 text-gray-600 text-sm">
+    <li>• Google Ads (careful wording)</li>
+    <li>• Microsoft Advertising</li>
+    <li>• Reddit Ads</li>
+    <li>• SEO</li>
+    <li>• Email</li>
+  </ul>
+
+  <p className="mt-5 font-semibold text-lg">AI Automation Used</p>
+  <ul className="mt-2 space-y-1 text-gray-600 text-sm">
+    <li>• AI ad copy generation</li>
+    <li>• Automated reporting</li>
+    <li>• Automated email sequences</li>
+    <li>• AI blog generation</li>
+  </ul>
+
+  <div className="mt-6 border-t pt-4">
+    <p className="text-sm text-gray-500">Setup Fee</p>
+    <p className="font-semibold">$2,500 – $4,000</p>
+
+    <p className="mt-2 text-sm text-gray-500">Monthly</p>
+    <p className="font-semibold">$1,500 – $2,500</p>
+  </div>
+</div>
     {/* Tier 2 */}
     <div className="rounded-3xl bg-white p-8 shadow-sm ring-1 ring-black/5 transition hover:shadow-md">
       <div className="flex items-center justify-between">
