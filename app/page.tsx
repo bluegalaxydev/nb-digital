@@ -1,5 +1,7 @@
 import { Mail, Phone, MapPin } from "lucide-react";
 
+import Link from "next/link";
+
 export default function Home() {
   return (
     <main className="min-h-screen bg-[#f7f7f8] text-[#111111]">
@@ -26,9 +28,9 @@ export default function Home() {
             <a href="#home" className="text-[15px] text-gray-700 hover:text-black">
               Home
             </a>
-            <a href="#services" className="text-[15px] text-gray-700 hover:text-black">
-              Services
-            </a>
+<Link href="/services" className="text-[15px] text-gray-700 hover:text-black">
+  Services
+</Link>
             <a href="#about" className="text-[15px] text-gray-700 hover:text-black">
               About
             </a>
