@@ -231,252 +231,46 @@ We help small businesses grow with smart marketing strategy, lead generation, au
       Our Marketing Services
     </h2>
     <p className="mt-4 text-lg text-gray-500 md:text-xl">
-      Three scalable growth systems designed to increase leads and revenue.
+      Simple one-time pricing for core marketing services.
     </p>
   </div>
 
-  <div className="mt-16 grid gap-8 md:grid-cols-3">
-    {/* Tier 1 */}
-<div className="rounded-3xl bg-white p-8 shadow-sm ring-1 ring-black/5">
-  <div className="flex items-center justify-between">
-    <div className="flex h-16 w-16 items-center justify-center rounded-2xl bg-gradient-to-br from-blue-500 to-purple-500 text-2xl text-white">
-      ✦
-    </div>
-    <span className="rounded-full bg-black px-4 py-1 text-sm font-medium text-white">
-      Tier 1
+<div className="mt-16 space-y-6">
+  <div className="flex items-center justify-between border-b pb-4">
+    <span className="text-lg font-medium text-black">
+      SEO
+    </span>
+    <span className="text-lg font-semibold text-[#05051c]">
+      $800 one-time
     </span>
   </div>
 
-  <h3 className="mt-8 text-3xl font-semibold text-black">
-    Tier 1 — AI Growth Foundation
-  </h3>
-
-  <p className="mt-2 text-gray-500 text-sm">
-    (For companies already selling but with weak marketing systems)
-  </p>
-
-  <p className="mt-4 font-semibold text-lg">Goal</p>
-  <p className="text-gray-600">
-    Fix their funnel and automate customer acquisition basics.
-  </p>
-
-  <p className="mt-5 font-semibold text-lg">Services</p>
-  <ul className="mt-2 space-y-1 text-gray-600 text-sm">
-    <li>• AI-generated ad creatives (images + copy)</li>
-    <li>• Landing page optimization</li>
-    <li>• Email marketing automation</li>
-    <li>• Basic CRM funnel setup</li>
-    <li>• Retargeting pixel installation</li>
-    <li>• Weekly analytics reports</li>
-    <li>• SEO blog content (AI assisted)</li>
-    <li>• Compliance-safe messaging guidance</li>
-  </ul>
-
-  <p className="mt-5 font-semibold text-lg">Platforms</p>
-  <ul className="mt-2 space-y-1 text-gray-600 text-sm">
-    <li>• Google Ads (careful wording)</li>
-    <li>• Microsoft Advertising</li>
-    <li>• Reddit Ads</li>
-    <li>• SEO</li>
-    <li>• Email</li>
-  </ul>
-
-  <p className="mt-5 font-semibold text-lg">AI Automation Used</p>
-  <ul className="mt-2 space-y-1 text-gray-600 text-sm">
-    <li>• AI ad copy generation</li>
-    <li>• Automated reporting</li>
-    <li>• Automated email sequences</li>
-    <li>• AI blog generation</li>
-  </ul>
-
-  <div className="mt-6 border-t pt-4">
-    <p className="text-sm text-gray-500">Setup Fee</p>
-    <p className="font-semibold">$2,500 – $4,000</p>
-
-    <p className="mt-2 text-sm text-gray-500">Monthly</p>
-    <p className="font-semibold">$1,500 – $2,500</p>
-  </div>
-</div>
-    {/* Tier 2 */}
-<div className="rounded-3xl bg-white p-8 shadow-sm ring-1 ring-black/5">
-  <div className="flex items-center justify-between">
-    <div className="flex h-16 w-16 items-center justify-center rounded-2xl bg-gradient-to-br from-blue-500 to-purple-500 text-2xl text-white">
-      ✦
-    </div>
-
-    <span className="rounded-full bg-black px-4 py-1 text-sm font-medium text-white">
-      Tier 2
+  <div className="flex items-center justify-between border-b pb-4">
+    <span className="text-lg font-medium text-black">
+      Reddit Ads Fee
+    </span>
+    <span className="text-lg font-semibold text-[#05051c]">
+      $600 one-time
     </span>
   </div>
 
-  <h3 className="mt-8 text-3xl font-semibold text-black">
-    Tier 2 — AI Lead Generation Engine
-  </h3>
-
-  <p className="mt-2 text-gray-500 text-sm">
-    (Most of your clients will land here)
-  </p>
-
-  <p className="mt-4 font-semibold text-lg">Goal</p>
-  <p className="text-gray-600">
-    Generate consistent qualified leads + repeat buyers.
-  </p>
-
-  <p className="mt-5 font-semibold text-lg">Services</p>
-  <p className="text-gray-600 text-sm">
-    Everything in Tier 1 PLUS:
-  </p>
-
-  <ul className="mt-2 space-y-1 text-gray-600 text-sm">
-    <li>• AI lead generation funnels</li>
-    <li>• Influencer / affiliate program setup</li>
-    <li>• Conversion rate optimization</li>
-    <li>• AI chatbot for customer questions</li>
-    <li>• SMS marketing automation</li>
-    <li>• Retargeting campaigns</li>
-    <li>• Landing page A/B testing</li>
-    <li>• Advanced analytics dashboards</li>
-    <li>• Review / reputation automation</li>
-  </ul>
-
-  <p className="mt-5 font-semibold text-lg">Ad Platforms</p>
-
-  <p className="text-gray-600 text-sm">
-    You can legally advertise peptides indirectly through:
-  </p>
-
-  <ul className="mt-2 space-y-1 text-gray-600 text-sm">
-    <li>• Taboola native ads</li>
-    <li>• Outbrain native ads</li>
-    <li>• Reddit Ads</li>
-    <li>• SEO + advertorial pages</li>
-    <li>• Influencer traffic</li>
-    <li>• Email list building</li>
-  </ul>
-
-  <p className="mt-4 text-gray-600 text-sm">
-    Avoid direct peptide claims. Instead run educational ads like:
-  </p>
-
-  <ul className="mt-2 space-y-1 text-gray-600 text-sm">
-    <li>• “Longevity research peptides explained”</li>
-    <li>• “Anti-aging research compounds”</li>
-  </ul>
-
-  <p className="mt-4 text-gray-600 text-sm">
-    Then send traffic to an education page → store.
-  </p>
-
-  <p className="mt-5 font-semibold text-lg">AI Automation Used</p>
-
-  <ul className="mt-2 space-y-1 text-gray-600 text-sm">
-    <li>• AI chatbots</li>
-    <li>• AI ad optimization</li>
-    <li>• Automated retargeting</li>
-    <li>• AI copywriting</li>
-    <li>• Predictive analytics</li>
-  </ul>
-
-  <div className="mt-6 border-t pt-4">
-    <p className="text-sm text-gray-500">Setup Fee</p>
-    <p className="font-semibold">$4,000 – $7,000</p>
-
-    <p className="mt-2 text-sm text-gray-500">Monthly</p>
-    <p className="font-semibold">$3,000 – $6,000</p>
-
-    <p className="mt-3 text-sm text-gray-500">Optional</p>
-    <p className="font-semibold">5–10% ad spend management</p>
-  </div>
-</div>
-    {/* Tier 3 */}
-<div className="rounded-3xl bg-white p-8 shadow-sm ring-1 ring-black/5">
-  <div className="flex items-center justify-between">
-    <div className="flex h-16 w-16 items-center justify-center rounded-2xl bg-gradient-to-br from-blue-500 to-purple-500 text-2xl text-white">
-      ✦
-    </div>
-
-    <span className="rounded-full bg-black px-4 py-1 text-sm font-medium text-white">
-      Tier 3
+  <div className="flex items-center justify-between border-b pb-4">
+    <span className="text-lg font-medium text-black">
+      TikTok Ads Fee
+    </span>
+    <span className="text-lg font-semibold text-[#05051c]">
+      $600 one-time
     </span>
   </div>
 
-  <h3 className="mt-8 text-3xl font-semibold text-black">
-    Tier 3 — AI Revenue Scaling Partner
-  </h3>
-
-  <p className="mt-2 text-gray-500 text-sm">
-    (High revenue peptide companies doing $1M+ yearly)
-  </p>
-
-  <p className="mt-4 font-semibold text-lg">Goal</p>
-  <p className="text-gray-600">
-    Turn your agency into their growth department.
-  </p>
-
-  <p className="mt-5 font-semibold text-lg">Services</p>
-
-  <p className="text-gray-600 text-sm">
-    Everything above PLUS:
-  </p>
-
-  <ul className="mt-2 space-y-1 text-gray-600 text-sm">
-    <li>• Full funnel growth strategy</li>
-    <li>• AI predictive marketing</li>
-    <li>• Influencer network management</li>
-    <li>• Affiliate network creation</li>
-    <li>• High-volume advertorial campaigns</li>
-    <li>• Advanced CRO</li>
-    <li>• Product launch campaigns</li>
-    <li>• UGC ad production</li>
-    <li>• Brand positioning strategy</li>
-    <li>• AI audience targeting models</li>
-  </ul>
-
-  <p className="mt-5 font-semibold text-lg">Traffic Sources</p>
-
-  <p className="text-gray-600 text-sm">
-    High-volume channels:
-  </p>
-
-  <ul className="mt-2 space-y-1 text-gray-600 text-sm">
-    <li>• Taboola</li>
-    <li>• Outbrain</li>
-    <li>• Reddit Ads</li>
-    <li>• SEO content farms</li>
-    <li>• Influencer networks</li>
-    <li>• Email + SMS scaling</li>
-  </ul>
-
-  <p className="mt-4 text-gray-600 text-sm">
-    You basically run all acquisition channels except restricted ones like
-    Facebook for peptides.
-  </p>
-
-  <p className="mt-5 font-semibold text-lg">AI Automation Used</p>
-
-  <ul className="mt-2 space-y-1 text-gray-600 text-sm">
-    <li>• AI customer segmentation</li>
-    <li>• Automated ad testing</li>
-    <li>• AI ad creatives</li>
-    <li>• AI customer lifetime value modeling</li>
-    <li>• Predictive campaign scaling</li>
-  </ul>
-
-  <div className="mt-6 border-t pt-4">
-    <p className="text-sm text-gray-500">Setup Fee</p>
-    <p className="font-semibold">$8,000 – $15,000</p>
-
-    <p className="mt-2 text-sm text-gray-500">Monthly</p>
-    <p className="font-semibold">$8,000 – $15,000</p>
-
-    <p className="mt-3 text-sm text-gray-500">Performance Bonus</p>
-    <p className="font-semibold">5–12% of revenue generated</p>
+  <div className="flex items-center justify-between border-b pb-4">
+    <span className="text-lg font-medium text-black">
+      X Ads Fee
+    </span>
+    <span className="text-lg font-semibold text-[#05051c]">
+      $600 one-time
+    </span>
   </div>
-
-  <p className="mt-4 text-sm text-gray-500 italic">
-    This is where real money is.
-  </p>
-</div>
 </div>
 
   <div className="mt-14 flex justify-center">
