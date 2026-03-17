@@ -353,7 +353,12 @@ export default function Home() {
                 </div>
                 <div>
                   <p className="text-2xl font-semibold">Email Us</p>
-                  <p className="mt-1 text-xl text-[#6a6f85]">info@notbadcapital.com</p>
+                  <a
+  href="mailto:info@notbadcapital.com"
+  className="mt-1 text-xl text-[#6a6f85] hover:underline"
+>
+  info@notbadcapital.com
+</a>
                 </div>
               </div>
 
