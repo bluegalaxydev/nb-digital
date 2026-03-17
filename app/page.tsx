@@ -124,50 +124,45 @@ export default function Home() {
 
       <section id="services" className="mx-auto max-w-7xl px-6 py-20">
         <div className="text-center">
-          <h2 className="text-5xl font-semibold">
-  Marketing Services for Small Businesses
+<h2 className="text-5xl font-semibold">
+  Marketing Services for High-Risk Businesses
 </h2>
 <p className="mt-6 text-2xl text-[#6a6f85]">
-We help small businesses grow with smart marketing strategy, lead generation, automation, and brand positioning.
+  We help high-risk businesses grow through SEO, paid advertising, and conversion-focused marketing systems.
 </p>
         </div>
 
-        <div className="mt-14 grid gap-8 md:grid-cols-3">
-{[
-  {
-    title: "Digital Marketing Strategy",
-    text: "Clear marketing plans designed to help small businesses attract better leads and grow consistently.",
-  },
-  {
-    title: "Lead Generation Campaigns",
-    text: "Targeted campaigns that bring in qualified leads through paid ads, funnels, and conversion-focused landing pages.",
-  },
-  {
-    title: "Marketing Automation",
-    text: "Automated follow-up systems for email, SMS, and customer journeys so no opportunity gets missed.",
-  },
-  {
-    title: "Content & Brand Positioning",
-    text: "Messaging, offers, and brand presentation that make your business look trustworthy and stand out online.",
-  },
-  {
-    title: "Analytics & Reporting",
-    text: "Simple performance tracking so you can understand what is working and where to invest next.",
-  },
-  {
-    title: "Custom Growth Support",
-    text: "Flexible marketing support tailored to your business stage, industry, and goals.",
-  },
-].map((item) => (
-            <div key={item.title} className="rounded-[28px] border border-gray-200 bg-white p-9">
-              <div className="mb-8 flex h-14 w-14 items-center justify-center rounded-2xl bg-gradient-to-br from-blue-500 to-purple-600 text-2xl text-white">
-                ✦
-              </div>
-              <h3 className="text-[34px] font-semibold leading-tight">{item.title}</h3>
-              <p className="mt-6 text-[18px] leading-9 text-[#6a6f85]">{item.text}</p>
-            </div>
-          ))}
-        </div>
+<div className="mt-14 grid gap-8 md:grid-cols-3">
+  {[
+    {
+      title: "SEO",
+      text: "We improve your rankings, increase organic traffic, and build long-term visibility for high-risk products.",
+    },
+    {
+      title: "Paid Ads",
+      text: "We run ads on TikTok, Reddit, and X to drive traffic, leads, and revenue.",
+    },
+    {
+      title: "Offer Refinement",
+      text: "We revise your proposal and messaging until it is clear, persuasive, and ready to convert.",
+    },
+  ].map((item) => (
+    <div
+      key={item.title}
+      className="rounded-[28px] border border-gray-200 bg-white p-10 shadow-sm"
+    >
+      <div className="mb-8 flex h-14 w-14 items-center justify-center rounded-2xl bg-gradient-to-br from-blue-500 to-purple-500 text-2xl text-white">
+        ✦
+      </div>
+      <h3 className="text-[34px] font-semibold leading-tight">
+        {item.title}
+      </h3>
+      <p className="mt-6 text-[18px] leading-9 text-[#6a6f85]">
+        {item.text}
+      </p>
+    </div>
+  ))}
+</div>
       </section>
 
       <section
