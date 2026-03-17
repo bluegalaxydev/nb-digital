@@ -362,8 +362,9 @@ export default function Home() {
                   <Phone size={32} />
                 </div>
                 <div>
-                  <p className="text-2xl font-semibold">Call Us</p>
-                  <p className="mt-1 text-xl text-[#6a6f85]">+1 (770) 826-0555</p>
+<a href="tel:+16575774455" className="mt-1 text-xl text-[#6a6f85] hover:underline">
+  +1 (657) 577-4455
+</a>
                 </div>
               </div>
 
