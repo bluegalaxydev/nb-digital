@@ -236,47 +236,104 @@ export default function Home() {
       Our Marketing Services
     </h2>
     <p className="mt-4 text-lg text-gray-500 md:text-xl">
-      Simple one-time pricing for core marketing services.
+      Three scalable growth systems designed to increase leads and revenue.
     </p>
   </div>
 
-<div className="mt-16 space-y-6">
-  <div className="flex items-center justify-between border-b pb-4">
-    <span className="text-lg font-medium text-black">
-      SEO
-    </span>
-    <span className="text-lg font-semibold text-[#05051c]">
-      $800 one-time
-    </span>
-  </div>
+  <div className="mt-16 grid gap-8 md:grid-cols-3">
+    {/* Tier 1 */}
+    <div className="rounded-3xl bg-white p-8 shadow-sm ring-1 ring-black/5 transition hover:shadow-md">
+      <div className="flex items-center justify-between">
+        <div className="flex h-16 w-16 items-center justify-center rounded-2xl bg-gradient-to-br from-blue-500 to-purple-500 text-2xl text-white">
+          ✦
+        </div>
+        <span className="rounded-full bg-black px-4 py-1 text-sm font-medium text-white">
+          Tier 1
+        </span>
+      </div>
 
-  <div className="flex items-center justify-between border-b pb-4">
-    <span className="text-lg font-medium text-black">
-      Reddit Ads Fee
-    </span>
-    <span className="text-lg font-semibold text-[#05051c]">
-      $600 one-time
-    </span>
-  </div>
+      <h3 className="mt-8 text-3xl font-semibold leading-tight text-black">
+        AI Growth Foundation
+      </h3>
 
-  <div className="flex items-center justify-between border-b pb-4">
-    <span className="text-lg font-medium text-black">
-      TikTok Ads Fee
-    </span>
-    <span className="text-lg font-semibold text-[#05051c]">
-      $600 one-time
-    </span>
-  </div>
+      <p className="mt-3 text-2xl font-semibold text-[#05051c]">
+        $1,500–$2,500<span className="text-base font-medium text-gray-500"> / month</span>
+      </p>
 
-  <div className="flex items-center justify-between border-b pb-4">
-    <span className="text-lg font-medium text-black">
-      X Ads Fee
-    </span>
-    <span className="text-lg font-semibold text-[#05051c]">
-      $600 one-time
-    </span>
+      <p className="mt-1 text-sm font-medium text-[#6a5cff]">
+        Setup Fee: $2,500–$4,000
+      </p>
+
+      <p className="mt-6 text-lg leading-8 text-gray-600">
+        Perfect for established businesses that need stronger marketing systems.
+        We set up AI-powered foundations including landing page optimization,
+        email automation, CRM pipelines, retargeting pixels, and AI-assisted
+        content to create a scalable customer acquisition system.
+      </p>
+    </div>
+
+    {/* Tier 2 */}
+    <div className="rounded-3xl bg-white p-8 shadow-sm ring-1 ring-black/5 transition hover:shadow-md">
+      <div className="flex items-center justify-between">
+        <div className="flex h-16 w-16 items-center justify-center rounded-2xl bg-gradient-to-br from-blue-500 to-purple-500 text-2xl text-white">
+          ✦
+        </div>
+        <span className="rounded-full bg-black px-4 py-1 text-sm font-medium text-white">
+          Tier 2
+        </span>
+      </div>
+
+      <h3 className="mt-8 text-3xl font-semibold leading-tight text-black">
+        AI Lead Generation Engine
+      </h3>
+
+      <p className="mt-3 text-2xl font-semibold text-[#05051c]">
+        $3,000–$6,000<span className="text-base font-medium text-gray-500"> / month</span>
+      </p>
+
+      <p className="mt-1 text-sm font-medium text-[#6a5cff]">
+        Setup Fee: $4,000–$7,000
+      </p>
+
+      <p className="mt-6 text-lg leading-8 text-gray-600">
+        Designed for businesses ready to aggressively scale lead generation. We
+        build high-converting funnels, implement AI chatbots, automate SMS and
+        email follow-up, manage retargeting systems, and optimize conversion
+        rates with continuous testing for stronger ROI.
+      </p>
+    </div>
+
+    {/* Tier 3 */}
+    <div className="rounded-3xl bg-white p-8 shadow-sm ring-1 ring-black/5 transition hover:shadow-md">
+      <div className="flex items-center justify-between">
+        <div className="flex h-16 w-16 items-center justify-center rounded-2xl bg-gradient-to-br from-blue-500 to-purple-500 text-2xl text-white">
+          ✦
+        </div>
+        <span className="rounded-full bg-black px-4 py-1 text-sm font-medium text-white">
+          Tier 3
+        </span>
+      </div>
+
+      <h3 className="mt-8 text-3xl font-semibold leading-tight text-black">
+        AI Revenue Scaling Partner
+      </h3>
+
+      <p className="mt-3 text-2xl font-semibold text-[#05051c]">
+        $8,000–$15,000<span className="text-base font-medium text-gray-500"> / month</span>
+      </p>
+
+      <p className="mt-1 text-sm font-medium text-[#6a5cff]">
+        Setup Fee: $8,000–$15,000
+      </p>
+
+      <p className="mt-6 text-lg leading-8 text-gray-600">
+        Our highest-level service for companies focused on rapid growth. We act
+        as your external growth team, managing full-funnel marketing, advanced
+        automation, native traffic strategy, conversion optimization, audience
+        targeting, and performance analytics to maximize revenue.
+      </p>
+    </div>
   </div>
-</div>
 
   <div className="mt-14 flex justify-center">
     <a
