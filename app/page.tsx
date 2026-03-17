@@ -77,7 +77,7 @@ export default function Home() {
 </div>
 
 <p className="mt-3 text-sm text-gray-400 text-center">
-  Platforms like Facebook & Google often restrict these industries — we know how to work around it.
+  Platforms like tiktok & reddit often restrict these industries — we know how to work around it.
 </p>
 
           <div className="mt-10 flex flex-wrap gap-4">
