@@ -16,9 +16,9 @@ export default function Home() {
   <div className="font-semibold text-xl tracking-tight text-slate-900">
     Harbor Point
   </div>
-  <div className="text-[11px] uppercase tracking-[0.18em] text-slate-500">
-    High Risk Company Marketing
-  </div>
+<div className="text-[11px] uppercase tracking-[0.18em] text-slate-500">
+  Marketing Services
+</div>
 </div>
 </div>
 
