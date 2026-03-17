@@ -67,7 +67,7 @@ export default function Home() {
 </h1>
 
 <p className="mt-6 text-lg text-gray-500 md:text-xl">
-  Harbor Point Marketing Services helps high-risk businesses, including peptide companies, grow through digital marketing, SEO, automation, and clear growth strategies.
+  Harbor Point Marketing helps high-risk brands—including peptide companies—scale through compliant growth systems, SEO, optimization and automation
 </p>
 <div className="mt-6 flex justify-center">
   <div className="inline-flex items-center gap-2 rounded-full bg-[#eef2ff] px-4 py-2 text-sm text-[#3730a3]">
