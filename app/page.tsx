@@ -25,9 +25,9 @@ export default function Home() {
 </div>
 
           <nav className="hidden items-center gap-10 md:flex">
-            <a href="#home" className="text-[15px] text-gray-700 hover:text-black">
-              Home
-            </a>
+<Link href="/" className="text-[15px] text-gray-700 hover:text-black">
+  Home
+</Link>
 <Link href="/services" className="text-[15px] text-gray-700 hover:text-black">
   Services
 </Link>
