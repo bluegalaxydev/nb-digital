@@ -12,14 +12,14 @@ export default function Home() {
     className="h-12 w-auto object-contain"
   />
 
-  <div className="leading-tight">
-    <div className="font-semibold text-xl tracking-tight text-slate-900">
-      Harbor Point
-    </div>
-    <div className="text-[11px] uppercase tracking-[0.18em] text-slate-500">
-      Marketing Services
-    </div>
+<div className="leading-tight">
+  <div className="font-semibold text-xl tracking-tight text-slate-900">
+    Harbor Point
   </div>
+  <div className="text-[11px] uppercase tracking-[0.18em] text-slate-500">
+    High Risk Company Marketing
+  </div>
+</div>
 </div>
 
           <nav className="hidden items-center gap-10 md:flex">
@@ -58,16 +58,26 @@ export default function Home() {
             ✨ Marketing & Growth Experts
           </div>
 
-<h1 className="mt-8 text-5xl font-semibold leading-[1.02] md:text-7xl">
+<h1 className="text-5xl font-semibold tracking-tight text-black md:text-7xl">
   Marketing That Helps
   <br />
-  <span className="text-[#6a5cff]">Small Businesses</span>
+  <span className="text-[#6366f1]">High Risk Businesses</span>
   <br />
   Grow Faster
 </h1>
 
-<p className="mt-8 max-w-xl text-2xl leading-10 text-[#6a6f85]">
-  Harbor Point Marketing Services helps small businesses grow with digital marketing, lead generation, automation, and clear growth strategy.
+<p className="mt-6 text-lg text-gray-500 md:text-xl">
+  Harbor Point Marketing Services helps high-risk businesses, including peptide companies, grow through digital marketing, SEO, automation, and clear growth strategies.
+</p>
+<div className="mt-6 flex justify-center">
+  <div className="inline-flex items-center gap-2 rounded-full bg-[#eef2ff] px-4 py-2 text-sm text-[#3730a3]">
+    <span>⚡</span>
+    Specialized in high-risk marketing: peptides, supplements, and restricted industries
+  </div>
+</div>
+
+<p className="mt-3 text-sm text-gray-400 text-center">
+  Platforms like Facebook & Google often restrict these industries — we know how to work around it.
 </p>
 
           <div className="mt-10 flex flex-wrap gap-4">
