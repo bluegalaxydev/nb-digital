@@ -438,7 +438,8 @@ export default function Home() {
                 <div>
                   <p className="text-2xl font-semibold">Visit Us</p>
 <p className="mt-1 text-xl leading-9 text-[#6a6f85]">
-  6013 Warner Ave<br />
+  6013 Warner Ave
+  <br />
   Huntington Beach, CA 92647
 </p>
                 </div>
