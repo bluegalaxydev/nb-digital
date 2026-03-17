@@ -437,11 +437,10 @@ export default function Home() {
                 </div>
                 <div>
                   <p className="text-2xl font-semibold">Visit Us</p>
-                  <p className="mt-1 text-xl leading-9 text-[#6a6f85]">
-                    266 Robledo St
-                    <br />
-                    Las Vegas, NV, 89138
-                  </p>
+<p className="mt-1 text-xl leading-9 text-[#6a6f85]">
+  6013 Warner Ave<br />
+  Huntington Beach, CA 92647
+</p>
                 </div>
               </div>
             </div>
