@@ -113,11 +113,11 @@ export default function Home() {
 
         <div>
           <div className="overflow-hidden rounded-[28px] bg-white shadow-sm">
-            <img
-              src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=1200&q=80"
-              alt="Analytics dashboard"
-              className="h-[540px] w-full object-cover"
-            />
+<img
+  src="/peptides.jpg"
+  alt="Peptide marketing"
+  className="w-full rounded-2xl shadow-lg"
+/>
           </div>
         </div>
       </section>
