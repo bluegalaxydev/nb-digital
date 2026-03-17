@@ -471,7 +471,7 @@ export default function Home() {
                 <label className="mb-3 block text-2xl font-medium">Industry</label>
                 <input
                   type="text"
-                  placeholder="e.g., Healthcare, Legal, Construction"
+                  placeholder="e.g., peptides, prediction/trading, cannabis"
                   className="w-full rounded-2xl border border-gray-200 bg-[#f6f6f7] px-5 py-5 text-lg outline-none"
                 />
               </div>
