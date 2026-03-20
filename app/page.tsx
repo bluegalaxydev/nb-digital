@@ -213,9 +213,9 @@ export default function Home() {
         </span>
       </div>
 
-      <h3 className="mt-8 text-3xl font-semibold leading-tight text-black">
-        AI Growth Foundation
-      </h3>
+<h3 className="mt-8 text-3xl font-semibold leading-tight text-black">
+  AI SEO Foundation
+</h3>
 
       <p className="mt-3 text-2xl font-semibold text-[#05051c]">
         $1,500–$2,500<span className="text-base font-medium text-gray-500"> / month</span>
@@ -225,12 +225,12 @@ export default function Home() {
         Setup Fee: $2,500–$4,000
       </p>
 
-      <p className="mt-6 text-lg leading-8 text-gray-600">
-        Perfect for established businesses that need stronger marketing systems.
-        We set up AI-powered foundations including landing page optimization,
-        email automation, CRM pipelines, retargeting pixels, and AI-assisted
-        content to create a scalable customer acquisition system.
-      </p>
+<p className="mt-6 text-lg leading-8 text-gray-600">
+  Built for businesses that need a strong SEO and technical foundation.
+  We provide SEO reporting, general site checks, keyword research,
+  on-page optimization, technical fixes, and ongoing SEO development
+  to improve rankings.
+</p>
     </div>
 
     {/* Tier 2 */}
@@ -245,7 +245,7 @@ export default function Home() {
       </div>
 
       <h3 className="mt-8 text-3xl font-semibold leading-tight text-black">
-        AI Lead Generation Engine
+        AI Growth Engine
       </h3>
 
       <p className="mt-3 text-2xl font-semibold text-[#05051c]">
@@ -256,12 +256,11 @@ export default function Home() {
         Setup Fee: $4,000–$7,000
       </p>
 
-      <p className="mt-6 text-lg leading-8 text-gray-600">
-        Designed for businesses ready to aggressively scale lead generation. We
-        build high-converting funnels, implement AI chatbots, automate SMS and
-        email follow-up, manage retargeting systems, and optimize conversion
-        rates with continuous testing for stronger ROI.
-      </p>
+<p className="mt-6 text-lg leading-8 text-gray-600">
+  Includes everything in Tier 1, plus paid growth execution. We create
+  ad videos, design conversion-focused creatives, and promote them across
+  X, Reddit, and TikTok to drive traffic, leads, and revenue.
+</p>
     </div>
 
     {/* Tier 3 */}
