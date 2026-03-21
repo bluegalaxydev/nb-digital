@@ -197,112 +197,183 @@ export default function Home() {
       Our Marketing Services
     </h2>
     <p className="mt-4 text-lg text-gray-500 md:text-xl">
-      Three scalable growth systems designed to increase leads and revenue.
+      Select the services you need and submit your request.
     </p>
   </div>
 
-  <div className="mt-16 grid gap-8 md:grid-cols-3">
-    {/* Tier 1 */}
-    <div className="rounded-3xl bg-white p-8 shadow-sm ring-1 ring-black/5 transition hover:shadow-md">
-      <div className="flex items-center justify-between">
-        <div className="flex h-16 w-16 items-center justify-center rounded-2xl bg-gradient-to-br from-blue-500 to-purple-500 text-2xl text-white">
-          ✦
+  <form
+    action="https://formspree.io/f/YOUR_FORM_ID"
+    method="POST"
+    className="mt-16 grid gap-10 md:grid-cols-2"
+  >
+    {/* Left: service checkboxes */}
+    <div className="rounded-3xl bg-white p-8 shadow-sm ring-1 ring-black/5">
+      <h3 className="text-2xl font-semibold text-black">Choose Services</h3>
+      <p className="mt-2 text-gray-500">
+        Check all services you want us to help with.
+      </p>
+
+      <div className="mt-8 space-y-8">
+        <div>
+          <h4 className="text-lg font-semibold text-black">Website / SEO / Systems</h4>
+          <div className="mt-4 space-y-3 text-gray-700">
+            {[
+              "Website creation / optimization",
+              "Basic SEO implementation",
+              "Basic SEO developing",
+              "Keyword search",
+              "On-page optimization (ranking)",
+              "Email flow setup",
+              "Welcome sequence (10% off with email signup)",
+              "Abandoned cart recovery",
+              "CRM setup",
+              "Ongoing system maintenance & optimization",
+              "Free initial business audit / strategy report",
+              "Market positioning",
+              "Funnel recommendations",
+              "Growth opportunities",
+            ].map((service) => (
+              <label key={service} className="flex items-start gap-3">
+                <input
+                  type="checkbox"
+                  name="services"
+                  value={service}
+                  className="mt-1 h-4 w-4 rounded border-gray-300"
+                />
+                <span>{service}</span>
+              </label>
+            ))}
+          </div>
         </div>
-        <span className="rounded-full bg-black px-4 py-1 text-sm font-medium text-white">
-          Tier 1
-        </span>
-      </div>
 
-<h3 className="mt-8 text-3xl font-semibold leading-tight text-black">
-  AI SEO Foundation
-</h3>
-
-      <p className="mt-3 text-2xl font-semibold text-[#05051c]">
-        $1,500–$2,500<span className="text-base font-medium text-gray-500"> / month</span>
-      </p>
-
-      <p className="mt-1 text-sm font-medium text-[#6a5cff]">
-        Setup Fee: $2,500–$4,000
-      </p>
-
-<p className="mt-6 text-lg leading-8 text-gray-600">
-  Built for businesses that need a strong SEO and technical foundation.
-  We provide SEO reporting, general site checks, keyword research,
-  on-page optimization, technical fixes, and ongoing SEO development
-  to improve rankings.
-</p>
-    </div>
-
-    {/* Tier 2 */}
-    <div className="rounded-3xl bg-white p-8 shadow-sm ring-1 ring-black/5 transition hover:shadow-md">
-      <div className="flex items-center justify-between">
-        <div className="flex h-16 w-16 items-center justify-center rounded-2xl bg-gradient-to-br from-blue-500 to-purple-500 text-2xl text-white">
-          ✦
+        <div>
+          <h4 className="text-lg font-semibold text-black">Ads / Growth / Reporting</h4>
+          <div className="mt-4 space-y-3 text-gray-700">
+            {[
+              "Basic UGC ads (images)",
+              "4 creatives / month",
+              "AI-assisted + edited creatives",
+              "Advanced email automation",
+              "Upsell flows",
+              "Re-engagement campaigns",
+              "Retention sequences",
+              "Traffic / ad setup",
+              "X / Reddit ads",
+              "Platforms with little to no restrictions",
+              "Google compliance",
+              "Monthly KPI report",
+              "ROAS tracking",
+              "Conversion rates tracking",
+              "Funnel performance reporting",
+            ].map((service) => (
+              <label key={service} className="flex items-start gap-3">
+                <input
+                  type="checkbox"
+                  name="services"
+                  value={service}
+                  className="mt-1 h-4 w-4 rounded border-gray-300"
+                />
+                <span>{service}</span>
+              </label>
+            ))}
+          </div>
         </div>
-        <span className="rounded-full bg-black px-4 py-1 text-sm font-medium text-white">
-          Tier 2
-        </span>
-      </div>
 
-      <h3 className="mt-8 text-3xl font-semibold leading-tight text-black">
-        AI Growth Engine
-      </h3>
-
-      <p className="mt-3 text-2xl font-semibold text-[#05051c]">
-        $3,000–$6,000<span className="text-base font-medium text-gray-500"> / month</span>
-      </p>
-
-      <p className="mt-1 text-sm font-medium text-[#6a5cff]">
-        Setup Fee: $4,000–$7,000
-      </p>
-
-<p className="mt-6 text-lg leading-8 text-gray-600">
-  Includes everything in Tier 1, plus paid growth execution. We create
-  ad videos, design conversion-focused creatives, and promote them across
-  X, Reddit, and TikTok to drive traffic, leads, and revenue.
-</p>
-    </div>
-
-    {/* Tier 3 */}
-    <div className="rounded-3xl bg-white p-8 shadow-sm ring-1 ring-black/5 transition hover:shadow-md">
-      <div className="flex items-center justify-between">
-        <div className="flex h-16 w-16 items-center justify-center rounded-2xl bg-gradient-to-br from-blue-500 to-purple-500 text-2xl text-white">
-          ✦
-        </div>
-        <span className="rounded-full bg-black px-4 py-1 text-sm font-medium text-white">
-          Tier 3
-        </span>
-      </div>
-
-      <h3 className="mt-8 text-3xl font-semibold leading-tight text-black">
-        AI Revenue Scaling Partner
-      </h3>
-
-      <p className="mt-3 text-2xl font-semibold text-[#05051c]">
-        $8,000–$15,000<span className="text-base font-medium text-gray-500"> / month</span>
-      </p>
-
-      <p className="mt-1 text-sm font-medium text-[#6a5cff]">
-        Setup Fee: $8,000–$15,000
-      </p>
-
-      <p className="mt-6 text-lg leading-8 text-gray-600">
-        Our highest-level service for companies focused on rapid growth. We act
-        as your external growth team, managing full-funnel marketing, advanced
-        automation, native traffic strategy, conversion optimization, audience
-        targeting, and performance analytics to maximize revenue.
-      </p>
-    </div>
+<div>
+  <h4 className="text-lg font-semibold text-black">Advanced Add-Ons</h4>
+  <div className="mt-4 space-y-3 text-gray-700">
+    {[
+      "AI chatbot",
+      "Advanced UGC / AI video contents",
+      "Social media management",
+      "Influencer / affiliate setup",
+    ].map((service) => (
+      <label key={service} className="flex items-start gap-3">
+        <input
+          type="checkbox"
+          name="services"
+          value={service}
+          className="mt-1 h-4 w-4 rounded border-gray-300"
+        />
+        <span>{service}</span>
+      </label>
+    ))}
   </div>
+</div>
+      </div>
+    </div>
 
-  <div className="mt-14 flex justify-center">
-    <a
-      href="#contact"
-      className="rounded-2xl bg-[#05051c] px-8 py-4 text-lg font-medium text-white transition hover:opacity-90"
+{/* Right: contact form */}
+<div className="rounded-3xl bg-white p-8 shadow-sm ring-1 ring-black/5">
+  <h3 className="text-2xl font-semibold text-black">Submit Your Request</h3>
+  <p className="mt-2 text-gray-500">
+    Tell us about your business and we’ll review your service request.
+  </p>
+
+  <div className="mt-8 space-y-5">
+    <div>
+      <label className="mb-2 block text-sm font-medium text-black">Name</label>
+      <input
+        type="text"
+        name="name"
+        required
+        className="w-full rounded-2xl border border-gray-300 px-4 py-3 outline-none focus:border-black"
+        placeholder="Your name"
+      />
+    </div>
+
+    <div>
+      <label className="mb-2 block text-sm font-medium text-black">Email</label>
+      <input
+        type="email"
+        name="email"
+        required
+        className="w-full rounded-2xl border border-gray-300 px-4 py-3 outline-none focus:border-black"
+        placeholder="you@example.com"
+      />
+    </div>
+
+    <div>
+      <label className="mb-2 block text-sm font-medium text-black">Company</label>
+      <input
+        type="text"
+        name="company"
+        className="w-full rounded-2xl border border-gray-300 px-4 py-3 outline-none focus:border-black"
+        placeholder="Company name"
+      />
+    </div>
+
+    <div>
+      <label className="mb-2 block text-sm font-medium text-black">Industry</label>
+      <input
+        type="text"
+        name="industry"
+        className="w-full rounded-2xl border border-gray-300 px-4 py-3 outline-none focus:border-black"
+        placeholder="e.g. peptides, trading, cannabis"
+      />
+    </div>
+
+    <div>
+      <label className="mb-2 block text-sm font-medium text-black">
+        Extra Notes
+      </label>
+      <textarea
+        name="message"
+        rows={6}
+        className="w-full rounded-2xl border border-gray-300 px-4 py-3 outline-none focus:border-black"
+        placeholder="Tell us what you need most right now."
+      />
+    </div>
+
+    <button
+      type="submit"
+      className="w-full rounded-2xl bg-[#05051c] px-8 py-4 text-lg font-medium text-white transition hover:opacity-90"
     >
-      Book a Strategy Call
-    </a>
+      Submit Request
+    </button>
   </div>
+</div>
+  </form>
 </section>
 
       <section id="contact" className="mx-auto max-w-7xl px-6 py-20">
