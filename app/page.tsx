@@ -202,7 +202,7 @@ export default function Home() {
   </div>
 
   <form
-    action="https://formspree.io/f/YOUR_FORM_ID"
+    action="https://formspree.io/f/xlgplbkp"
     method="POST"
     className="mt-16 grid gap-10 md:grid-cols-2"
   >
@@ -305,6 +305,12 @@ export default function Home() {
 
 {/* Right: contact form */}
 <div className="rounded-3xl bg-white p-8 shadow-sm ring-1 ring-black/5">
+  <input
+    type="hidden"
+    name="_subject"
+    value="New Service Request from Harbor Point Marketing"
+  />
+
   <h3 className="text-2xl font-semibold text-black">Submit Your Request</h3>
   <p className="mt-2 text-gray-500">
     Tell us about your business and we’ll review your service request.
@@ -349,7 +355,7 @@ export default function Home() {
         type="text"
         name="industry"
         className="w-full rounded-2xl border border-gray-300 px-4 py-3 outline-none focus:border-black"
-        placeholder="e.g. peptides, trading, cannabis"
+        placeholder="e.g. peptides, prediction/trading, cannabis"
       />
     </div>
 
@@ -371,12 +377,56 @@ export default function Home() {
     >
       Submit Request
     </button>
+
+    <div className="mt-10 space-y-8">
+      <div className="flex items-start gap-6">
+        <div className="flex h-16 w-16 items-center justify-center rounded-2xl bg-gradient-to-br from-blue-500 to-purple-600 text-white">
+          <Mail size={24} />
+        </div>
+        <div>
+          <p className="text-lg font-semibold">Email Us</p>
+          <a
+            href="mailto:info@notbadcapital.com"
+            className="mt-1 block text-base text-[#6a6f85] hover:underline"
+          >
+            info@notbadcapital.com
+          </a>
+        </div>
+      </div>
+
+      <div className="flex items-start gap-6">
+        <div className="flex h-16 w-16 items-center justify-center rounded-2xl bg-gradient-to-br from-blue-500 to-purple-600 text-white">
+          <Phone size={24} />
+        </div>
+        <div>
+          <p className="text-lg font-semibold">Call Us</p>
+          <a
+            href="tel:+16575774455"
+            className="mt-1 block text-base text-[#6a6f85] hover:underline"
+          >
+            +1 (657) 577-4455
+          </a>
+        </div>
+      </div>
+
+      <div className="flex items-start gap-6">
+        <div className="flex h-16 w-16 items-center justify-center rounded-2xl bg-gradient-to-br from-blue-500 to-purple-600 text-white">
+          <MapPin size={24} />
+        </div>
+        <div>
+          <p className="text-lg font-semibold">Visit Us</p>
+          <p className="mt-1 text-base leading-7 text-[#6a6f85]">
+            6013 Warner Ave
+            <br />
+            Huntington Beach, CA 92647
+          </p>
+        </div>
+      </div>
+    </div>
   </div>
 </div>
-  </form>
+</form>
 </section>
-
-
-    </main>
+</main>
   );
 }
