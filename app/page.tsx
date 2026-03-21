@@ -83,18 +83,12 @@ export default function Home() {
 </p>
 
           <div className="mt-10 flex flex-wrap gap-4">
-            <a
-              href="#contact"
-              className="rounded-2xl bg-[#05051c] px-8 py-4 text-lg font-medium text-white"
-            >
-              Book Your Free Consultation →
-            </a>
-            <a
-              href="#services"
-              className="rounded-2xl border border-gray-300 bg-white px-8 py-4 text-lg font-medium text-[#222]"
-            >
-              See Our Services
-            </a>
+<a
+  href="#services"
+  className="inline-flex items-center justify-center rounded-2xl bg-[#05051c] px-8 py-4 text-lg font-medium text-white transition hover:opacity-90"
+>
+  See Our Services →
+</a>
           </div>
 
           <div className="mt-10 flex flex-wrap gap-x-10 gap-y-4 text-lg text-[#5f657d]">
@@ -179,12 +173,7 @@ export default function Home() {
             </div>
           </div>
 
-          <a
-            href="#services"
-            className="mt-10 inline-block rounded-2xl bg-[#05051c] px-8 py-4 text-lg font-medium text-white"
-          >
-            See How We Work
-          </a>
+
         </div>
       </section>
 
