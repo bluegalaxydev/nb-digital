@@ -110,7 +110,7 @@ export default function Home() {
         <div>
           <div className="overflow-hidden rounded-[28px] bg-white shadow-sm">
 <img
-  src="/peptides.png"
+  src="/peptides1.png"
   alt="Peptide marketing"
   className="w-full rounded-2xl shadow-lg"
 />
