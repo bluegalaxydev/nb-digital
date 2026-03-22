@@ -169,7 +169,7 @@ export default function Home() {
       </section>
 
 <section
-  id="how"
+  id="services"
   className="mx-auto max-w-7xl px-6 py-24"
 >
   <div className="text-center">
