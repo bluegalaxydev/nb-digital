@@ -37,17 +37,10 @@ export default function Home() {
             <a href="#how" className="text-[15px] text-gray-700 hover:text-black">
               How It Works
             </a>
-            <a href="#contact" className="text-[15px] text-gray-700 hover:text-black">
-              Contact
-            </a>
+
           </nav>
 
-          <a
-            href="#contact"
-            className="rounded-2xl bg-[#05051c] px-7 py-3 text-[15px] font-medium text-white"
-          >
-            Book a Free Consultation
-          </a>
+
         </div>
       </header>
 
