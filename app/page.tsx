@@ -74,12 +74,18 @@ export default function Home() {
 </p>
 
           <div className="mt-10 flex flex-wrap gap-4">
-<a
-  href="#services"
-  className="inline-flex items-center justify-center rounded-2xl bg-[#05051c] px-8 py-4 text-lg font-medium text-white transition hover:opacity-90"
+<button
+  type="button"
+  onClick={() =>
+    document.getElementById("services")?.scrollIntoView({
+      behavior: "smooth",
+      block: "start",
+    })
+  }
+  className="inline-flex items-center justify-center rounded-2xl bg-[#05051c] px-8 py-4 text-white"
 >
   See Our Services →
-</a>
+</button>
           </div>
 
           <div className="mt-10 flex flex-wrap gap-x-10 gap-y-4 text-lg text-[#5f657d]">
@@ -168,10 +174,7 @@ export default function Home() {
         </div>
       </section>
 
-<section
-  id="services"
-  className="mx-auto max-w-7xl px-6 py-24"
->
+<section id="services" className="mx-auto max-w-7xl px-6 py-24 scroll-mt-24">
   <div className="text-center">
     <h2 className="text-4xl font-semibold tracking-tight text-black md:text-6xl">
       Our Marketing Services
