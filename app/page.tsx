@@ -34,9 +34,7 @@ export default function Home() {
             <a href="#about" className="text-[15px] text-gray-700 hover:text-black">
               About
             </a>
-            <a href="#how" className="text-[15px] text-gray-700 hover:text-black">
-              How It Works
-            </a>
+
 
           </nav>
 
