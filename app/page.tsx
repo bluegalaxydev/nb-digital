@@ -200,7 +200,7 @@ export default function Home() {
         <div>
           <h4 className="text-lg font-semibold text-black">Website / SEO / Systems</h4>
           <div className="mt-4 space-y-3 text-gray-700">
-            {[
+{[
   "Website build / redesign",
   "Website optimization (speed, mobile, UX)",
   "Landing page creation (high-converting)",
@@ -212,9 +212,8 @@ export default function Home() {
   "Product page optimization",
   "Internal linking optimization",
   "Email capture setup (popups / forms)",
-"Email capture setup (popups / forms)",
-"  ↳ Welcome email sequence",
-"  ↳ Abandoned cart recovery setup",
+  "Welcome email sequence",
+  "Abandoned cart recovery setup",
   "CRM setup & integration",
   "Lead tracking system setup",
   "Ongoing website maintenance",
@@ -223,16 +222,16 @@ export default function Home() {
   "Offer / funnel optimization",
   "Conversion rate optimization (CRO)",
 ].map((service) => (
-              <label key={service} className="flex items-start gap-3">
-                <input
-                  type="checkbox"
-                  name="services"
-                  value={service}
-                  className="mt-1 h-4 w-4 rounded border-gray-300"
-                />
-                <span>{service}</span>
-              </label>
-            ))}
+  <label key={service} className="flex items-start gap-3">
+    <input
+      type="checkbox"
+      name="services"
+      value={service}
+      className="mt-1 h-4 w-4 rounded border-gray-300"
+    />
+    <span>{service}</span>
+  </label>
+))}
           </div>
         </div>
 
