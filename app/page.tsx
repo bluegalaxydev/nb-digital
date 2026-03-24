@@ -38,6 +38,9 @@ export default function Home() {
   <Link href="/terms-and-conditions" className="text-[15px] text-gray-700 hover:text-black">
     Terms & Conditions
   </Link>
+  <Link href="/privacy" className="text-[15px] text-gray-700 hover:text-black">
+  Privacy
+</Link>
 </nav>
 
 
