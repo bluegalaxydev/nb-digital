@@ -201,21 +201,28 @@ export default function Home() {
           <h4 className="text-lg font-semibold text-black">Website / SEO / Systems</h4>
           <div className="mt-4 space-y-3 text-gray-700">
             {[
-              "Website creation / optimization",
-              "Basic SEO implementation",
-              "Basic SEO developing",
-              "Keyword search",
-              "On-page optimization (ranking)",
-              "Email flow setup",
-              "Welcome sequence (10% off with email signup)",
-              "Abandoned cart recovery",
-              "CRM setup",
-              "Ongoing system maintenance & optimization",
-              "Free initial business audit / strategy report",
-              "Market positioning",
-              "Funnel recommendations",
-              "Growth opportunities",
-            ].map((service) => (
+  "Website build / redesign",
+  "Website optimization (speed, mobile, UX)",
+  "Landing page creation (high-converting)",
+  "Sales funnel setup",
+  "Basic SEO setup (site-wide)",
+  "Keyword research & targeting",
+  "Content creation (SEO articles)",
+  "On-page SEO optimization",
+  "Product page optimization",
+  "Internal linking optimization",
+  "Email capture setup (popups / forms)",
+"Email capture setup (popups / forms)",
+"  ↳ Welcome email sequence",
+"  ↳ Abandoned cart recovery setup",
+  "CRM setup & integration",
+  "Lead tracking system setup",
+  "Ongoing website maintenance",
+  "Initial audit & strategy report",
+  "Market positioning strategy",
+  "Offer / funnel optimization",
+  "Conversion rate optimization (CRO)",
+].map((service) => (
               <label key={service} className="flex items-start gap-3">
                 <input
                   type="checkbox"
@@ -233,22 +240,24 @@ export default function Home() {
           <h4 className="text-lg font-semibold text-black">Ads / Growth / Reporting</h4>
           <div className="mt-4 space-y-3 text-gray-700">
             {[
-              "Basic UGC ads (images)",
-              "4 creatives / month",
-              "AI-assisted + edited creatives",
-              "Advanced email automation",
-              "Upsell flows",
-              "Re-engagement campaigns",
-              "Retention sequences",
-              "Traffic / ad setup",
-              "X / Reddit ads",
-              "Platforms with little to no restrictions",
-              "Google compliance",
-              "Monthly KPI report",
-              "ROAS tracking",
-              "Conversion rates tracking",
-              "Funnel performance reporting",
-            ].map((service) => (
+  "Ad account setup (Meta / TikTok / etc.)",
+  "Campaign launch & management",
+  "Creative production (images)",
+  "AI-assisted + edited creatives",
+  "Ad copywriting",
+  "Retargeting setup",
+  "Traffic campaign setup",
+  "Low-restriction platform ads (X / Reddit)",
+  "Google Ads compliance guidance",
+  "Email marketing campaigns",
+  "Upsell & cross-sell flows",
+  "Re-engagement campaigns",
+  "Retention email sequences",
+  "Monthly performance report",
+  "ROAS tracking",
+  "Conversion tracking setup",
+  "Funnel performance tracking",
+].map((service) => (
               <label key={service} className="flex items-start gap-3">
                 <input
                   type="checkbox"
@@ -266,11 +275,15 @@ export default function Home() {
   <h4 className="text-lg font-semibold text-black">Advanced Add-Ons</h4>
   <div className="mt-4 space-y-3 text-gray-700">
     {[
-      "AI chatbot",
-      "Advanced UGC / AI video contents",
-      "Social media management",
-      "Influencer / affiliate setup",
-    ].map((service) => (
+  "AI chatbot (website)",
+  "UGC video creatives / editing",
+  "Influencer outreach setup",
+  "Affiliate program setup",
+  "Programmatic SEO setup (scaled pages)",
+  "Lead generation system (automated)",
+  "Custom automation workflows (Zapier / Make)",
+  "Reputation / review management",
+].map((service) => (
       <label key={service} className="flex items-start gap-3">
         <input
           type="checkbox"
