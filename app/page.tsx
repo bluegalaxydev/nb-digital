@@ -25,19 +25,20 @@ export default function Home() {
 </div>
 </div>
 
-          <nav className="hidden items-center gap-10 md:flex">
-<Link href="/" className="text-[15px] text-gray-700 hover:text-black">
-  Home
-</Link>
-<Link href="/services" className="text-[15px] text-gray-700 hover:text-black">
-  Services
-</Link>
-            <a href="#about" className="text-[15px] text-gray-700 hover:text-black">
-              About
-            </a>
-
-
-          </nav>
+<nav className="hidden items-center gap-10 md:flex">
+  <Link href="/" className="text-[15px] text-gray-700 hover:text-black">
+    Home
+  </Link>
+  <Link href="/#services" className="text-[15px] text-gray-700 hover:text-black">
+    Services
+  </Link>
+  <Link href="/#about" className="text-[15px] text-gray-700 hover:text-black">
+    About
+  </Link>
+  <Link href="/terms-and-conditions" className="text-[15px] text-gray-700 hover:text-black">
+    Terms & Conditions
+  </Link>
+</nav>
 
 
         </div>
