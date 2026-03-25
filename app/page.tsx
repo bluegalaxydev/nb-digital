@@ -14,13 +14,13 @@ export default function Home() {
   className="mx-auto grid max-w-7xl items-center gap-12 px-6 py-14 md:grid-cols-2"
 >
   <div>
-    <Reveal delay={0.1}>
+    <Reveal delay={0.2}>
       <div className="inline-flex items-center rounded-full bg-[#ececf3] px-5 py-3 text-sm text-gray-600">
         ✨ Marketing & Growth Experts
       </div>
     </Reveal>
 
-    <Reveal delay={0.25}>
+    <Reveal delay={0.6}>
       <h1 className="text-5xl font-semibold tracking-tight text-black md:text-7xl">
         Marketing That Helps
         <br />
@@ -30,7 +30,7 @@ export default function Home() {
       </h1>
     </Reveal>
 
-    <Reveal delay={0.45}>
+    <Reveal delay={1.00}>
       <p className="mt-6 text-lg text-gray-500 md:text-xl">
         Harbor Point Marketing helps high-risk brands—including peptide
         companies—scale through compliant growth systems, SEO, optimization and
