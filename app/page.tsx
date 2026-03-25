@@ -1,5 +1,6 @@
 "use client";
 import { Mail, Phone, MapPin } from "lucide-react";
+import Reveal from "./components/reveal";
 
 
 
@@ -8,385 +9,430 @@ export default function Home() {
     <main className="min-h-screen bg-[#f7f7f8] text-[#111111]">
 
 
-      <section
-        id="home"
-        className="mx-auto grid max-w-7xl items-center gap-12 px-6 py-14 md:grid-cols-2"
-      >
-        <div>
-          <div className="inline-flex items-center rounded-full bg-[#ececf3] px-5 py-3 text-sm text-gray-600">
-            ✨ Marketing & Growth Experts
-          </div>
-
-<h1 className="text-5xl font-semibold tracking-tight text-black md:text-7xl">
-  Marketing That Helps
-  <br />
-  <span className="text-[#6366f1]">High Risk Businesses</span>
-  <br />
-  Grow Faster
-</h1>
-
-<p className="mt-6 text-lg text-gray-500 md:text-xl">
-  Harbor Point Marketing helps high-risk brands—including peptide companies—scale through compliant growth systems, SEO, optimization and automation
-</p>
-<div className="mt-6 flex justify-center">
-  <div className="inline-flex items-center gap-2 rounded-full bg-[#eef2ff] px-4 py-2 text-sm text-[#3730a3]">
-    <span>⚡</span>
-    Specialized in high-risk marketing: peptides, supplements, and restricted industries
-  </div>
-</div>
-
-<p className="mt-3 text-sm text-gray-400 text-center">
-  Platforms like tiktok & reddit often restrict these industries — we know how to work around it.
-</p>
-
-          <div className="mt-10 flex flex-wrap gap-4">
-<button
-  type="button"
-  onClick={() =>
-    document.getElementById("services")?.scrollIntoView({
-      behavior: "smooth",
-      block: "start",
-    })
-  }
-  className="inline-flex items-center justify-center rounded-2xl bg-[#05051c] px-8 py-4 text-white"
+<section
+  id="home"
+  className="mx-auto grid max-w-7xl items-center gap-12 px-6 py-14 md:grid-cols-2"
 >
-  See Our Services →
-</button>
-          </div>
+  <div>
+    <Reveal delay={0.1}>
+      <div className="inline-flex items-center rounded-full bg-[#ececf3] px-5 py-3 text-sm text-gray-600">
+        ✨ Marketing & Growth Experts
+      </div>
+    </Reveal>
 
-          <div className="mt-10 flex flex-wrap gap-x-10 gap-y-4 text-lg text-[#5f657d]">
-            <div className="flex items-center gap-3">
-              <span className="h-3 w-3 rounded-full bg-green-500" />
-              No long-term contracts
-            </div>
-            <div className="flex items-center gap-3">
-              <span className="h-3 w-3 rounded-full bg-green-500" />
-              Done-for-you implementation
-            </div>
-            <div className="flex items-center gap-3">
-              <span className="h-3 w-3 rounded-full bg-green-500" />
-              Custom to your industry
-            </div>
-          </div>
+    <Reveal delay={0.25}>
+      <h1 className="text-5xl font-semibold tracking-tight text-black md:text-7xl">
+        Marketing That Helps
+        <br />
+        <span className="text-[#6366f1]">High Risk Businesses</span>
+        <br />
+        Grow Faster
+      </h1>
+    </Reveal>
+
+    <Reveal delay={0.45}>
+      <p className="mt-6 text-lg text-gray-500 md:text-xl">
+        Harbor Point Marketing helps high-risk brands—including peptide
+        companies—scale through compliant growth systems, SEO, optimization and
+        automation
+      </p>
+    </Reveal>
+
+    <Reveal delay={0.6}>
+      <div className="mt-6 flex justify-center">
+        <div className="inline-flex items-center gap-2 rounded-full bg-[#eef2ff] px-4 py-2 text-sm text-[#3730a3]">
+          <span>⚡</span>
+          Specialized in high-risk marketing: peptides, supplements, and restricted industries
         </div>
+      </div>
+    </Reveal>
 
-        <div>
-          <div className="overflow-hidden rounded-[28px] bg-white shadow-sm">
-<img
-  src="/peptides1.png"
-  alt="Peptide marketing"
-  className="w-full rounded-2xl shadow-lg"
-/>
-          </div>
+    <Reveal delay={0.75}>
+      <p className="mt-3 text-center text-sm text-gray-400">
+        Platforms like tiktok & reddit often restrict these industries — we know how to work around it.
+      </p>
+    </Reveal>
+
+    <Reveal delay={0.9}>
+      <div className="mt-10 flex flex-wrap gap-4">
+        <button
+          type="button"
+          onClick={() =>
+            document.getElementById("services")?.scrollIntoView({
+              behavior: "smooth",
+              block: "start",
+            })
+          }
+          className="inline-flex items-center justify-center rounded-2xl bg-[#05051c] px-8 py-4 text-white"
+        >
+          See Our Services →
+        </button>
+      </div>
+    </Reveal>
+
+    <Reveal delay={1.05}>
+      <div className="mt-10 flex flex-wrap gap-x-10 gap-y-4 text-lg text-[#5f657d]">
+        <div className="flex items-center gap-3">
+          <span className="h-3 w-3 rounded-full bg-green-500" />
+          No long-term contracts
         </div>
-      </section>
-
-
-
-      <section
-        id="about"
-        className="mx-auto grid max-w-7xl items-center gap-12 px-6 py-20 md:grid-cols-2"
-      >
-        <div className="overflow-hidden rounded-[28px] bg-white shadow-sm">
-          <img
-            src="https://images.unsplash.com/photo-1496171367470-9ed9a91ea931?auto=format&fit=crop&w=1200&q=80"
-            alt="Business dashboard on laptop"
-            className="h-[500px] w-full object-cover"
-          />
+        <div className="flex items-center gap-3">
+          <span className="h-3 w-3 rounded-full bg-green-500" />
+          Done-for-you implementation
         </div>
-
-        <div>
-          <h2 className="text-6xl font-semibold leading-tight">
-            Your Complete Business
-            <br />
-            Operating System
-          </h2>
-
-          <p className="mt-8 text-[20px] leading-10 text-[#6a6f85]">
-            We don&apos;t just run ads or post on social media. We build complete
-            marketing and operational systems that work 24/7. Whether you need
-            marketing automation, sales processes, or custom integrations—we create
-            the infrastructure that lets niche businesses scale without burning out.
-          </p>
-
-          <div className="mt-8 space-y-5 text-[18px] text-[#333]">
-            <div className="flex items-start gap-4">
-              <span className="mt-1 flex h-7 w-7 items-center justify-center rounded-full border-2 border-green-500 text-green-500">
-                ✓
-              </span>
-              Custom automation that runs your marketing 24/7
-            </div>
-            <div className="flex items-start gap-4">
-              <span className="mt-1 flex h-7 w-7 items-center justify-center rounded-full border-2 border-green-500 text-green-500">
-                ✓
-              </span>
-              Industry-specific systems built for your niche
-            </div>
-            <div className="flex items-start gap-4">
-              <span className="mt-1 flex h-7 w-7 items-center justify-center rounded-full border-2 border-green-500 text-green-500">
-                ✓
-              </span>
-              Complete integration of your sales and operations
-            </div>
-            <div className="flex items-start gap-4">
-              <span className="mt-1 flex h-7 w-7 items-center justify-center rounded-full border-2 border-green-500 text-green-500">
-                ✓
-              </span>
-              Done-for-you implementation, not just consulting
-            </div>
-          </div>
-
-
+        <div className="flex items-center gap-3">
+          <span className="h-3 w-3 rounded-full bg-green-500" />
+          Custom to your industry
         </div>
-      </section>
+      </div>
+    </Reveal>
+  </div>
+
+  <Reveal delay={1.2}>
+    <div>
+      <div className="overflow-hidden rounded-[28px] bg-white shadow-sm">
+        <img
+          src="/peptides1.png"
+          alt="Peptide marketing"
+          className="w-full rounded-2xl shadow-lg"
+        />
+      </div>
+    </div>
+  </Reveal>
+</section>
+
+
+
+<section
+  id="about"
+  className="mx-auto grid max-w-7xl items-center gap-12 px-6 py-20 md:grid-cols-2"
+>
+  <Reveal delay={0.1}>
+    <div className="overflow-hidden rounded-[28px] bg-white shadow-sm">
+      <img
+        src="https://images.unsplash.com/photo-1496171367470-9ed9a91ea931?auto=format&fit=crop&w=1200&q=80"
+        alt="Business dashboard on laptop"
+        className="h-[500px] w-full object-cover"
+      />
+    </div>
+  </Reveal>
+
+  <div>
+    <Reveal delay={0.25}>
+      <h2 className="text-6xl font-semibold leading-tight">
+        Your Complete Business
+        <br />
+        Operating System
+      </h2>
+    </Reveal>
+
+    <Reveal delay={0.4}>
+      <p className="mt-8 text-[20px] leading-10 text-[#6a6f85]">
+        We don&apos;t just run ads or post on social media. We build complete
+        marketing and operational systems that work 24/7. Whether you need
+        marketing automation, sales processes, or custom integrations—we create
+        the infrastructure that lets niche businesses scale without burning out.
+      </p>
+    </Reveal>
+
+    <Reveal delay={0.55}>
+      <div className="mt-8 space-y-5 text-[18px] text-[#333]">
+        <div className="flex items-start gap-4">
+          <span className="mt-1 flex h-7 w-7 items-center justify-center rounded-full border-2 border-green-500 text-green-500">
+            ✓
+          </span>
+          Custom automation that runs your marketing 24/7
+        </div>
+        <div className="flex items-start gap-4">
+          <span className="mt-1 flex h-7 w-7 items-center justify-center rounded-full border-2 border-green-500 text-green-500">
+            ✓
+          </span>
+          Industry-specific systems built for your niche
+        </div>
+        <div className="flex items-start gap-4">
+          <span className="mt-1 flex h-7 w-7 items-center justify-center rounded-full border-2 border-green-500 text-green-500">
+            ✓
+          </span>
+          Complete integration of your sales and operations
+        </div>
+        <div className="flex items-start gap-4">
+          <span className="mt-1 flex h-7 w-7 items-center justify-center rounded-full border-2 border-green-500 text-green-500">
+            ✓
+          </span>
+          Done-for-you implementation, not just consulting
+        </div>
+      </div>
+    </Reveal>
+  </div>
+</section>
 
 <section id="services" className="mx-auto max-w-7xl px-6 py-24 scroll-mt-24">
-  <div className="text-center">
-    <h2 className="text-4xl font-semibold tracking-tight text-black md:text-6xl">
-      Our Marketing Services
-    </h2>
-    <p className="mt-4 text-lg text-gray-500 md:text-xl">
-      Select the services you need and submit your request.
-    </p>
-  </div>
+  <Reveal delay={0.1}>
+    <div className="text-center">
+      <h2 className="text-4xl font-semibold tracking-tight text-black md:text-6xl">
+        Our Marketing Services
+      </h2>
+      <p className="mt-4 text-lg text-gray-500 md:text-xl">
+        Select the services you need and submit your request.
+      </p>
+    </div>
+  </Reveal>
 
   <form
     action="https://formspree.io/f/xlgplbkp"
     method="POST"
     className="mt-16 grid gap-10 md:grid-cols-2"
   >
-    {/* Left: service checkboxes */}
-    <div className="rounded-3xl bg-white p-8 shadow-sm ring-1 ring-black/5">
-      <h3 className="text-2xl font-semibold text-black">Choose Services</h3>
-      <p className="mt-2 text-gray-500">
-        Check all services you want us to help with.
-      </p>
+    <Reveal delay={0.25}>
+      <div className="rounded-3xl bg-white p-8 shadow-sm ring-1 ring-black/5">
+        <h3 className="text-2xl font-semibold text-black">Choose Services</h3>
+        <p className="mt-2 text-gray-500">
+          Check all services you want us to help with.
+        </p>
 
-      <div className="mt-8 space-y-8">
-        <div>
-          <h4 className="text-lg font-semibold text-black">Website / SEO / Systems</h4>
-          <div className="mt-4 space-y-3 text-gray-700">
-{[
-  "Website build / redesign",
-  "Website optimization (speed, mobile, UX)",
-  "Landing page creation (high-converting)",
-  "Sales funnel setup",
-  "Basic SEO setup (site-wide)",
-  "Keyword research & targeting",
-  "Content creation (SEO articles)",
-  "On-page SEO optimization",
-  "Product page optimization",
-  "Internal linking optimization",
-"Email capture setup (popups / forms)",
-"  ↳ Welcome email sequence",
-"  ↳ Abandoned cart recovery setup",
-  "CRM setup & integration",
-  "Lead tracking system setup",
-  "Ongoing website maintenance",
-  "Initial audit & strategy report",
-  "Market positioning strategy",
-  "Offer / funnel optimization",
-  "Conversion rate optimization (CRO)",
-].map((service) => (
-  <label key={service} className="flex items-start gap-3">
-    <input
-      type="checkbox"
-      name="services"
-      value={service}
-      className="mt-1 h-4 w-4 rounded border-gray-300"
-    />
-    <span>{service}</span>
-  </label>
-))}
+        <div className="mt-8 space-y-8">
+          <div>
+            <h4 className="text-lg font-semibold text-black">
+              Website / SEO / Systems
+            </h4>
+            <div className="mt-4 space-y-3 text-gray-700">
+              {[
+                "Website build / redesign",
+                "Website optimization (speed, mobile, UX)",
+                "Landing page creation (high-converting)",
+                "Sales funnel setup",
+                "Basic SEO setup (site-wide)",
+                "Keyword research & targeting",
+                "Content creation (SEO articles)",
+                "On-page SEO optimization",
+                "Product page optimization",
+                "Internal linking optimization",
+                "Email capture setup (popups / forms)",
+                "  ↳ Welcome email sequence",
+                "  ↳ Abandoned cart recovery setup",
+                "CRM setup & integration",
+                "Lead tracking system setup",
+                "Ongoing website maintenance",
+                "Initial audit & strategy report",
+                "Market positioning strategy",
+                "Offer / funnel optimization",
+                "Conversion rate optimization (CRO)",
+              ].map((service) => (
+                <label key={service} className="flex items-start gap-3">
+                  <input
+                    type="checkbox"
+                    name="services"
+                    value={service}
+                    className="mt-1 h-4 w-4 rounded border-gray-300"
+                  />
+                  <span>{service}</span>
+                </label>
+              ))}
+            </div>
+          </div>
+
+          <div>
+            <h4 className="text-lg font-semibold text-black">
+              Ads / Growth / Reporting
+            </h4>
+            <div className="mt-4 space-y-3 text-gray-700">
+              {[
+                "Ad account setup (Meta / TikTok / etc.)",
+                "Campaign launch & management",
+                "Creative production (images)",
+                "AI-assisted + edited creatives",
+                "Ad copywriting",
+                "Retargeting setup",
+                "Traffic campaign setup",
+                "Low-restriction platform ads (X / Reddit)",
+                "Google Ads compliance guidance",
+                "Email marketing campaigns",
+                "Upsell & cross-sell flows",
+                "Re-engagement campaigns",
+                "Retention email sequences",
+                "Monthly performance report",
+                "ROAS tracking",
+                "Conversion tracking setup",
+                "Funnel performance tracking",
+              ].map((service) => (
+                <label key={service} className="flex items-start gap-3">
+                  <input
+                    type="checkbox"
+                    name="services"
+                    value={service}
+                    className="mt-1 h-4 w-4 rounded border-gray-300"
+                  />
+                  <span>{service}</span>
+                </label>
+              ))}
+            </div>
+          </div>
+
+          <div>
+            <h4 className="text-lg font-semibold text-black">
+              Advanced Add-Ons
+            </h4>
+            <div className="mt-4 space-y-3 text-gray-700">
+              {[
+                "AI chatbot (website)",
+                "UGC video creatives / editing",
+                "Influencer outreach setup",
+                "Affiliate program setup",
+                "Programmatic SEO setup (scaled pages)",
+                "Lead generation system (automated)",
+                "Custom automation workflows (Zapier / Make)",
+                "Reputation / review management",
+              ].map((service) => (
+                <label key={service} className="flex items-start gap-3">
+                  <input
+                    type="checkbox"
+                    name="services"
+                    value={service}
+                    className="mt-1 h-4 w-4 rounded border-gray-300"
+                  />
+                  <span>{service}</span>
+                </label>
+              ))}
+            </div>
           </div>
         </div>
+      </div>
+    </Reveal>
 
-        <div>
-          <h4 className="text-lg font-semibold text-black">Ads / Growth / Reporting</h4>
-          <div className="mt-4 space-y-3 text-gray-700">
-            {[
-  "Ad account setup (Meta / TikTok / etc.)",
-  "Campaign launch & management",
-  "Creative production (images)",
-  "AI-assisted + edited creatives",
-  "Ad copywriting",
-  "Retargeting setup",
-  "Traffic campaign setup",
-  "Low-restriction platform ads (X / Reddit)",
-  "Google Ads compliance guidance",
-  "Email marketing campaigns",
-  "Upsell & cross-sell flows",
-  "Re-engagement campaigns",
-  "Retention email sequences",
-  "Monthly performance report",
-  "ROAS tracking",
-  "Conversion tracking setup",
-  "Funnel performance tracking",
-].map((service) => (
-              <label key={service} className="flex items-start gap-3">
-                <input
-                  type="checkbox"
-                  name="services"
-                  value={service}
-                  className="mt-1 h-4 w-4 rounded border-gray-300"
-                />
-                <span>{service}</span>
-              </label>
-            ))}
-          </div>
-        </div>
-
-<div>
-  <h4 className="text-lg font-semibold text-black">Advanced Add-Ons</h4>
-  <div className="mt-4 space-y-3 text-gray-700">
-    {[
-  "AI chatbot (website)",
-  "UGC video creatives / editing",
-  "Influencer outreach setup",
-  "Affiliate program setup",
-  "Programmatic SEO setup (scaled pages)",
-  "Lead generation system (automated)",
-  "Custom automation workflows (Zapier / Make)",
-  "Reputation / review management",
-].map((service) => (
-      <label key={service} className="flex items-start gap-3">
+    <Reveal delay={0.4}>
+      <div className="rounded-3xl bg-white p-8 shadow-sm ring-1 ring-black/5">
         <input
-          type="checkbox"
-          name="services"
-          value={service}
-          className="mt-1 h-4 w-4 rounded border-gray-300"
+          type="hidden"
+          name="_subject"
+          value="New Service Request from Harbor Point Marketing"
         />
-        <span>{service}</span>
-      </label>
-    ))}
-  </div>
-</div>
-      </div>
-    </div>
 
-{/* Right: contact form */}
-<div className="rounded-3xl bg-white p-8 shadow-sm ring-1 ring-black/5">
-  <input
-    type="hidden"
-    name="_subject"
-    value="New Service Request from Harbor Point Marketing"
-  />
+        <h3 className="text-2xl font-semibold text-black">
+          Submit Your Request
+        </h3>
+        <p className="mt-2 text-gray-500">
+          Tell us about your business and we’ll review your service request.
+        </p>
 
-  <h3 className="text-2xl font-semibold text-black">Submit Your Request</h3>
-  <p className="mt-2 text-gray-500">
-    Tell us about your business and we’ll review your service request.
-  </p>
+        <div className="mt-8 space-y-5">
+          <div>
+            <label className="mb-2 block text-sm font-medium text-black">
+              Name
+            </label>
+            <input
+              type="text"
+              name="name"
+              required
+              className="w-full rounded-2xl border border-gray-300 px-4 py-3 outline-none focus:border-black"
+              placeholder="Your name"
+            />
+          </div>
 
-  <div className="mt-8 space-y-5">
-    <div>
-      <label className="mb-2 block text-sm font-medium text-black">Name</label>
-      <input
-        type="text"
-        name="name"
-        required
-        className="w-full rounded-2xl border border-gray-300 px-4 py-3 outline-none focus:border-black"
-        placeholder="Your name"
-      />
-    </div>
+          <div>
+            <label className="mb-2 block text-sm font-medium text-black">
+              Email
+            </label>
+            <input
+              type="email"
+              name="email"
+              required
+              className="w-full rounded-2xl border border-gray-300 px-4 py-3 outline-none focus:border-black"
+              placeholder="you@example.com"
+            />
+          </div>
 
-    <div>
-      <label className="mb-2 block text-sm font-medium text-black">Email</label>
-      <input
-        type="email"
-        name="email"
-        required
-        className="w-full rounded-2xl border border-gray-300 px-4 py-3 outline-none focus:border-black"
-        placeholder="you@example.com"
-      />
-    </div>
+          <div>
+            <label className="mb-2 block text-sm font-medium text-black">
+              Company
+            </label>
+            <input
+              type="text"
+              name="company"
+              className="w-full rounded-2xl border border-gray-300 px-4 py-3 outline-none focus:border-black"
+              placeholder="Company name"
+            />
+          </div>
 
-    <div>
-      <label className="mb-2 block text-sm font-medium text-black">Company</label>
-      <input
-        type="text"
-        name="company"
-        className="w-full rounded-2xl border border-gray-300 px-4 py-3 outline-none focus:border-black"
-        placeholder="Company name"
-      />
-    </div>
+          <div>
+            <label className="mb-2 block text-sm font-medium text-black">
+              Industry
+            </label>
+            <input
+              type="text"
+              name="industry"
+              className="w-full rounded-2xl border border-gray-300 px-4 py-3 outline-none focus:border-black"
+              placeholder="e.g. peptides, prediction/trading, cannabis"
+            />
+          </div>
 
-    <div>
-      <label className="mb-2 block text-sm font-medium text-black">Industry</label>
-      <input
-        type="text"
-        name="industry"
-        className="w-full rounded-2xl border border-gray-300 px-4 py-3 outline-none focus:border-black"
-        placeholder="e.g. peptides, prediction/trading, cannabis"
-      />
-    </div>
+          <div>
+            <label className="mb-2 block text-sm font-medium text-black">
+              Extra Notes
+            </label>
+            <textarea
+              name="message"
+              rows={6}
+              className="w-full rounded-2xl border border-gray-300 px-4 py-3 outline-none focus:border-black"
+              placeholder="Tell us what you need most right now."
+            />
+          </div>
 
-    <div>
-      <label className="mb-2 block text-sm font-medium text-black">
-        Extra Notes
-      </label>
-      <textarea
-        name="message"
-        rows={6}
-        className="w-full rounded-2xl border border-gray-300 px-4 py-3 outline-none focus:border-black"
-        placeholder="Tell us what you need most right now."
-      />
-    </div>
-
-    <button
-      type="submit"
-      className="w-full rounded-2xl bg-[#05051c] px-8 py-4 text-lg font-medium text-white transition hover:opacity-90"
-    >
-      Submit Request
-    </button>
-
-    <div className="mt-10 space-y-8">
-      <div className="flex items-start gap-6">
-        <div className="flex h-16 w-16 items-center justify-center rounded-2xl bg-gradient-to-br from-blue-500 to-purple-600 text-white">
-          <Mail size={24} />
-        </div>
-        <div>
-          <p className="text-lg font-semibold">Email Us</p>
-          <a
-            href="mailto:info@notbadcapital.com"
-            className="mt-1 block text-base text-[#6a6f85] hover:underline"
+          <button
+            type="submit"
+            className="w-full rounded-2xl bg-[#05051c] px-8 py-4 text-lg font-medium text-white transition hover:opacity-90"
           >
-            info@notbadcapital.com
-          </a>
-        </div>
-      </div>
+            Submit Request
+          </button>
 
-      <div className="flex items-start gap-6">
-        <div className="flex h-16 w-16 items-center justify-center rounded-2xl bg-gradient-to-br from-blue-500 to-purple-600 text-white">
-          <Phone size={24} />
-        </div>
-        <div>
-          <p className="text-lg font-semibold">Call Us</p>
-          <a
-            href="tel:+16575774455"
-            className="mt-1 block text-base text-[#6a6f85] hover:underline"
-          >
-            +1 (657) 577-4455
-          </a>
-        </div>
-      </div>
+          <div className="mt-10 space-y-8">
+            <div className="flex items-start gap-6">
+              <div className="flex h-16 w-16 items-center justify-center rounded-2xl bg-gradient-to-br from-blue-500 to-purple-600 text-white">
+                <Mail size={24} />
+              </div>
+              <div>
+                <p className="text-lg font-semibold">Email Us</p>
+                <a
+                  href="mailto:info@notbadcapital.com"
+                  className="mt-1 block text-base text-[#6a6f85] hover:underline"
+                >
+                  info@notbadcapital.com
+                </a>
+              </div>
+            </div>
 
-      <div className="flex items-start gap-6">
-        <div className="flex h-16 w-16 items-center justify-center rounded-2xl bg-gradient-to-br from-blue-500 to-purple-600 text-white">
-          <MapPin size={24} />
-        </div>
-        <div>
-          <p className="text-lg font-semibold">Visit Us</p>
-          <p className="mt-1 text-base leading-7 text-[#6a6f85]">
-            6013 Warner Ave
-            <br />
-            Huntington Beach, CA 92647
-          </p>
+            <div className="flex items-start gap-6">
+              <div className="flex h-16 w-16 items-center justify-center rounded-2xl bg-gradient-to-br from-blue-500 to-purple-600 text-white">
+                <Phone size={24} />
+              </div>
+              <div>
+                <p className="text-lg font-semibold">Call Us</p>
+                <a
+                  href="tel:+16575774455"
+                  className="mt-1 block text-base text-[#6a6f85] hover:underline"
+                >
+                  +1 (657) 577-4455
+                </a>
+              </div>
+            </div>
+
+            <div className="flex items-start gap-6">
+              <div className="flex h-16 w-16 items-center justify-center rounded-2xl bg-gradient-to-br from-blue-500 to-purple-600 text-white">
+                <MapPin size={24} />
+              </div>
+              <div>
+                <p className="text-lg font-semibold">Visit Us</p>
+                <p className="mt-1 text-base leading-7 text-[#6a6f85]">
+                  6013 Warner Ave
+                  <br />
+                  Huntington Beach, CA 92647
+                </p>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
-    </div>
-  </div>
-</div>
-</form>
+    </Reveal>
+  </form>
 </section>
 </main>
   );
