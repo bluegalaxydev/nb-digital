@@ -20,6 +20,11 @@ export default function Reveal({
     const node = ref.current;
     if (!node) return;
 
+    if (typeof window === "undefined" || !("IntersectionObserver" in window)) {
+      setVisible(true);
+      return;
+    }
+
     const observer = new IntersectionObserver(
       ([entry]) => {
         if (entry.isIntersecting) {
@@ -27,7 +32,10 @@ export default function Reveal({
           observer.unobserve(node);
         }
       },
-      { threshold: 0.15 }
+      {
+        threshold: 0.1,
+        rootMargin: "0px 0px -10% 0px",
+      }
     );
 
     observer.observe(node);
