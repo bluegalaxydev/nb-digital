@@ -1,46 +1,6 @@
-import Link from "next/link";
-
 export default function TermsAndConditionsPage() {
   return (
     <main className="min-h-screen bg-[#f7f7f8] text-[#111111]">
-      <header className="border-b border-gray-200 bg-white">
-        <div className="mx-auto flex max-w-7xl items-center justify-between px-6 py-5">
-          <Link href="/" className="flex items-center gap-3">
-            <img
-              src="/logo.png"
-              alt="Harbor Point Marketing Services"
-              className="h-12 w-auto object-contain"
-            />
-            <div className="leading-tight">
-              <div className="text-xl font-semibold tracking-tight text-slate-900">
-                Harbor Point
-              </div>
-              <div className="text-[11px] uppercase tracking-[0.18em] text-slate-500">
-                Marketing Services
-              </div>
-            </div>
-          </Link>
-
-          <nav className="hidden items-center gap-10 md:flex">
-            <Link href="/" className="text-[15px] text-gray-700 hover:text-black">
-              Home
-            </Link>
-            <Link href="/#services" className="text-[15px] text-gray-700 hover:text-black">
-              Services
-            </Link>
-            <Link href="/#about" className="text-[15px] text-gray-700 hover:text-black">
-              About
-            </Link>
-            <Link
-              href="/terms-and-conditions"
-              className="text-[15px] font-medium text-black"
-            >
-              Terms & Conditions
-            </Link>
-          </nav>
-        </div>
-      </header>
-
       <section className="mx-auto max-w-6xl px-6 py-20 md:px-10 md:py-24">
         <div className="max-w-5xl">
           <h1 className="text-5xl font-semibold tracking-tight text-black md:text-6xl">
