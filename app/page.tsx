@@ -1,51 +1,12 @@
 "use client";
 import { Mail, Phone, MapPin } from "lucide-react";
 
-import Link from "next/link";
+
 
 export default function Home() {
   return (
     <main className="min-h-screen bg-[#f7f7f8] text-[#111111]">
-      <header className="border-b border-gray-200 bg-white">
-        <div className="mx-auto flex max-w-7xl items-center justify-between px-6 py-5">
-<div className="flex items-center gap-3">
-  <img
-    src="/logo.png"
-    alt="Harbor Point Marketing Services"
-    className="h-12 w-auto object-contain"
-  />
 
-<div className="leading-tight">
-  <div className="font-semibold text-xl tracking-tight text-slate-900">
-    Harbor Point
-  </div>
-<div className="text-[11px] uppercase tracking-[0.18em] text-slate-500">
-  Marketing Services
-</div>
-</div>
-</div>
-
-<nav className="hidden items-center gap-10 md:flex">
-  <Link href="/" className="text-[15px] text-gray-700 hover:text-black">
-    Home
-  </Link>
-  <Link href="/#services" className="text-[15px] text-gray-700 hover:text-black">
-    Services
-  </Link>
-  <Link href="/#about" className="text-[15px] text-gray-700 hover:text-black">
-    About
-  </Link>
-  <Link href="/terms-and-conditions" className="text-[15px] text-gray-700 hover:text-black">
-    Terms & Conditions
-  </Link>
-  <Link href="/privacy" className="text-[15px] text-gray-700 hover:text-black">
-  Privacy
-</Link>
-</nav>
-
-
-        </div>
-      </header>
 
       <section
         id="home"
