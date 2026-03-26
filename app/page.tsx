@@ -20,7 +20,7 @@ export default function Home() {
       </div>
     </Reveal>
 
-    <Reveal delay={0.6}>
+    <Reveal delay={0.8}>
       <h1 className="text-5xl font-semibold tracking-tight text-black md:text-7xl">
         Marketing That Helps
         <br />
@@ -30,7 +30,7 @@ export default function Home() {
       </h1>
     </Reveal>
 
-    <Reveal delay={1.00}>
+    <Reveal delay={1.40}>
       <p className="mt-6 text-lg text-gray-500 md:text-xl">
         Harbor Point Marketing helps high-risk brands—including peptide
         companies—scale through compliant growth systems, SEO, optimization and
@@ -38,7 +38,7 @@ export default function Home() {
       </p>
     </Reveal>
 
-    <Reveal delay={0.6}>
+    <Reveal delay={2.0}>
       <div className="mt-6 flex justify-center">
         <div className="inline-flex items-center gap-2 rounded-full bg-[#eef2ff] px-4 py-2 text-sm text-[#3730a3]">
           <span>⚡</span>
@@ -47,13 +47,13 @@ export default function Home() {
       </div>
     </Reveal>
 
-    <Reveal delay={0.75}>
+    <Reveal delay={2.40}>
       <p className="mt-3 text-center text-sm text-gray-400">
         Platforms like tiktok & reddit often restrict these industries — we know how to work around it.
       </p>
     </Reveal>
 
-    <Reveal delay={0.9}>
+    <Reveal delay={2.80}>
       <div className="mt-10 flex flex-wrap gap-4">
         <button
           type="button"
@@ -70,7 +70,7 @@ export default function Home() {
       </div>
     </Reveal>
 
-    <Reveal delay={1.05}>
+    <Reveal delay={3.20}>
       <div className="mt-10 flex flex-wrap gap-x-10 gap-y-4 text-lg text-[#5f657d]">
         <div className="flex items-center gap-3">
           <span className="h-3 w-3 rounded-full bg-green-500" />
@@ -88,7 +88,7 @@ export default function Home() {
     </Reveal>
   </div>
 
-  <Reveal delay={1.2}>
+  <Reveal delay={1.80}>
     <div>
       <div className="overflow-hidden rounded-[28px] bg-white shadow-sm">
         <img
@@ -107,7 +107,7 @@ export default function Home() {
   id="about"
   className="mx-auto grid max-w-7xl items-center gap-12 px-6 py-20 md:grid-cols-2"
 >
-  <Reveal delay={0.1}>
+  <Reveal delay={0.3}>
     <div className="overflow-hidden rounded-[28px] bg-white shadow-sm">
       <img
         src="https://images.unsplash.com/photo-1496171367470-9ed9a91ea931?auto=format&fit=crop&w=1200&q=80"
@@ -118,7 +118,7 @@ export default function Home() {
   </Reveal>
 
   <div>
-    <Reveal delay={0.25}>
+    <Reveal delay={1.00}>
       <h2 className="text-6xl font-semibold leading-tight">
         Your Complete Business
         <br />
@@ -126,7 +126,7 @@ export default function Home() {
       </h2>
     </Reveal>
 
-    <Reveal delay={0.4}>
+    <Reveal delay={1.60}>
       <p className="mt-8 text-[20px] leading-10 text-[#6a6f85]">
         We don&apos;t just run ads or post on social media. We build complete
         marketing and operational systems that work 24/7. Whether you need
@@ -135,7 +135,7 @@ export default function Home() {
       </p>
     </Reveal>
 
-    <Reveal delay={0.55}>
+    <Reveal delay={2.20}>
       <div className="mt-8 space-y-5 text-[18px] text-[#333]">
         <div className="flex items-start gap-4">
           <span className="mt-1 flex h-7 w-7 items-center justify-center rounded-full border-2 border-green-500 text-green-500">
@@ -167,7 +167,7 @@ export default function Home() {
 </section>
 
 <section id="services" className="mx-auto max-w-7xl px-6 py-24 scroll-mt-24">
-  <Reveal delay={0.1}>
+  <Reveal delay={0.3}>
     <div className="text-center">
       <h2 className="text-4xl font-semibold tracking-tight text-black md:text-6xl">
         Our Marketing Services
@@ -183,7 +183,7 @@ export default function Home() {
     method="POST"
     className="mt-16 grid gap-10 md:grid-cols-2"
   >
-    <Reveal delay={0.25}>
+    <Reveal delay={1.00}>
       <div className="rounded-3xl bg-white p-8 shadow-sm ring-1 ring-black/5">
         <h3 className="text-2xl font-semibold text-black">Choose Services</h3>
         <p className="mt-2 text-gray-500">
@@ -299,7 +299,7 @@ export default function Home() {
       </div>
     </Reveal>
 
-    <Reveal delay={0.4}>
+    <Reveal delay={1.4}>
       <div className="rounded-3xl bg-white p-8 shadow-sm ring-1 ring-black/5">
         <input
           type="hidden"

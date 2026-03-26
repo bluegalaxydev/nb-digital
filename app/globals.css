@@ -23,7 +23,7 @@ body {
 @keyframes revealFadeUp {
   from {
     opacity: 0;
-    transform: translateY(28px);
+    transform: translateY(40px); /* 原来20 → 改成40 */
   }
   to {
     opacity: 1;
@@ -37,5 +37,5 @@ body {
 
 .reveal-ltr-active {
   opacity: 1;
-  animation: revealFadeUp 1.6s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+  animation: revealFadeUp 1.8s cubic-bezier(0.22, 1, 0.36, 1) forwards;
 }
