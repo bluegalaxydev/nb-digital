@@ -33,9 +33,17 @@ body {
 
 .reveal-ltr-hidden {
   opacity: 0;
+  transform: translateY(40px);
 }
 
-.reveal-ltr-active {
+/* 轻一点（用于小元素） */
+.reveal-soft {
+  opacity: 1;
+  animation: revealFadeUp 1.2s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+}
+
+/* 重一点（用于标题、大块） */
+.reveal-strong {
   opacity: 1;
   animation: revealFadeUp 1.8s cubic-bezier(0.22, 1, 0.36, 1) forwards;
 }
