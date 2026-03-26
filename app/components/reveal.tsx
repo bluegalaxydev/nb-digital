@@ -1,17 +1,19 @@
 "use client";
 
-import { useEffect, useRef, useState, type ReactNode } from "react";
+import { useEffect, useRef, useState } from "react";
 
 type RevealProps = {
-  children: ReactNode;
+  children: React.ReactNode;
   className?: string;
   delay?: number;
+  variant?: "soft" | "strong";
 };
 
 export default function Reveal({
   children,
   className = "",
   delay = 0,
+  variant = "strong",
 }: RevealProps) {
   const ref = useRef<HTMLDivElement | null>(null);
   const [visible, setVisible] = useState(false);
@@ -19,11 +21,6 @@ export default function Reveal({
   useEffect(() => {
     const node = ref.current;
     if (!node) return;
-
-    if (typeof window === "undefined" || !("IntersectionObserver" in window)) {
-      setVisible(true);
-      return;
-    }
 
     const observer = new IntersectionObserver(
       ([entry]) => {
@@ -33,8 +30,8 @@ export default function Reveal({
         }
       },
       {
-        threshold: 0.1,
-        rootMargin: "0px 0px -10% 0px",
+        threshold: 0.2,
+        rootMargin: "0px 0px -8% 0px",
       }
     );
 
@@ -43,11 +40,14 @@ export default function Reveal({
     return () => observer.disconnect();
   }, []);
 
+  const activeClass =
+    variant === "soft" ? "reveal-soft" : "reveal-strong";
+
   return (
     <div
       ref={ref}
       className={`${className} ${
-        visible ? "reveal-ltr-active" : "reveal-ltr-hidden"
+        visible ? activeClass : "reveal-ltr-hidden"
       }`}
       style={{ animationDelay: `${delay}s` }}
     >
