@@ -1,29 +1,26 @@
 @import "tailwindcss";
 
 :root {
---background: #ffffff;
---foreground: #171717;
-}
-
-
-
-@media (prefers-color-scheme: dark) {
-  :root {
---background: #0a0a0a;
---foreground: #ededed;
-  }
+  --background: #f7f7f8;
+  --foreground: #111111;
+  --accent: #6366f1;
+  --accent-dark: #4f46e5;
 }
 
 body {
   background: var(--background);
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
+
+/* ── Reveal animations ─────────────────────────── */
 
 @keyframes revealFadeUp {
   from {
     opacity: 0;
-    transform: translateY(40px); /* 原来20 → 改成40 */
+    transform: translateY(32px);
   }
   to {
     opacity: 1;
@@ -31,19 +28,33 @@ body {
   }
 }
 
+/* Hidden state before intersection */
 .reveal-ltr-hidden {
   opacity: 0;
-  transform: translateY(40px);
+  transform: translateY(32px);
 }
 
-/* 轻一点（用于小元素） */
+/*
+ * FIX: use "both" instead of "forwards" so the animation's
+ * `from` keyframe (opacity:0) is applied DURING the delay.
+ * This eliminates the flash/flicker that happened when the
+ * class set opacity:1 before the delayed animation started.
+ */
 .reveal-soft {
-  opacity: 1;
-  animation: revealFadeUp 1.2s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+  animation: revealFadeUp 0.8s cubic-bezier(0.22, 1, 0.36, 1) both;
 }
 
-/* 重一点（用于标题、大块） */
 .reveal-strong {
-  opacity: 1;
-  animation: revealFadeUp 1.8s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+  animation: revealFadeUp 1.1s cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+
+/* Smooth scroll for anchor links */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Focus styles for accessibility */
+:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
 }

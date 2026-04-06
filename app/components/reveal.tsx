@@ -30,26 +30,22 @@ export default function Reveal({
         }
       },
       {
-        threshold: 0.2,
-        rootMargin: "0px 0px -8% 0px",
+        threshold: 0.15,
+        rootMargin: "0px 0px -5% 0px",
       }
     );
 
     observer.observe(node);
-
     return () => observer.disconnect();
   }, []);
 
-  const activeClass =
-    variant === "soft" ? "reveal-soft" : "reveal-strong";
+  const activeClass = variant === "soft" ? "reveal-soft" : "reveal-strong";
 
   return (
     <div
       ref={ref}
-      className={`${className} ${
-        visible ? activeClass : "reveal-ltr-hidden"
-      }`}
-      style={{ animationDelay: `${delay}s` }}
+      className={`${className} ${visible ? activeClass : "reveal-ltr-hidden"}`}
+      style={visible ? { animationDelay: `${delay}s` } : undefined}
     >
       {children}
     </div>
