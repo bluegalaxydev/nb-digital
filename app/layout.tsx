@@ -41,9 +41,13 @@ export default function RootLayout({
         className={`${geistSans.variable} ${geistMono.variable} bg-[#f7f7f8] text-[#111111]`}
       >
         {/* ── Header ── */}
-        <header className="sticky top-0 z-40 border-b border-gray-200 bg-white/95 backdrop-blur-sm">
+        <header className="sticky top-0 z-40 border-b border-white/60 bg-white/70 backdrop-blur-xl">
           <div className="relative mx-auto flex max-w-7xl items-center justify-between px-6 py-4">
-            <Link href="/" className="flex items-center gap-3" aria-label="Harbor Point Marketing — Home">
+            <Link
+              href="/"
+              className="flex items-center gap-3 transition hover:opacity-80"
+              aria-label="Harbor Point Marketing — Home"
+            >
               <img
                 src="/logo.png"
                 alt=""
@@ -62,28 +66,25 @@ export default function RootLayout({
             </Link>
 
             {/* Desktop nav */}
-            <nav className="hidden items-center gap-10 md:flex" aria-label="Main navigation">
-              <Link href="/" className="text-[15px] text-gray-700 transition hover:text-black">
-                Home
-              </Link>
-              <Link href="/#services" className="text-[15px] text-gray-700 transition hover:text-black">
-                Services
-              </Link>
-              <Link href="/#about" className="text-[15px] text-gray-700 transition hover:text-black">
-                About
-              </Link>
-              <Link
-                href="/terms-and-conditions"
-                className="text-[15px] text-gray-700 transition hover:text-black"
-              >
-                Terms &amp; Conditions
-              </Link>
-              <Link
-                href="/privacy"
-                className="text-[15px] text-gray-700 transition hover:text-black"
-              >
-                Privacy
-              </Link>
+            <nav
+              className="hidden items-center gap-10 md:flex"
+              aria-label="Main navigation"
+            >
+              {[
+                { href: "/", label: "Home" },
+                { href: "/#services", label: "Services" },
+                { href: "/#about", label: "About" },
+                { href: "/terms-and-conditions", label: "Terms & Conditions" },
+                { href: "/privacy", label: "Privacy" },
+              ].map((link) => (
+                <Link
+                  key={link.href}
+                  href={link.href}
+                  className="relative text-[15px] text-gray-600 transition hover:text-black after:absolute after:bottom-[-4px] after:left-0 after:h-[2px] after:w-0 after:bg-[#6366f1] after:transition-all after:duration-300 hover:after:w-full"
+                >
+                  {link.label}
+                </Link>
+              ))}
             </nav>
 
             {/* Mobile nav */}
@@ -94,13 +95,33 @@ export default function RootLayout({
         {children}
 
         {/* ── Footer ── */}
-        <footer className="border-t border-gray-200 bg-white" role="contentinfo">
-          <div className="mx-auto max-w-7xl px-6 py-12">
+        <footer
+          className="relative overflow-hidden border-t border-gray-200/60 bg-white"
+          role="contentinfo"
+        >
+          {/* Subtle gradient accent at top edge */}
+          <div
+            className="absolute left-0 right-0 top-0 h-px bg-gradient-to-r from-transparent via-indigo-300/40 to-transparent"
+            aria-hidden="true"
+          />
+
+          <div className="mx-auto max-w-7xl px-6 py-14">
             <div className="grid gap-10 md:grid-cols-3">
               <div>
-                <Link href="/" className="flex items-center gap-3">
-                  <img src="/logo.png" alt="" className="h-10 w-auto object-contain" width={40} height={40} />
-                  <span className="text-lg font-semibold text-slate-900">Harbor Point</span>
+                <Link
+                  href="/"
+                  className="flex items-center gap-3 transition hover:opacity-80"
+                >
+                  <img
+                    src="/logo.png"
+                    alt=""
+                    className="h-10 w-auto object-contain"
+                    width={40}
+                    height={40}
+                  />
+                  <span className="text-lg font-semibold text-slate-900">
+                    Harbor Point
+                  </span>
                 </Link>
                 <p className="mt-4 text-sm leading-6 text-gray-500">
                   Marketing systems for high-risk businesses. Peptides,
@@ -109,7 +130,7 @@ export default function RootLayout({
               </div>
 
               <nav aria-label="Footer navigation">
-                <h4 className="text-sm font-semibold uppercase tracking-wider text-gray-900">
+                <h4 className="text-xs font-semibold uppercase tracking-wider text-gray-400">
                   Quick Links
                 </h4>
                 <ul className="mt-4 space-y-3">
@@ -117,7 +138,10 @@ export default function RootLayout({
                     { href: "/", label: "Home" },
                     { href: "/#services", label: "Services" },
                     { href: "/#about", label: "About" },
-                    { href: "/terms-and-conditions", label: "Terms & Conditions" },
+                    {
+                      href: "/terms-and-conditions",
+                      label: "Terms & Conditions",
+                    },
                     { href: "/privacy", label: "Privacy Policy" },
                   ].map((link) => (
                     <li key={link.href}>
@@ -133,17 +157,23 @@ export default function RootLayout({
               </nav>
 
               <div>
-                <h4 className="text-sm font-semibold uppercase tracking-wider text-gray-900">
+                <h4 className="text-xs font-semibold uppercase tracking-wider text-gray-400">
                   Contact
                 </h4>
                 <address className="mt-4 space-y-3 text-sm not-italic text-gray-500">
                   <p>
-                    <a href="mailto:info@notbadcapital.com" className="hover:text-[#6366f1]">
+                    <a
+                      href="mailto:info@notbadcapital.com"
+                      className="transition hover:text-[#6366f1]"
+                    >
                       info@notbadcapital.com
                     </a>
                   </p>
                   <p>
-                    <a href="tel:+16575774455" className="hover:text-[#6366f1]">
+                    <a
+                      href="tel:+16575774455"
+                      className="transition hover:text-[#6366f1]"
+                    >
                       +1 (657) 577-4455
                     </a>
                   </p>
@@ -156,9 +186,11 @@ export default function RootLayout({
               </div>
             </div>
 
-            <div className="mt-10 border-t border-gray-100 pt-6 text-center text-xs text-gray-400">
-              &copy; {new Date().getFullYear()} Harbor Point Marketing Services. All rights reserved.
-            </div>
+            <div className="section-divider mx-auto mt-10 max-w-3xl" />
+            <p className="mt-6 text-center text-xs text-gray-400">
+              &copy; {new Date().getFullYear()} Harbor Point Marketing Services.
+              All rights reserved.
+            </p>
           </div>
         </footer>
       </body>

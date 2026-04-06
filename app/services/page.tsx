@@ -13,14 +13,17 @@ const services = [
   {
     title: "SEO",
     text: "We improve your rankings, increase organic traffic, and build long-term visibility for high-risk products.",
+    icon: "🔍",
   },
   {
     title: "Paid Ads",
     text: "We run ads on TikTok, Reddit, and X to drive traffic, leads, and revenue — even in restricted categories.",
+    icon: "📈",
   },
   {
     title: "Offer Refinement",
     text: "We revise your proposal and messaging until it is clear, persuasive, and ready to convert.",
+    icon: "✦",
   },
 ];
 
@@ -30,11 +33,26 @@ export default function ServicesPage() {
       <section
         id="services"
         aria-label="Marketing services overview"
-        className="mx-auto max-w-7xl px-6 py-20"
+        className="relative mx-auto max-w-7xl overflow-hidden px-6 py-20"
       >
-        <div className="text-center">
+        {/* Background glow */}
+        <div
+          className="glow-orb"
+          style={{
+            width: 500,
+            height: 500,
+            top: -100,
+            right: -100,
+            background:
+              "radial-gradient(circle, rgba(99,102,241,0.12) 0%, transparent 70%)",
+          }}
+          aria-hidden="true"
+        />
+
+        <div className="relative text-center">
           <h1 className="text-4xl font-semibold md:text-5xl">
-            Marketing Services for High-Risk Businesses
+            Marketing Services for{" "}
+            <span className="text-gradient">High-Risk Businesses</span>
           </h1>
           <p className="mt-6 text-xl text-[#6a6f85] md:text-2xl">
             We help high-risk businesses grow through SEO, paid advertising, and
@@ -42,17 +60,17 @@ export default function ServicesPage() {
           </p>
         </div>
 
-        <div className="mt-14 grid gap-8 md:grid-cols-3">
+        <div className="relative mt-14 grid gap-8 md:grid-cols-3">
           {services.map((item) => (
             <article
               key={item.title}
-              className="rounded-[28px] border border-gray-200 bg-white p-10 shadow-sm"
+              className="glass-card rounded-[28px] p-10"
             >
               <div
-                className="mb-8 flex h-14 w-14 items-center justify-center rounded-2xl bg-gradient-to-br from-blue-500 to-purple-500 text-2xl text-white"
+                className="mb-8 flex h-14 w-14 items-center justify-center rounded-2xl bg-gradient-to-br from-blue-500 to-purple-500 text-2xl text-white shadow-lg shadow-indigo-500/20"
                 aria-hidden="true"
               >
-                ✦
+                {item.icon}
               </div>
 
               <h2 className="text-[34px] font-semibold leading-tight">

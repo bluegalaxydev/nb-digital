@@ -84,168 +84,250 @@ export default function Home() {
       />
 
       <main className="min-h-screen bg-[#f7f7f8] text-[#111111]">
-        {/* ═══ HERO ═══ */}
+        {/* ═══════════════════════════════════════════
+            HERO SECTION
+        ═══════════════════════════════════════════ */}
         <section
           id="home"
           aria-label="Hero"
-          className="mx-auto grid max-w-7xl items-center gap-12 px-6 py-14 md:grid-cols-2"
+          className="relative overflow-hidden"
         >
-          <div>
-            <Reveal delay={0.1} variant="soft">
-              <p className="inline-flex items-center rounded-full bg-[#ececf3] px-5 py-3 text-sm text-gray-600">
-                ✨ Marketing &amp; Growth Experts
-              </p>
-            </Reveal>
+          {/* Decorative glow orbs */}
+          <div
+            className="glow-orb glow-orb--animated"
+            style={{
+              width: 500,
+              height: 500,
+              top: -120,
+              left: -100,
+              background:
+                "radial-gradient(circle, rgba(99,102,241,0.25) 0%, transparent 70%)",
+            }}
+          />
+          <div
+            className="glow-orb glow-orb--animated"
+            style={{
+              width: 400,
+              height: 400,
+              bottom: -80,
+              right: -60,
+              background:
+                "radial-gradient(circle, rgba(139,92,246,0.2) 0%, transparent 70%)",
+              animationDelay: "4s",
+            }}
+          />
 
-            <Reveal delay={0.25} variant="strong">
-              <h1 className="mt-6 text-5xl font-semibold tracking-tight text-black md:text-7xl">
-                Marketing That Helps
-                <br />
-                <span className="text-[#6366f1]">High Risk Businesses</span>
-                <br />
-                Grow Faster
-              </h1>
-            </Reveal>
-
-            <Reveal delay={0.4} variant="soft">
-              <p className="mt-6 text-lg text-gray-500 md:text-xl">
-                Harbor Point Marketing helps high-risk brands—including peptide
-                companies—scale through compliant growth systems, SEO,
-                optimization and automation.
-              </p>
-            </Reveal>
-
-            <Reveal delay={0.55} variant="soft">
-              <div className="mt-6 flex justify-center">
-                <p className="inline-flex items-center gap-2 rounded-full bg-[#eef2ff] px-4 py-2 text-sm text-[#3730a3]">
-                  <span>⚡</span>
-                  Specialized in high-risk marketing: peptides, supplements, and
-                  restricted industries
+          <div className="relative mx-auto grid max-w-7xl items-center gap-12 px-6 py-20 md:grid-cols-2">
+            <div>
+              <Reveal delay={0.1} variant="soft">
+                <p className="inline-flex items-center rounded-full border border-indigo-100 bg-white/80 px-5 py-3 text-sm text-gray-600 shadow-sm backdrop-blur-sm">
+                  ✨ Marketing &amp; Growth Experts
                 </p>
-              </div>
-            </Reveal>
+              </Reveal>
 
-            <Reveal delay={0.65} variant="soft">
-              <p className="mt-3 text-center text-sm text-gray-400">
-                Platforms like TikTok &amp; Reddit often restrict these
-                industries — we know how to work around it.
-              </p>
-            </Reveal>
+              <Reveal delay={0.25} variant="strong">
+                <h1 className="mt-6 text-5xl font-semibold tracking-tight text-black md:text-7xl">
+                  Marketing That Helps
+                  <br />
+                  <span className="text-gradient">High Risk Businesses</span>
+                  <br />
+                  Grow Faster
+                </h1>
+              </Reveal>
 
-            <Reveal delay={0.75} variant="soft">
-              <div className="mt-10 flex flex-wrap gap-4">
-                <ScrollButton
-                  target="services"
-                  className="inline-flex items-center justify-center rounded-2xl bg-[#05051c] px-8 py-4 text-white transition hover:bg-[#1a1a3e]"
+              <Reveal delay={0.4} variant="soft">
+                <p className="mt-6 text-lg leading-relaxed text-gray-500 md:text-xl">
+                  Harbor Point Marketing helps high-risk brands—including peptide
+                  companies—scale through compliant growth systems, SEO,
+                  optimization and automation.
+                </p>
+              </Reveal>
+
+              <Reveal delay={0.55} variant="soft">
+                <div className="mt-6 flex justify-center">
+                  <p className="inline-flex items-center gap-2 rounded-full border border-indigo-100 bg-[#eef2ff]/80 px-4 py-2 text-sm text-[#3730a3] backdrop-blur-sm">
+                    <span>⚡</span>
+                    Specialized in high-risk marketing: peptides, supplements, and
+                    restricted industries
+                  </p>
+                </div>
+              </Reveal>
+
+              <Reveal delay={0.65} variant="soft">
+                <p className="mt-3 text-center text-sm text-gray-400">
+                  Platforms like TikTok &amp; Reddit often restrict these
+                  industries — we know how to work around it.
+                </p>
+              </Reveal>
+
+              <Reveal delay={0.75} variant="soft">
+                <div className="mt-10 flex flex-wrap gap-4">
+                  <ScrollButton
+                    target="services"
+                    className="btn-primary"
+                  >
+                    <span>See Our Services →</span>
+                  </ScrollButton>
+                </div>
+              </Reveal>
+
+              <Reveal delay={0.85} variant="soft">
+                <ul
+                  className="mt-10 flex flex-wrap gap-x-10 gap-y-4 text-lg text-[#5f657d]"
+                  role="list"
                 >
-                  See Our Services →
-                </ScrollButton>
-              </div>
-            </Reveal>
+                  <li className="flex items-center gap-3">
+                    <span
+                      className="dot-pulse h-3 w-3 rounded-full bg-green-500"
+                      aria-hidden="true"
+                    />
+                    No long-term contracts
+                  </li>
+                  <li className="flex items-center gap-3">
+                    <span
+                      className="dot-pulse h-3 w-3 rounded-full bg-green-500"
+                      aria-hidden="true"
+                      style={{ animationDelay: "0.5s" }}
+                    />
+                    Done-for-you implementation
+                  </li>
+                  <li className="flex items-center gap-3">
+                    <span
+                      className="dot-pulse h-3 w-3 rounded-full bg-green-500"
+                      aria-hidden="true"
+                      style={{ animationDelay: "1s" }}
+                    />
+                    Custom to your industry
+                  </li>
+                </ul>
+              </Reveal>
+            </div>
 
-            <Reveal delay={0.85} variant="soft">
-              <ul className="mt-10 flex flex-wrap gap-x-10 gap-y-4 text-lg text-[#5f657d]" role="list">
-                <li className="flex items-center gap-3">
-                  <span className="h-3 w-3 rounded-full bg-green-500" aria-hidden="true" />
-                  No long-term contracts
-                </li>
-                <li className="flex items-center gap-3">
-                  <span className="h-3 w-3 rounded-full bg-green-500" aria-hidden="true" />
-                  Done-for-you implementation
-                </li>
-                <li className="flex items-center gap-3">
-                  <span className="h-3 w-3 rounded-full bg-green-500" aria-hidden="true" />
-                  Custom to your industry
-                </li>
-              </ul>
+            <Reveal delay={0.4} variant="strong">
+              <div className="image-shine overflow-hidden rounded-[28px] bg-white shadow-lg ring-1 ring-black/5">
+                <img
+                  src="/peptides1.png"
+                  alt="Peptide marketing campaign dashboard showing growth metrics"
+                  className="w-full"
+                  width={600}
+                  height={400}
+                  loading="eager"
+                />
+              </div>
             </Reveal>
           </div>
-
-          <Reveal delay={0.4} variant="strong">
-            <div className="overflow-hidden rounded-[28px] bg-white shadow-sm">
-              <img
-                src="/peptides1.png"
-                alt="Peptide marketing campaign dashboard showing growth metrics"
-                className="w-full rounded-2xl shadow-lg"
-                width={600}
-                height={400}
-                loading="eager"
-              />
-            </div>
-          </Reveal>
         </section>
 
-        {/* ═══ ABOUT ═══ */}
+        {/* Divider */}
+        <div className="section-divider mx-auto max-w-5xl" />
+
+        {/* ═══════════════════════════════════════════
+            ABOUT SECTION
+        ═══════════════════════════════════════════ */}
         <section
           id="about"
           aria-label="About Harbor Point Marketing"
-          className="mx-auto grid max-w-7xl items-center gap-12 px-6 py-20 md:grid-cols-2"
+          className="relative overflow-hidden"
         >
-          <Reveal delay={0.15} variant="strong">
-            <div className="overflow-hidden rounded-[28px] bg-white shadow-sm">
-              <img
-                src="https://images.unsplash.com/photo-1496171367470-9ed9a91ea931?auto=format&fit=crop&w=1200&q=80"
-                alt="Business analytics dashboard on laptop showing marketing performance data"
-                className="h-[500px] w-full object-cover"
-                width={1200}
-                height={500}
-                loading="lazy"
-              />
-            </div>
-          </Reveal>
+          {/* Subtle dot pattern */}
+          <div
+            className="dot-pattern pointer-events-none absolute inset-0 opacity-[0.03]"
+            aria-hidden="true"
+          />
 
-          <div>
-            <Reveal delay={0.3} variant="strong">
-              <h2 className="text-5xl font-semibold leading-tight md:text-6xl">
-                Your Complete Business
-                <br />
-                Operating System
-              </h2>
+          <div className="relative mx-auto grid max-w-7xl items-center gap-12 px-6 py-24 md:grid-cols-2">
+            <Reveal delay={0.15} variant="strong">
+              <div className="image-shine overflow-hidden rounded-[28px] bg-white shadow-lg ring-1 ring-black/5">
+                <img
+                  src="https://images.unsplash.com/photo-1496171367470-9ed9a91ea931?auto=format&fit=crop&w=1200&q=80"
+                  alt="Business analytics dashboard on laptop showing marketing performance data"
+                  className="h-[500px] w-full object-cover"
+                  width={1200}
+                  height={500}
+                  loading="lazy"
+                />
+              </div>
             </Reveal>
 
-            <Reveal delay={0.45} variant="soft">
-              <p className="mt-8 text-[20px] leading-10 text-[#6a6f85]">
-                We don&apos;t just run ads or post on social media. We build
-                complete marketing and operational systems that work 24/7.
-                Whether you need marketing automation, sales processes, or
-                custom integrations—we create the infrastructure that lets niche
-                businesses scale without burning out.
-              </p>
-            </Reveal>
+            <div>
+              <Reveal delay={0.3} variant="strong">
+                <h2 className="text-5xl font-semibold leading-tight md:text-6xl">
+                  Your Complete Business
+                  <br />
+                  <span className="text-gradient">Operating System</span>
+                </h2>
+              </Reveal>
 
-            <Reveal delay={0.6} variant="soft">
-              <ul className="mt-8 space-y-5 text-[18px] text-[#333]" role="list">
-                {[
-                  "Custom automation that runs your marketing 24/7",
-                  "Industry-specific systems built for your niche",
-                  "Complete integration of your sales and operations",
-                  "Done-for-you implementation, not just consulting",
-                ].map((item) => (
-                  <li key={item} className="flex items-start gap-4">
-                    <span
-                      className="mt-1 flex h-7 w-7 shrink-0 items-center justify-center rounded-full border-2 border-green-500 text-green-500"
-                      aria-hidden="true"
+              <Reveal delay={0.45} variant="soft">
+                <p className="mt-8 text-[20px] leading-10 text-[#6a6f85]">
+                  We don&apos;t just run ads or post on social media. We build
+                  complete marketing and operational systems that work 24/7.
+                  Whether you need marketing automation, sales processes, or
+                  custom integrations—we create the infrastructure that lets niche
+                  businesses scale without burning out.
+                </p>
+              </Reveal>
+
+              <Reveal delay={0.6} variant="soft">
+                <ul
+                  className="mt-8 space-y-5 text-[18px] text-[#333]"
+                  role="list"
+                >
+                  {[
+                    "Custom automation that runs your marketing 24/7",
+                    "Industry-specific systems built for your niche",
+                    "Complete integration of your sales and operations",
+                    "Done-for-you implementation, not just consulting",
+                  ].map((item) => (
+                    <li
+                      key={item}
+                      className="flex items-start gap-4 rounded-xl px-3 py-2 transition hover:bg-white/60"
                     >
-                      ✓
-                    </span>
-                    {item}
-                  </li>
-                ))}
-              </ul>
-            </Reveal>
+                      <span
+                        className="mt-1 flex h-7 w-7 shrink-0 items-center justify-center rounded-full border-2 border-green-500 text-green-500"
+                        aria-hidden="true"
+                      >
+                        ✓
+                      </span>
+                      {item}
+                    </li>
+                  ))}
+                </ul>
+              </Reveal>
+            </div>
           </div>
         </section>
 
-        {/* ═══ SERVICES + CONTACT FORM ═══ */}
+        {/* Divider */}
+        <div className="section-divider mx-auto max-w-5xl" />
+
+        {/* ═══════════════════════════════════════════
+            SERVICES + CONTACT FORM
+        ═══════════════════════════════════════════ */}
         <section
           id="services"
           aria-label="Services and contact form"
-          className="mx-auto max-w-7xl px-6 py-24 scroll-mt-24"
+          className="relative mx-auto max-w-7xl overflow-hidden px-6 py-24 scroll-mt-24"
         >
+          {/* Background glow */}
+          <div
+            className="glow-orb"
+            style={{
+              width: 600,
+              height: 600,
+              top: "50%",
+              left: "50%",
+              transform: "translate(-50%, -50%)",
+              background:
+                "radial-gradient(circle, rgba(99,102,241,0.08) 0%, transparent 70%)",
+            }}
+            aria-hidden="true"
+          />
+
           <Reveal delay={0.15} variant="strong">
-            <div className="text-center">
+            <div className="relative text-center">
               <h2 className="text-4xl font-semibold tracking-tight text-black md:text-6xl">
-                Our Marketing Services
+                Our Marketing <span className="text-gradient">Services</span>
               </h2>
               <p className="mt-4 text-lg text-gray-500 md:text-xl">
                 Select the services you need and submit your request.
@@ -256,10 +338,10 @@ export default function Home() {
           <form
             action="https://formspree.io/f/xlgplbkp"
             method="POST"
-            className="mt-16 grid gap-10 md:grid-cols-2"
+            className="relative mt-16 grid gap-10 md:grid-cols-2"
           >
             <Reveal delay={0.3} variant="soft">
-              <fieldset className="rounded-3xl bg-white p-8 shadow-sm ring-1 ring-black/5">
+              <fieldset className="glass-card rounded-3xl p-8">
                 <legend className="text-2xl font-semibold text-black">
                   Choose Services
                 </legend>
@@ -269,7 +351,10 @@ export default function Home() {
 
                 <div className="mt-8 space-y-8">
                   <div role="group" aria-labelledby="group-web-seo">
-                    <h3 id="group-web-seo" className="text-lg font-semibold text-black">
+                    <h3
+                      id="group-web-seo"
+                      className="text-lg font-semibold text-black"
+                    >
                       Website / SEO / Systems
                     </h3>
                     <div className="mt-4 space-y-3 text-gray-700">
@@ -295,12 +380,15 @@ export default function Home() {
                         "Offer / funnel optimization",
                         "Conversion rate optimization (CRO)",
                       ].map((service) => (
-                        <label key={service} className="flex items-start gap-3 cursor-pointer">
+                        <label
+                          key={service}
+                          className="flex cursor-pointer items-start gap-3 rounded-lg px-2 py-1 transition hover:bg-indigo-50/50"
+                        >
                           <input
                             type="checkbox"
                             name="services"
                             value={service}
-                            className="mt-1 h-4 w-4 rounded border-gray-300 accent-[#6366f1]"
+                            className="mt-1 h-4 w-4 rounded border-gray-300"
                           />
                           <span>{service}</span>
                         </label>
@@ -309,7 +397,10 @@ export default function Home() {
                   </div>
 
                   <div role="group" aria-labelledby="group-ads">
-                    <h3 id="group-ads" className="text-lg font-semibold text-black">
+                    <h3
+                      id="group-ads"
+                      className="text-lg font-semibold text-black"
+                    >
                       Ads / Growth / Reporting
                     </h3>
                     <div className="mt-4 space-y-3 text-gray-700">
@@ -332,12 +423,15 @@ export default function Home() {
                         "Conversion tracking setup",
                         "Funnel performance tracking",
                       ].map((service) => (
-                        <label key={service} className="flex items-start gap-3 cursor-pointer">
+                        <label
+                          key={service}
+                          className="flex cursor-pointer items-start gap-3 rounded-lg px-2 py-1 transition hover:bg-indigo-50/50"
+                        >
                           <input
                             type="checkbox"
                             name="services"
                             value={service}
-                            className="mt-1 h-4 w-4 rounded border-gray-300 accent-[#6366f1]"
+                            className="mt-1 h-4 w-4 rounded border-gray-300"
                           />
                           <span>{service}</span>
                         </label>
@@ -346,7 +440,10 @@ export default function Home() {
                   </div>
 
                   <div role="group" aria-labelledby="group-addons">
-                    <h3 id="group-addons" className="text-lg font-semibold text-black">
+                    <h3
+                      id="group-addons"
+                      className="text-lg font-semibold text-black"
+                    >
                       Advanced Add-Ons
                     </h3>
                     <div className="mt-4 space-y-3 text-gray-700">
@@ -360,12 +457,15 @@ export default function Home() {
                         "Custom automation workflows (Zapier / Make)",
                         "Reputation / review management",
                       ].map((service) => (
-                        <label key={service} className="flex items-start gap-3 cursor-pointer">
+                        <label
+                          key={service}
+                          className="flex cursor-pointer items-start gap-3 rounded-lg px-2 py-1 transition hover:bg-indigo-50/50"
+                        >
                           <input
                             type="checkbox"
                             name="services"
                             value={service}
-                            className="mt-1 h-4 w-4 rounded border-gray-300 accent-[#6366f1]"
+                            className="mt-1 h-4 w-4 rounded border-gray-300"
                           />
                           <span>{service}</span>
                         </label>
@@ -377,7 +477,7 @@ export default function Home() {
             </Reveal>
 
             <Reveal delay={0.4} variant="soft">
-              <div className="rounded-3xl bg-white p-8 shadow-sm ring-1 ring-black/5">
+              <div className="glass-card rounded-3xl p-8">
                 <input
                   type="hidden"
                   name="_subject"
@@ -405,7 +505,7 @@ export default function Home() {
                       type="text"
                       name="name"
                       required
-                      className="w-full rounded-2xl border border-gray-300 px-4 py-3 outline-none focus:border-[#6366f1] focus:ring-1 focus:ring-[#6366f1]"
+                      className="input-premium"
                       placeholder="Your name"
                     />
                   </div>
@@ -422,7 +522,7 @@ export default function Home() {
                       type="email"
                       name="email"
                       required
-                      className="w-full rounded-2xl border border-gray-300 px-4 py-3 outline-none focus:border-[#6366f1] focus:ring-1 focus:ring-[#6366f1]"
+                      className="input-premium"
                       placeholder="you@example.com"
                     />
                   </div>
@@ -438,7 +538,7 @@ export default function Home() {
                       id="field-company"
                       type="text"
                       name="company"
-                      className="w-full rounded-2xl border border-gray-300 px-4 py-3 outline-none focus:border-[#6366f1] focus:ring-1 focus:ring-[#6366f1]"
+                      className="input-premium"
                       placeholder="Company name"
                     />
                   </div>
@@ -454,7 +554,7 @@ export default function Home() {
                       id="field-industry"
                       type="text"
                       name="industry"
-                      className="w-full rounded-2xl border border-gray-300 px-4 py-3 outline-none focus:border-[#6366f1] focus:ring-1 focus:ring-[#6366f1]"
+                      className="input-premium"
                       placeholder="e.g. peptides, prediction/trading, cannabis"
                     />
                   </div>
@@ -470,29 +570,26 @@ export default function Home() {
                       id="field-message"
                       name="message"
                       rows={6}
-                      className="w-full rounded-2xl border border-gray-300 px-4 py-3 outline-none focus:border-[#6366f1] focus:ring-1 focus:ring-[#6366f1]"
+                      className="input-premium"
                       placeholder="Tell us what you need most right now."
                     />
                   </div>
 
-                  <button
-                    type="submit"
-                    className="w-full rounded-2xl bg-[#05051c] px-8 py-4 text-lg font-medium text-white transition hover:bg-[#1a1a3e]"
-                  >
-                    Submit Request
+                  <button type="submit" className="btn-primary w-full text-lg">
+                    <span>Submit Request</span>
                   </button>
 
                   {/* Contact info */}
                   <address className="mt-10 space-y-8 not-italic">
                     <div className="flex items-start gap-6">
-                      <div className="flex h-16 w-16 shrink-0 items-center justify-center rounded-2xl bg-gradient-to-br from-blue-500 to-purple-600 text-white">
+                      <div className="icon-glow flex h-16 w-16 shrink-0 items-center justify-center rounded-2xl bg-gradient-to-br from-blue-500 to-purple-600 text-white shadow-lg shadow-indigo-500/20">
                         <Mail size={24} />
                       </div>
                       <div>
                         <p className="text-lg font-semibold">Email Us</p>
                         <a
                           href="mailto:info@notbadcapital.com"
-                          className="mt-1 block text-base text-[#6a6f85] hover:text-[#6366f1] hover:underline"
+                          className="mt-1 block text-base text-[#6a6f85] transition hover:text-[#6366f1]"
                         >
                           info@notbadcapital.com
                         </a>
@@ -500,14 +597,14 @@ export default function Home() {
                     </div>
 
                     <div className="flex items-start gap-6">
-                      <div className="flex h-16 w-16 shrink-0 items-center justify-center rounded-2xl bg-gradient-to-br from-blue-500 to-purple-600 text-white">
+                      <div className="icon-glow flex h-16 w-16 shrink-0 items-center justify-center rounded-2xl bg-gradient-to-br from-blue-500 to-purple-600 text-white shadow-lg shadow-indigo-500/20">
                         <Phone size={24} />
                       </div>
                       <div>
                         <p className="text-lg font-semibold">Call Us</p>
                         <a
                           href="tel:+16575774455"
-                          className="mt-1 block text-base text-[#6a6f85] hover:text-[#6366f1] hover:underline"
+                          className="mt-1 block text-base text-[#6a6f85] transition hover:text-[#6366f1]"
                         >
                           +1 (657) 577-4455
                         </a>
@@ -515,7 +612,7 @@ export default function Home() {
                     </div>
 
                     <div className="flex items-start gap-6">
-                      <div className="flex h-16 w-16 shrink-0 items-center justify-center rounded-2xl bg-gradient-to-br from-blue-500 to-purple-600 text-white">
+                      <div className="icon-glow flex h-16 w-16 shrink-0 items-center justify-center rounded-2xl bg-gradient-to-br from-blue-500 to-purple-600 text-white shadow-lg shadow-indigo-500/20">
                         <MapPin size={24} />
                       </div>
                       <div>
