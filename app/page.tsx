@@ -19,8 +19,6 @@ import {
   Layers,
   Sprout,
   LineChart,
-  Star,
-  Quote,
 } from "lucide-react";
 import Reveal from "./components/reveal";
 import ScrollButton from "./components/scroll-button";
@@ -1170,97 +1168,6 @@ export default function Home() {
                 </div>
               </div>
             </Reveal>
-          </div>
-        </section>
-
-        <div className="section-divider mx-auto max-w-5xl" />
-
-        {/* ═══════════════════════════════════════
-            CLIENT TESTIMONIALS
-        ═══════════════════════════════════════ */}
-        <section
-          id="testimonials"
-          aria-label="Client testimonials"
-          className="relative overflow-hidden"
-        >
-          <div className="mx-auto max-w-7xl px-6 py-24 md:py-32">
-            <Reveal delay={0.1} variant="strong">
-              <div className="text-center">
-                <p className="text-sm font-semibold uppercase tracking-widest text-blue-600">
-                  Client Success Stories
-                </p>
-                <h2 className="mt-3 text-4xl font-bold tracking-tight text-slate-900 md:text-5xl">
-                  Trusted by{" "}
-                  <span className="text-gradient">High-Risk Brands</span>
-                </h2>
-                <p className="mx-auto mt-5 max-w-2xl text-lg text-slate-500">
-                  Our clients stay because the results speak for themselves.
-                  Here&apos;s what business owners in restricted industries say
-                  about working with us.
-                </p>
-              </div>
-            </Reveal>
-
-            <div className="mt-16 grid gap-8 md:grid-cols-3">
-              {[
-                {
-                  name: "Marcus R.",
-                  role: "CEO, Peptide Research Brand",
-                  quote:
-                    "Every other agency told us they couldn't work with our industry. Harbor Point not only took us on — they 3x'd our organic traffic in 5 months with their AI-powered SEO framework. Our cost per lead dropped by 60%.",
-                  metric: "3x Organic Traffic",
-                  stars: 5,
-                },
-                {
-                  name: "Sarah L.",
-                  role: "Founder, Supplement Company",
-                  quote:
-                    "The AI Marketing Engine identified gaps in our site structure that we never would have caught. Within 90 days, we were ranking for 40+ new keywords. SEO truly is a long-term game and Harbor Point makes it effortless.",
-                  metric: "40+ New Rankings",
-                  stars: 5,
-                },
-                {
-                  name: "David K.",
-                  role: "COO, CBD E-Commerce Brand",
-                  quote:
-                    "We got banned from Meta Ads twice before finding Harbor Point. They built us a multi-channel strategy using SEO + Reddit ads that now generates more revenue than paid social ever did — and it's growing every month.",
-                  metric: "340% ROAS",
-                  stars: 5,
-                },
-              ].map((t, i) => (
-                <Reveal key={t.name} delay={0.15 + i * 0.1} variant="soft">
-                  <div className="glass-card flex h-full flex-col rounded-2xl p-8">
-                    <Quote
-                      size={32}
-                      className="shrink-0 text-blue-200"
-                    />
-                    <p className="mt-4 flex-1 text-[15px] leading-7 text-slate-600">
-                      &ldquo;{t.quote}&rdquo;
-                    </p>
-                    <div className="mt-6">
-                      <div className="flex gap-0.5">
-                        {Array.from({ length: t.stars }).map((_, si) => (
-                          <Star
-                            key={si}
-                            size={16}
-                            className="fill-amber-400 text-amber-400"
-                          />
-                        ))}
-                      </div>
-                      <div className="mt-3 flex items-center justify-between">
-                        <div>
-                          <p className="font-bold text-slate-900">{t.name}</p>
-                          <p className="text-sm text-slate-500">{t.role}</p>
-                        </div>
-                        <span className="rounded-full bg-emerald-50 px-3 py-1 text-xs font-bold text-emerald-600">
-                          {t.metric}
-                        </span>
-                      </div>
-                    </div>
-                  </div>
-                </Reveal>
-              ))}
-            </div>
           </div>
         </section>
 
