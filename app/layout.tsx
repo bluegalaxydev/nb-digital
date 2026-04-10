@@ -107,7 +107,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} bg-[#eef4fb] text-[#0f172a]`}
+        className={`${geistSans.variable} ${geistMono.variable} bg-[#f0f4fa] text-[#0c1222]`}
       >
         {/* ── Global structured data ── */}
         <script
@@ -119,12 +119,15 @@ export default function RootLayout({
           dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }}
         />
 
+        {/* ── Top accent stripe ── */}
+        <div className="accent-stripe" aria-hidden="true" />
+
         {/* ── Header ── */}
-        <header className="sticky top-0 z-40 border-b border-blue-100/50 bg-white/75 backdrop-blur-xl">
-          <div className="relative mx-auto flex max-w-7xl items-center justify-between px-6 py-3.5">
+        <header className="header-glass sticky top-0 z-40 border-b border-blue-100/40">
+          <div className="relative mx-auto flex max-w-7xl items-center justify-between px-6 py-4">
             <Link
               href="/"
-              className="flex items-center gap-3 transition hover:opacity-80"
+              className="flex items-center gap-3 transition-opacity hover:opacity-85"
               aria-label="Harbor Point Marketing — Home"
             >
               <img
@@ -135,10 +138,10 @@ export default function RootLayout({
                 height={44}
               />
               <div className="leading-tight">
-                <span className="block text-lg font-bold tracking-tight text-slate-900">
+                <span className="block text-[17px] font-bold tracking-tight text-slate-900">
                   Harbor Point
                 </span>
-                <span className="block text-[10px] font-medium uppercase tracking-[0.2em] text-blue-600/70">
+                <span className="block text-[10px] font-semibold uppercase tracking-[0.22em] text-blue-600/80">
                   Marketing Services
                 </span>
               </div>
@@ -146,21 +149,21 @@ export default function RootLayout({
 
             {/* Desktop nav */}
             <nav
-              className="hidden items-center gap-1 md:flex"
+              className="hidden items-center gap-0.5 md:flex"
               aria-label="Main navigation"
             >
               {navLinks.map((link) => (
                 <Link
                   key={link.href}
                   href={link.href}
-                  className="rounded-lg px-4 py-2 text-[14px] font-medium text-slate-600 transition hover:bg-blue-50/60 hover:text-blue-700"
+                  className="rounded-lg px-4 py-2 text-[13.5px] font-medium text-slate-500 transition-all hover:bg-blue-50/70 hover:text-blue-700"
                 >
                   {link.label}
                 </Link>
               ))}
               <Link
                 href="/#contact"
-                className="ml-3 rounded-xl bg-gradient-to-r from-blue-600 to-sky-500 px-5 py-2.5 text-[14px] font-semibold text-white shadow-md shadow-blue-500/20 transition hover:shadow-lg hover:shadow-blue-500/30"
+                className="ml-4 rounded-xl bg-gradient-to-r from-blue-700 via-blue-600 to-sky-500 px-5 py-2.5 text-[13.5px] font-semibold text-white shadow-lg shadow-blue-600/25 transition-all hover:-translate-y-0.5 hover:shadow-xl hover:shadow-blue-600/30"
               >
                 Get Started
               </Link>
@@ -175,21 +178,22 @@ export default function RootLayout({
 
         {/* ── Footer ── */}
         <footer
-          className="relative overflow-hidden border-t border-blue-100/50 bg-white"
+          className="relative overflow-hidden border-t border-blue-100/40 bg-gradient-to-b from-white to-slate-50/80"
           role="contentinfo"
         >
+          {/* Decorative top gradient line */}
           <div
-            className="absolute left-0 right-0 top-0 h-px bg-gradient-to-r from-transparent via-blue-300/30 to-transparent"
+            className="absolute left-0 right-0 top-0 h-px bg-gradient-to-r from-transparent via-blue-400/25 to-transparent"
             aria-hidden="true"
           />
 
-          <div className="mx-auto max-w-7xl px-6 py-14">
-            <div className="grid gap-10 md:grid-cols-4">
+          <div className="mx-auto max-w-7xl px-6 py-16">
+            <div className="grid gap-12 md:grid-cols-4">
               {/* Brand */}
               <div className="md:col-span-2">
                 <Link
                   href="/"
-                  className="flex items-center gap-3 transition hover:opacity-80"
+                  className="flex items-center gap-3 transition-opacity hover:opacity-85"
                 >
                   <img
                     src="/logo.png"
@@ -198,23 +202,32 @@ export default function RootLayout({
                     width={40}
                     height={40}
                   />
-                  <span className="text-lg font-bold text-slate-900">
-                    Harbor Point
-                  </span>
+                  <div className="leading-tight">
+                    <span className="block text-lg font-bold text-slate-900">
+                      Harbor Point
+                    </span>
+                    <span className="block text-[9px] font-semibold uppercase tracking-[0.2em] text-blue-600/70">
+                      Marketing Services
+                    </span>
+                  </div>
                 </Link>
-                <p className="mt-4 max-w-sm text-sm leading-6 text-slate-500">
-                  Full-service marketing agency for high-risk businesses.
+                <p className="mt-5 max-w-sm text-[13.5px] leading-6 text-slate-500">
+                  AI-powered marketing agency for high-risk businesses.
                   Peptides, supplements, CBD, and restricted industries — we
                   build the growth systems others can&apos;t.
                 </p>
+                <div className="mt-5 flex items-center gap-2">
+                  <span className="dot-pulse h-2 w-2 rounded-full bg-emerald-500" />
+                  <span className="text-xs font-medium text-slate-400">Available for new clients</span>
+                </div>
               </div>
 
               {/* Links */}
               <nav aria-label="Footer navigation">
-                <h4 className="text-xs font-bold uppercase tracking-wider text-slate-400">
+                <h4 className="text-[11px] font-bold uppercase tracking-[0.15em] text-slate-400">
                   Quick Links
                 </h4>
-                <ul className="mt-4 space-y-2.5">
+                <ul className="mt-5 space-y-3">
                   {[
                     { href: "/", label: "Home" },
                     { href: "/services", label: "Services" },
@@ -227,7 +240,7 @@ export default function RootLayout({
                     <li key={link.href}>
                       <Link
                         href={link.href}
-                        className="text-sm text-slate-500 transition hover:text-blue-600"
+                        className="text-[13.5px] text-slate-500 transition-colors hover:text-blue-600"
                       >
                         {link.label}
                       </Link>
@@ -238,14 +251,14 @@ export default function RootLayout({
 
               {/* Contact */}
               <div>
-                <h4 className="text-xs font-bold uppercase tracking-wider text-slate-400">
+                <h4 className="text-[11px] font-bold uppercase tracking-[0.15em] text-slate-400">
                   Contact
                 </h4>
-                <address className="mt-4 space-y-2.5 text-sm not-italic text-slate-500">
+                <address className="mt-5 space-y-3 text-[13.5px] not-italic text-slate-500">
                   <p>
                     <a
                       href="mailto:info@notbadcapital.com"
-                      className="transition hover:text-blue-600"
+                      className="transition-colors hover:text-blue-600"
                     >
                       info@notbadcapital.com
                     </a>
@@ -253,12 +266,12 @@ export default function RootLayout({
                   <p>
                     <a
                       href="tel:+16575774455"
-                      className="transition hover:text-blue-600"
+                      className="transition-colors hover:text-blue-600"
                     >
                       +1 (657) 577-4455
                     </a>
                   </p>
-                  <p>
+                  <p className="leading-6">
                     6013 Warner Ave
                     <br />
                     Huntington Beach, CA 92647
@@ -267,12 +280,15 @@ export default function RootLayout({
               </div>
             </div>
 
-            <div className="section-divider mx-auto mt-10 max-w-3xl" />
-            <p className="mt-6 text-center text-xs text-slate-400">
+            <div className="section-divider mx-auto mt-12 max-w-4xl" />
+            <p className="mt-7 text-center text-[12px] tracking-wide text-slate-400">
               &copy; {new Date().getFullYear()} Harbor Point Marketing Services.
               All rights reserved.
             </p>
           </div>
+
+          {/* Bottom accent stripe */}
+          <div className="accent-stripe" aria-hidden="true" />
         </footer>
       </body>
     </html>

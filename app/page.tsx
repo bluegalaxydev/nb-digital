@@ -315,58 +315,63 @@ export default function Home() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }}
       />
 
-      <main className="min-h-screen text-[#0f172a]">
+      <main className="min-h-screen text-[#0c1222]">
         {/* ═══════════════════════════════════════
             HERO
         ═══════════════════════════════════════ */}
         <section
           id="home"
           aria-label="Hero"
-          className="relative overflow-hidden bg-gradient-to-b from-[#dbeafe] via-[#e8f0fe] to-[#eef4fb]"
+          className="noise-overlay relative overflow-hidden bg-gradient-to-b from-[#dbeafe] via-[#e8f1fe] to-[#f0f4fa]"
         >
+          {/* Grid pattern */}
+          <div className="hero-grid pointer-events-none absolute inset-0" aria-hidden="true" />
+
           {/* Decorative orbs */}
           <div
             className="glow-orb glow-orb--animated"
             style={{
-              width: 600,
-              height: 600,
-              top: -180,
-              left: -150,
+              width: 700,
+              height: 700,
+              top: -200,
+              left: -180,
               background:
-                "radial-gradient(circle, rgba(37,99,235,0.18) 0%, transparent 70%)",
+                "radial-gradient(circle, rgba(37,99,235,0.15) 0%, transparent 65%)",
             }}
           />
           <div
             className="glow-orb glow-orb--animated"
             style={{
-              width: 450,
-              height: 450,
-              bottom: -100,
-              right: -80,
+              width: 500,
+              height: 500,
+              bottom: -120,
+              right: -100,
               background:
-                "radial-gradient(circle, rgba(14,165,233,0.14) 0%, transparent 70%)",
+                "radial-gradient(circle, rgba(14,165,233,0.12) 0%, transparent 65%)",
               animationDelay: "5s",
             }}
           />
 
-          <div className="relative mx-auto grid max-w-7xl items-center gap-14 px-6 py-24 md:grid-cols-2 md:py-32">
+          <div className="relative mx-auto grid max-w-7xl items-center gap-14 px-6 py-28 md:grid-cols-2 md:py-36">
             <div>
               <Reveal delay={0.1} variant="soft">
-                <p className="badge-shimmer inline-flex items-center gap-2 rounded-full border border-blue-200/60 bg-white/80 px-5 py-2.5 text-sm font-medium text-blue-700 shadow-sm backdrop-blur-sm">
-                  <Bot size={16} className="text-blue-500" />
+                <p className="badge-shimmer inline-flex items-center gap-2.5 rounded-full border border-blue-200/50 bg-white/85 px-5 py-2.5 text-[13px] font-semibold text-blue-700 shadow-sm backdrop-blur-md">
+                  <Bot size={15} className="text-blue-500" />
                   AI-Powered Marketing for High-Risk Brands
                 </p>
               </Reveal>
 
               <Reveal delay={0.2} variant="strong">
-                <h1 className="mt-7 text-[2.75rem] font-bold leading-[1.1] tracking-tight text-slate-900 md:text-[3.75rem] lg:text-[4.25rem]">
-                  AI-Driven SEO &amp; Marketing for{" "}
+                <h1 className="mt-8 text-[2.75rem] font-extrabold leading-[1.08] tracking-tight text-slate-900 md:text-[3.75rem] lg:text-[4.5rem]">
+                  AI-Driven SEO &amp;{" "}
+                  <br className="hidden lg:block" />
+                  Marketing for{" "}
                   <span className="text-gradient-hero">High-Risk Businesses</span>
                 </h1>
               </Reveal>
 
               <Reveal delay={0.35} variant="soft">
-                <p className="mt-6 max-w-xl text-lg leading-relaxed text-slate-600 md:text-xl">
+                <p className="mt-7 max-w-xl text-[17px] leading-relaxed text-slate-500 md:text-lg">
                   We use our proprietary AI Marketing Engine to build long-term
                   SEO frameworks, run compliant paid ads, and automate growth
                   systems — for peptide companies, supplements, CBD, and
@@ -375,7 +380,7 @@ export default function Home() {
               </Reveal>
 
               <Reveal delay={0.5} variant="soft">
-                <div className="mt-8 flex flex-wrap gap-4">
+                <div className="mt-9 flex flex-wrap gap-4">
                   <ScrollButton target="services" className="btn-primary">
                     <span className="flex items-center gap-2">
                       Explore Our Services
@@ -390,7 +395,7 @@ export default function Home() {
 
               <Reveal delay={0.6} variant="soft">
                 <ul
-                  className="mt-10 flex flex-wrap gap-x-8 gap-y-3 text-[15px] text-slate-500"
+                  className="mt-11 flex flex-wrap gap-x-8 gap-y-3 text-[14px] font-medium text-slate-400"
                   role="list"
                 >
                   {[
@@ -400,7 +405,7 @@ export default function Home() {
                   ].map((item, i) => (
                     <li key={item} className="flex items-center gap-2.5">
                       <span
-                        className="dot-pulse h-2.5 w-2.5 rounded-full bg-emerald-500"
+                        className="dot-pulse h-2 w-2 rounded-full bg-emerald-500"
                         aria-hidden="true"
                         style={{ animationDelay: `${i * 0.5}s` }}
                       />
@@ -412,7 +417,7 @@ export default function Home() {
             </div>
 
             <Reveal delay={0.35} variant="strong">
-              <div className="image-shine overflow-hidden rounded-3xl bg-white shadow-xl shadow-blue-900/8 ring-1 ring-blue-100/50">
+              <div className="gradient-border image-shine overflow-hidden rounded-3xl bg-white shadow-2xl shadow-blue-900/10 ring-1 ring-white/60">
                 <img
                   src="/peptides1.png"
                   alt="Marketing analytics dashboard showing growth metrics for a high-risk peptide brand"
@@ -431,16 +436,16 @@ export default function Home() {
         ═══════════════════════════════════════ */}
         <section
           aria-label="Key metrics"
-          className="relative border-y border-blue-100/50 bg-white/60 backdrop-blur-sm"
+          className="relative border-y border-blue-100/40 bg-white/70 backdrop-blur-md"
         >
-          <div className="mx-auto grid max-w-6xl grid-cols-2 divide-x divide-blue-100/50 md:grid-cols-4">
+          <div className="mx-auto grid max-w-6xl grid-cols-2 divide-x divide-blue-100/40 md:grid-cols-4">
             {stats.map((s, i) => (
               <Reveal key={s.label} delay={0.1 + i * 0.1} variant="soft">
-                <div className="stat-item px-6 py-10 text-center md:py-12">
-                  <p className="text-3xl font-bold text-blue-600 md:text-4xl">
+                <div className="stat-item px-6 py-11 text-center md:py-14">
+                  <p className="stat-value text-3xl font-extrabold md:text-4xl">
                     {s.value}
                   </p>
-                  <p className="mt-2 text-sm font-medium text-slate-500">
+                  <p className="mt-2.5 text-[13px] font-semibold uppercase tracking-wider text-slate-400">
                     {s.label}
                   </p>
                 </div>
@@ -546,10 +551,10 @@ export default function Home() {
           <div className="relative mx-auto max-w-7xl px-6 py-24 md:py-32">
             <Reveal delay={0.1} variant="strong">
               <div className="text-center">
-                <p className="text-sm font-semibold uppercase tracking-widest text-blue-600">
+                <p className="text-[12px] font-bold uppercase tracking-[0.2em] text-blue-600">
                   What We Do
                 </p>
-                <h2 className="mt-3 text-4xl font-bold tracking-tight text-slate-900 md:text-5xl">
+                <h2 className="mt-3 text-4xl font-extrabold tracking-tight text-slate-900 md:text-5xl">
                   Marketing Services for{" "}
                   <span className="text-gradient">High-Risk Brands</span>
                 </h2>
@@ -560,17 +565,17 @@ export default function Home() {
               </div>
             </Reveal>
 
-            <div className="relative mt-16 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+            <div className="relative mt-16 grid gap-7 sm:grid-cols-2 lg:grid-cols-3">
               {services.map((svc, i) => (
                 <Reveal key={svc.title} delay={0.15 + i * 0.08} variant="soft">
                   <article className="glass-card group rounded-2xl p-8">
-                    <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-gradient-to-br from-blue-500 to-sky-500 text-white shadow-lg shadow-blue-500/20 transition-transform group-hover:scale-110">
-                      <svc.icon size={22} />
+                    <div className="icon-premium flex h-12 w-12 items-center justify-center rounded-xl bg-gradient-to-br from-blue-600 to-sky-500 text-white shadow-lg shadow-blue-500/25 transition-transform duration-500 group-hover:scale-110 group-hover:shadow-xl group-hover:shadow-blue-500/30">
+                      <svc.icon size={22} strokeWidth={1.8} />
                     </div>
-                    <h3 className="mt-5 text-xl font-bold text-slate-900">
+                    <h3 className="mt-6 text-[19px] font-bold tracking-tight text-slate-900">
                       {svc.title}
                     </h3>
-                    <p className="mt-3 text-[15px] leading-7 text-slate-500">
+                    <p className="mt-3 text-[14.5px] leading-7 text-slate-500">
                       {svc.desc}
                     </p>
                   </article>
@@ -607,10 +612,10 @@ export default function Home() {
             <div className="grid items-center gap-14 md:grid-cols-2">
               <div>
                 <Reveal delay={0.1} variant="strong">
-                  <p className="text-sm font-semibold uppercase tracking-widest text-blue-600">
+                  <p className="text-[12px] font-bold uppercase tracking-[0.2em] text-blue-600">
                     Our Technology
                   </p>
-                  <h2 className="mt-3 text-4xl font-bold tracking-tight text-slate-900 md:text-5xl">
+                  <h2 className="mt-3 text-4xl font-extrabold tracking-tight text-slate-900 md:text-5xl">
                     Meet Our{" "}
                     <span className="text-gradient">AI Marketing Engine</span>
                   </h2>
@@ -667,18 +672,18 @@ export default function Home() {
               <Reveal delay={0.2} variant="strong">
                 <div className="relative">
                   {/* AI Engine visual card */}
-                  <div className="glass-card rounded-3xl p-10 text-center">
-                    <div className="mx-auto flex h-24 w-24 items-center justify-center rounded-3xl bg-gradient-to-br from-blue-500 to-sky-400 shadow-2xl shadow-blue-500/30">
-                      <Bot size={48} className="text-white" />
+                  <div className="gradient-border glass-card rounded-3xl p-10 text-center">
+                    <div className="icon-premium mx-auto flex h-24 w-24 items-center justify-center rounded-3xl bg-gradient-to-br from-blue-600 to-sky-400 shadow-2xl shadow-blue-500/30">
+                      <Bot size={48} className="text-white" strokeWidth={1.5} />
                     </div>
-                    <h3 className="mt-6 text-2xl font-bold text-slate-900">
+                    <h3 className="mt-7 text-2xl font-bold tracking-tight text-slate-900">
                       Harbor Point AI Engine
                     </h3>
-                    <p className="mt-3 text-slate-500">
+                    <p className="mt-3 text-[15px] text-slate-500">
                       Proprietary marketing intelligence built for high-risk industries
                     </p>
 
-                    <div className="mt-8 grid grid-cols-2 gap-4">
+                    <div className="mt-9 grid grid-cols-2 gap-4">
                       {[
                         { val: "24/7", label: "Always Monitoring" },
                         { val: "100+", label: "SEO Signals Tracked" },
@@ -687,10 +692,10 @@ export default function Home() {
                       ].map((m) => (
                         <div
                           key={m.label}
-                          className="rounded-xl bg-blue-50/80 px-4 py-4"
+                          className="rounded-xl bg-gradient-to-br from-blue-50/90 to-sky-50/60 px-4 py-5 transition-colors hover:from-blue-50 hover:to-sky-50"
                         >
-                          <p className="text-xl font-bold text-blue-600">{m.val}</p>
-                          <p className="mt-1 text-xs font-medium text-slate-500">
+                          <p className="stat-value text-xl font-extrabold">{m.val}</p>
+                          <p className="mt-1.5 text-[11px] font-semibold uppercase tracking-wider text-slate-400">
                             {m.label}
                           </p>
                         </div>
@@ -716,10 +721,10 @@ export default function Home() {
           <div className="mx-auto max-w-7xl px-6 py-24 md:py-32">
             <Reveal delay={0.1} variant="strong">
               <div className="text-center">
-                <p className="text-sm font-semibold uppercase tracking-widest text-blue-600">
+                <p className="text-[12px] font-bold uppercase tracking-[0.2em] text-blue-600">
                   The Long Game
                 </p>
-                <h2 className="mt-3 text-4xl font-bold tracking-tight text-slate-900 md:text-5xl">
+                <h2 className="mt-3 text-4xl font-extrabold tracking-tight text-slate-900 md:text-5xl">
                   Why SEO Is Your Best{" "}
                   <span className="text-gradient">Long-Term Investment</span>
                 </h2>
@@ -852,10 +857,10 @@ export default function Home() {
           <div className="mx-auto max-w-7xl px-6 py-24 md:py-32">
             <Reveal delay={0.1} variant="strong">
               <div className="text-center">
-                <p className="text-sm font-semibold uppercase tracking-widest text-blue-600">
+                <p className="text-[12px] font-bold uppercase tracking-[0.2em] text-blue-600">
                   How It Works
                 </p>
-                <h2 className="mt-3 text-4xl font-bold tracking-tight text-slate-900 md:text-5xl">
+                <h2 className="mt-3 text-4xl font-extrabold tracking-tight text-slate-900 md:text-5xl">
                   A Proven <span className="text-gradient">4-Step Process</span>
                 </h2>
                 <p className="mx-auto mt-5 max-w-2xl text-lg text-slate-500">
@@ -865,17 +870,17 @@ export default function Home() {
               </div>
             </Reveal>
 
-            <div className="relative mt-16 grid gap-8 sm:grid-cols-2 lg:grid-cols-4">
+            <div className="process-grid relative mt-16 grid gap-8 sm:grid-cols-2 lg:grid-cols-4">
               {process.map((p, i) => (
                 <Reveal key={p.step} delay={0.15 + i * 0.1} variant="soft">
                   <div className="glass-card relative rounded-2xl p-8 text-center">
-                    <span className="text-5xl font-extrabold text-blue-100">
+                    <span className="stat-value text-5xl font-extrabold opacity-30">
                       {p.step}
                     </span>
-                    <h3 className="mt-3 text-lg font-bold text-slate-900">
+                    <h3 className="mt-3 text-lg font-bold tracking-tight text-slate-900">
                       {p.title}
                     </h3>
-                    <p className="mt-3 text-[15px] leading-7 text-slate-500">
+                    <p className="mt-3 text-[14.5px] leading-7 text-slate-500">
                       {p.desc}
                     </p>
                   </div>
@@ -894,10 +899,10 @@ export default function Home() {
           <div className="mx-auto max-w-7xl px-6 py-24 md:py-32">
             <Reveal delay={0.1} variant="strong">
               <div className="text-center">
-                <p className="text-sm font-semibold uppercase tracking-widest text-blue-600">
+                <p className="text-[12px] font-bold uppercase tracking-[0.2em] text-blue-600">
                   Why Harbor Point
                 </p>
-                <h2 className="mt-3 text-4xl font-bold tracking-tight text-slate-900 md:text-5xl">
+                <h2 className="mt-3 text-4xl font-extrabold tracking-tight text-slate-900 md:text-5xl">
                   Built for Businesses{" "}
                   <span className="text-gradient">Others Won&apos;t Touch</span>
                 </h2>
@@ -953,10 +958,10 @@ export default function Home() {
           <div className="mx-auto max-w-7xl px-6 py-24 md:py-32">
             <Reveal delay={0.1} variant="strong">
               <div className="text-center">
-                <p className="text-sm font-semibold uppercase tracking-widest text-blue-600">
+                <p className="text-[12px] font-bold uppercase tracking-[0.2em] text-blue-600">
                   Real Results
                 </p>
-                <h2 className="mt-3 text-4xl font-bold tracking-tight text-slate-900 md:text-5xl">
+                <h2 className="mt-3 text-4xl font-extrabold tracking-tight text-slate-900 md:text-5xl">
                   See What Our{" "}
                   <span className="text-gradient">Audit Reveals</span>
                 </h2>
@@ -1061,7 +1066,7 @@ export default function Home() {
 
                   {/* Score circle */}
                   <div className="mt-8 flex items-center gap-8">
-                    <div className="relative flex h-32 w-32 shrink-0 items-center justify-center rounded-full border-[6px] border-emerald-200 bg-emerald-50">
+                    <div className="score-glow relative flex h-32 w-32 shrink-0 items-center justify-center rounded-full border-[6px] border-emerald-200 bg-emerald-50">
                       <div className="text-center">
                         <p className="text-4xl font-extrabold text-emerald-500">
                           85
@@ -1184,10 +1189,10 @@ export default function Home() {
           <div className="mx-auto max-w-5xl px-6 py-24 md:py-32">
             <Reveal delay={0.1} variant="strong">
               <div className="text-center">
-                <p className="text-sm font-semibold uppercase tracking-widest text-blue-600">
+                <p className="text-[12px] font-bold uppercase tracking-[0.2em] text-blue-600">
                   The Team Behind The AI
                 </p>
-                <h2 className="mt-3 text-4xl font-bold tracking-tight text-slate-900 md:text-5xl">
+                <h2 className="mt-3 text-4xl font-extrabold tracking-tight text-slate-900 md:text-5xl">
                   Real People,{" "}
                   <span className="text-gradient">Real Expertise</span>
                 </h2>
@@ -1260,10 +1265,10 @@ export default function Home() {
           <div className="mx-auto max-w-3xl px-6 py-24 md:py-32">
             <Reveal delay={0.1} variant="strong">
               <div className="text-center">
-                <p className="text-sm font-semibold uppercase tracking-widest text-blue-600">
+                <p className="text-[12px] font-bold uppercase tracking-[0.2em] text-blue-600">
                   FAQ
                 </p>
-                <h2 className="mt-3 text-4xl font-bold tracking-tight text-slate-900 md:text-5xl">
+                <h2 className="mt-3 text-4xl font-extrabold tracking-tight text-slate-900 md:text-5xl">
                   Common <span className="text-gradient">Questions</span>
                 </h2>
               </div>
@@ -1318,10 +1323,10 @@ export default function Home() {
 
           <Reveal delay={0.1} variant="strong">
             <div className="relative text-center">
-              <p className="text-sm font-semibold uppercase tracking-widest text-blue-600">
+              <p className="text-[12px] font-bold uppercase tracking-[0.2em] text-blue-600">
                 Get Started
               </p>
-              <h2 className="mt-3 text-4xl font-bold tracking-tight text-slate-900 md:text-5xl">
+              <h2 className="mt-3 text-4xl font-extrabold tracking-tight text-slate-900 md:text-5xl">
                 Start Your{" "}
                 <span className="text-gradient">Growth Journey</span>
               </h2>
