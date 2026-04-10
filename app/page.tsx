@@ -385,7 +385,7 @@ export default function Home() {
                     </span>
                   </ScrollButton>
                   <ScrollButton target="contact" className="btn-secondary">
-                    Get a Free Audit
+                    Get a Custom Audit
                   </ScrollButton>
                 </div>
               </Reveal>
@@ -1415,8 +1415,8 @@ export default function Home() {
                 Get Started
               </p>
               <h2 className="mt-3 text-4xl font-bold tracking-tight text-slate-900 md:text-5xl">
-                Request Your{" "}
-                <span className="text-gradient">Free Consultation</span>
+                Start Your{" "}
+                <span className="text-gradient">Growth Journey</span>
               </h2>
               <p className="mx-auto mt-5 max-w-2xl text-lg text-slate-500">
                 Select the services you need, tell us about your business, and

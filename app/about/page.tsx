@@ -250,15 +250,15 @@ export default function AboutPage() {
                 Ready to Grow Your High-Risk Business?
               </h2>
               <p className="mx-auto mt-4 max-w-2xl text-lg text-blue-100">
-                Get a free AI-powered marketing audit and see exactly where your
-                growth opportunities are.
+                Get an AI-powered marketing audit and see exactly where your
+                biggest growth opportunities are.
               </p>
               <div className="mt-8">
                 <ScrollButton
                   target="contact"
                   className="inline-flex items-center gap-2 rounded-xl bg-white px-8 py-4 text-base font-bold text-blue-600 shadow-xl transition hover:-translate-y-1 hover:shadow-2xl"
                 >
-                  Get Your Free Audit
+                  Get Your Custom Audit
                 </ScrollButton>
               </div>
             </Reveal>
