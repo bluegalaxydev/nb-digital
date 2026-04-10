@@ -7,6 +7,8 @@ const links = [
   { href: "/", label: "Home" },
   { href: "/#services", label: "Services" },
   { href: "/#about", label: "About" },
+  { href: "/#faq", label: "FAQ" },
+  { href: "/#contact", label: "Contact" },
   { href: "/terms-and-conditions", label: "Terms" },
   { href: "/privacy", label: "Privacy" },
 ];
@@ -19,16 +21,28 @@ export default function MobileNav() {
       <button
         type="button"
         onClick={() => setOpen(!open)}
-        className="flex h-10 w-10 items-center justify-center rounded-lg text-gray-700 hover:bg-gray-100"
+        className="flex h-10 w-10 items-center justify-center rounded-lg text-slate-700 hover:bg-blue-50"
         aria-label={open ? "Close menu" : "Open menu"}
         aria-expanded={open}
       >
         {open ? (
-          <svg width="24" height="24" fill="none" stroke="currentColor" strokeWidth="2">
+          <svg
+            width="24"
+            height="24"
+            fill="none"
+            stroke="currentColor"
+            strokeWidth="2"
+          >
             <path d="M6 6l12 12M6 18L18 6" />
           </svg>
         ) : (
-          <svg width="24" height="24" fill="none" stroke="currentColor" strokeWidth="2">
+          <svg
+            width="24"
+            height="24"
+            fill="none"
+            stroke="currentColor"
+            strokeWidth="2"
+          >
             <path d="M4 6h16M4 12h16M4 18h16" />
           </svg>
         )}
@@ -36,22 +50,31 @@ export default function MobileNav() {
 
       {open && (
         <nav
-          className="absolute left-0 right-0 top-full z-50 border-b border-gray-200 bg-white px-6 py-4 shadow-lg"
+          className="absolute left-0 right-0 top-full z-50 border-b border-blue-100/50 bg-white/95 px-6 py-4 shadow-lg backdrop-blur-xl"
           aria-label="Mobile navigation"
         >
-          <ul className="space-y-3">
+          <ul className="space-y-1">
             {links.map((link) => (
               <li key={link.href}>
                 <Link
                   href={link.href}
                   onClick={() => setOpen(false)}
-                  className="block rounded-lg px-3 py-2 text-[15px] text-gray-700 hover:bg-gray-50 hover:text-black"
+                  className="block rounded-lg px-3 py-2.5 text-[15px] font-medium text-slate-700 transition hover:bg-blue-50 hover:text-blue-700"
                 >
                   {link.label}
                 </Link>
               </li>
             ))}
           </ul>
+          <div className="mt-3 border-t border-blue-100/50 pt-3">
+            <Link
+              href="/#contact"
+              onClick={() => setOpen(false)}
+              className="block rounded-xl bg-gradient-to-r from-blue-600 to-sky-500 px-4 py-3 text-center text-[15px] font-semibold text-white shadow-md"
+            >
+              Get Started
+            </Link>
+          </div>
         </nav>
       )}
     </div>
