@@ -62,7 +62,7 @@ const services = [
   {
     icon: Megaphone,
     title: "Social Media & UGC",
-    text: "Platform-native content, UGC video production, and community-building strategies tailored for high-risk brands that need creative workarounds.",
+    text: "Platform-native content, UGC video production, and community-building strategies tailored for high-risk brands using compliant creative approaches.",
   },
   {
     icon: LineChart,

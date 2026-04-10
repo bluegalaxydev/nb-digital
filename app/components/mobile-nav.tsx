@@ -5,12 +5,10 @@ import Link from "next/link";
 
 const links = [
   { href: "/", label: "Home" },
-  { href: "/#services", label: "Services" },
-  { href: "/#about", label: "About" },
-  { href: "/#faq", label: "FAQ" },
+  { href: "/services", label: "Services" },
+  { href: "/about", label: "About" },
+  { href: "/blog", label: "Blog" },
   { href: "/#contact", label: "Contact" },
-  { href: "/terms-and-conditions", label: "Terms" },
-  { href: "/privacy", label: "Privacy" },
 ];
 
 export default function MobileNav() {

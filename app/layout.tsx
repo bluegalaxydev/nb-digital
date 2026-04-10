@@ -41,11 +41,61 @@ export const metadata: Metadata = {
   },
 };
 
+/* ── WebSite schema for Google Sitelinks search box ── */
+const websiteJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  name: "Harbor Point Marketing Services",
+  url: "https://www.harborpointmarketingservices.com",
+  description:
+    "AI-powered marketing agency for high-risk industries — peptides, supplements, CBD, and restricted verticals.",
+  publisher: {
+    "@type": "Organization",
+    name: "Harbor Point Marketing Services",
+    logo: {
+      "@type": "ImageObject",
+      url: "https://www.harborpointmarketingservices.com/logo.png",
+    },
+  },
+};
+
+/* ── BreadcrumbList schema ── */
+const breadcrumbJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  itemListElement: [
+    {
+      "@type": "ListItem",
+      position: 1,
+      name: "Home",
+      item: "https://www.harborpointmarketingservices.com",
+    },
+    {
+      "@type": "ListItem",
+      position: 2,
+      name: "Services",
+      item: "https://www.harborpointmarketingservices.com/services",
+    },
+    {
+      "@type": "ListItem",
+      position: 3,
+      name: "About",
+      item: "https://www.harborpointmarketingservices.com/about",
+    },
+    {
+      "@type": "ListItem",
+      position: 4,
+      name: "Blog",
+      item: "https://www.harborpointmarketingservices.com/blog",
+    },
+  ],
+};
+
 const navLinks = [
   { href: "/", label: "Home" },
-  { href: "/#services", label: "Services" },
-  { href: "/#about", label: "About" },
-  { href: "/#faq", label: "FAQ" },
+  { href: "/services", label: "Services" },
+  { href: "/about", label: "About" },
+  { href: "/blog", label: "Blog" },
   { href: "/#contact", label: "Contact" },
 ];
 
@@ -59,6 +109,16 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} bg-[#eef4fb] text-[#0f172a]`}
       >
+        {/* ── Global structured data ── */}
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(websiteJsonLd) }}
+        />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }}
+        />
+
         {/* ── Header ── */}
         <header className="sticky top-0 z-40 border-b border-blue-100/50 bg-white/75 backdrop-blur-xl">
           <div className="relative mx-auto flex max-w-7xl items-center justify-between px-6 py-3.5">
@@ -157,9 +217,10 @@ export default function RootLayout({
                 <ul className="mt-4 space-y-2.5">
                   {[
                     { href: "/", label: "Home" },
-                    { href: "/#services", label: "Services" },
-                    { href: "/#about", label: "About" },
-                    { href: "/#faq", label: "FAQ" },
+                    { href: "/services", label: "Services" },
+                    { href: "/about", label: "About" },
+                    { href: "/blog", label: "Blog" },
+                    { href: "/#contact", label: "Contact" },
                     { href: "/terms-and-conditions", label: "Terms & Conditions" },
                     { href: "/privacy", label: "Privacy Policy" },
                   ].map((link) => (
