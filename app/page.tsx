@@ -13,6 +13,12 @@ import {
   ArrowRight,
   ChevronDown,
   CheckCircle2,
+  Bot,
+  BrainCircuit,
+  Clock,
+  Layers,
+  Sprout,
+  LineChart,
 } from "lucide-react";
 import Reveal from "./components/reveal";
 import ScrollButton from "./components/scroll-button";
@@ -20,28 +26,32 @@ import type { Metadata } from "next";
 
 /* ── SEO metadata ─────────────────────────────── */
 export const metadata: Metadata = {
-  title: "Harbor Point Marketing | High-Risk Business Marketing & SEO Growth",
+  title: "Harbor Point Marketing | AI-Powered SEO & Marketing for High-Risk Businesses",
   description:
-    "Harbor Point Marketing helps high-risk brands — peptides, supplements, CBD, nutraceuticals, and restricted industries — scale through compliant SEO, paid advertising, automation, and conversion-focused marketing systems.",
+    "Harbor Point Marketing uses proprietary AI marketing technology to help high-risk brands — peptides, supplements, CBD, nutraceuticals, and restricted industries — build long-term SEO frameworks, scale paid advertising, and automate growth systems.",
   keywords: [
     "high risk marketing agency",
-    "high risk SEO",
+    "AI SEO marketing",
+    "high risk SEO agency",
     "peptide marketing",
     "supplement marketing agency",
     "CBD marketing",
     "nutraceutical marketing",
     "restricted industry marketing",
-    "high risk paid ads",
+    "AI marketing robot",
+    "long term SEO strategy",
+    "SEO framework high risk",
     "marketing automation high risk",
     "conversion rate optimization",
     "Harbor Point Marketing",
     "compliant marketing",
     "high risk business growth",
+    "AI powered marketing agency",
   ],
   openGraph: {
-    title: "Harbor Point Marketing | Marketing & SEO for High-Risk Industries",
+    title: "Harbor Point Marketing | AI-Powered SEO & Marketing for High-Risk Industries",
     description:
-      "We help high-risk brands scale through compliant growth systems, SEO, paid advertising, and marketing automation. Peptides, supplements, CBD & more.",
+      "We use proprietary AI marketing technology to help high-risk brands build long-term SEO frameworks, run compliant paid ads, and automate growth. Peptides, supplements, CBD & more.",
     url: "https://www.harborpointmarketingservices.com",
     siteName: "Harbor Point Marketing Services",
     locale: "en_US",
@@ -57,9 +67,9 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Harbor Point Marketing | High-Risk Business Growth",
+    title: "Harbor Point Marketing | AI-Powered High-Risk Business Growth",
     description:
-      "SEO, paid ads & marketing systems for peptide companies, supplements, CBD, and restricted industries.",
+      "AI-powered SEO frameworks, paid ads & marketing systems for peptide companies, supplements, CBD, and restricted industries. Long-term growth, not quick fixes.",
   },
   alternates: {
     canonical: "https://www.harborpointmarketingservices.com",
@@ -76,7 +86,7 @@ const orgJsonLd = {
   logo: "https://www.harborpointmarketingservices.com/logo.png",
   image: "https://www.harborpointmarketingservices.com/logo.png",
   description:
-    "Full-service marketing agency specializing in high-risk industries including peptides, supplements, CBD, and restricted verticals. We deliver compliant SEO, paid advertising, marketing automation, and conversion optimization.",
+    "AI-powered marketing agency specializing in high-risk industries including peptides, supplements, CBD, and restricted verticals. We use proprietary AI marketing technology to build long-term SEO frameworks, deliver compliant paid advertising, marketing automation, and conversion optimization.",
   address: {
     "@type": "PostalAddress",
     streetAddress: "6013 Warner Ave",
@@ -116,11 +126,14 @@ const orgJsonLd = {
   ],
   knowsAbout: [
     "high-risk marketing",
+    "AI-powered SEO",
     "peptide marketing",
     "supplement marketing",
     "CBD marketing",
     "restricted industry advertising",
     "compliant digital marketing",
+    "long-term SEO strategy",
+    "AI marketing automation",
   ],
 };
 
@@ -169,6 +182,22 @@ const faqJsonLd = {
         text: "Paid advertising campaigns typically generate leads within the first 1-2 weeks. SEO results generally begin appearing within 60-90 days, with significant ranking improvements by month 4-6. We provide transparent monthly reporting so you can track progress at every stage.",
       },
     },
+    {
+      "@type": "Question",
+      name: "What is your AI Marketing Robot and how does it work?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Our proprietary AI Marketing Engine continuously analyzes your website structure, keyword rankings, competitor movements, and content performance. It automatically identifies SEO gaps, generates optimization recommendations, monitors technical health, and helps produce compliant content — all customized for high-risk industries that require extra compliance awareness.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "Why is SEO a long-term investment and not a one-time project?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "SEO is a compounding asset — unlike paid ads that stop the moment you stop paying, SEO builds equity over time. Search algorithms constantly evolve, competitors publish new content, and user behavior shifts. A long-term SEO strategy ensures your rankings grow month over month, your organic traffic compounds, and your cost per acquisition decreases over time. Most of our clients see their best ROI after 6-12 months of consistent SEO work.",
+      },
+    },
   ],
 };
 
@@ -176,33 +205,33 @@ const faqJsonLd = {
 const services = [
   {
     icon: Search,
-    title: "SEO & Organic Growth",
-    desc: "Dominate search results with compliant, high-intent keyword strategies built for restricted industries.",
+    title: "AI-Powered SEO Framework",
+    desc: "Our AI engine builds and continuously optimizes your SEO architecture — technical audits, keyword mapping, content gaps, and internal linking — for sustainable long-term rankings.",
   },
   {
     icon: BarChart3,
     title: "Paid Advertising",
-    desc: "Run profitable ad campaigns on X, Reddit, and programmatic networks — even when other platforms restrict you.",
+    desc: "Run profitable ad campaigns on X, Reddit, and programmatic networks — even when other platforms restrict you. AI-optimized targeting and bidding.",
   },
   {
     icon: Zap,
     title: "Marketing Automation",
-    desc: "Build 24/7 systems that nurture leads, recover carts, and drive repeat purchases on autopilot.",
+    desc: "Build 24/7 AI-driven systems that nurture leads, recover carts, segment audiences, and drive repeat purchases on autopilot.",
   },
   {
     icon: Globe,
     title: "Website Design & CRO",
-    desc: "High-converting websites and landing pages engineered to turn visitors into customers.",
+    desc: "High-converting websites and landing pages with SEO-first architecture engineered to turn visitors into customers.",
   },
   {
     icon: Shield,
     title: "Compliance Strategy",
-    desc: "Navigate platform policies and ad restrictions with messaging that stays compliant and converts.",
+    desc: "Navigate platform policies and ad restrictions with AI-informed messaging frameworks that stay compliant and convert.",
   },
   {
     icon: TrendingUp,
     title: "Content & Email Marketing",
-    desc: "SEO content, email sequences, and retention flows that build long-term brand authority and revenue.",
+    desc: "AI-assisted SEO content, email sequences, and retention flows that compound your organic authority month over month.",
   },
 ];
 
@@ -245,20 +274,28 @@ const faqs = [
     a: "We specialize in high-risk industries that most agencies won't touch — including peptides, supplements, nutraceuticals, CBD, prediction markets, and other restricted verticals. Our team understands the compliance landscape and platform restrictions specific to these categories.",
   },
   {
+    q: "What is your AI Marketing Robot and how does it work?",
+    a: "Our proprietary AI Marketing Engine continuously analyzes your website structure, keyword rankings, competitor movements, and content performance. It automatically identifies SEO gaps, generates optimization recommendations, monitors technical health, and helps produce compliant content — all customized for high-risk industries that require extra compliance awareness.",
+  },
+  {
+    q: "Why is SEO a long-term investment?",
+    a: "SEO is a compounding asset — unlike paid ads that stop the moment you stop paying, SEO builds equity over time. Search algorithms constantly evolve, competitors publish new content, and user behavior shifts. A long-term SEO strategy ensures your rankings grow month over month, your organic traffic compounds, and your cost per acquisition decreases. Most clients see their best ROI after 6-12 months of consistent work.",
+  },
+  {
     q: "How do you run ads for restricted industries?",
     a: "We use a multi-platform approach focusing on channels with more flexible policies such as X (Twitter), Reddit, and select programmatic networks. We also build strong organic systems through SEO and content marketing to reduce dependence on any single ad platform.",
   },
   {
-    q: "Do you require long-term contracts?",
-    a: "No. We operate on a month-to-month basis because we believe our results should earn your business, not a contract. Most clients stay because the ROI speaks for itself.",
+    q: "What does your SEO framework process look like?",
+    a: "Our AI-powered SEO process starts with a deep technical audit, then builds a keyword architecture targeting buyer-intent terms in your niche. From there we create a content strategy with compliance-safe language, optimize on-page elements, build internal linking structures, and continuously produce and refine content. Our AI monitors everything 24/7 and flags opportunities in real-time.",
   },
   {
-    q: "What does your SEO process look like for high-risk businesses?",
-    a: "Our SEO process includes a comprehensive technical audit, keyword research targeting buyer-intent terms in your niche, content strategy built around compliance-safe language, on-page optimization, internal linking architecture, and ongoing content production.",
+    q: "Do you require long-term contracts?",
+    a: "No. We operate month-to-month because we believe our results should earn your business, not a contract. That said, SEO is inherently a long-term strategy — clients who commit to 6-12 months see exponentially better results as their organic rankings compound.",
   },
   {
     q: "How quickly can I expect to see results?",
-    a: "Paid advertising campaigns typically generate leads within the first 1-2 weeks. SEO results generally begin appearing within 60-90 days, with significant ranking improvements by month 4-6. We provide transparent monthly reporting so you can track progress.",
+    a: "Paid advertising campaigns typically generate leads within 1-2 weeks. For SEO, you'll see initial improvements in 60-90 days, with significant ranking gains by month 4-6. The real magic of SEO is its compounding nature — months 6-12 is where organic traffic growth truly accelerates.",
   },
 ];
 
@@ -316,24 +353,24 @@ export default function Home() {
             <div>
               <Reveal delay={0.1} variant="soft">
                 <p className="badge-shimmer inline-flex items-center gap-2 rounded-full border border-blue-200/60 bg-white/80 px-5 py-2.5 text-sm font-medium text-blue-700 shadow-sm backdrop-blur-sm">
-                  <span className="flex h-2 w-2 rounded-full bg-blue-500" />
-                  Trusted by 150+ High-Risk Brands
+                  <Bot size={16} className="text-blue-500" />
+                  AI-Powered Marketing for High-Risk Brands
                 </p>
               </Reveal>
 
               <Reveal delay={0.2} variant="strong">
                 <h1 className="mt-7 text-[2.75rem] font-bold leading-[1.1] tracking-tight text-slate-900 md:text-[3.75rem] lg:text-[4.25rem]">
-                  Marketing That Helps{" "}
-                  <span className="text-gradient-hero">High-Risk Businesses</span>{" "}
-                  Grow Faster
+                  AI-Driven SEO &amp; Marketing for{" "}
+                  <span className="text-gradient-hero">High-Risk Businesses</span>
                 </h1>
               </Reveal>
 
               <Reveal delay={0.35} variant="soft">
                 <p className="mt-6 max-w-xl text-lg leading-relaxed text-slate-600 md:text-xl">
-                  We build compliant growth systems — SEO, paid ads, automation &
-                  conversion optimization — for peptide companies, supplements,
-                  CBD, and restricted industries.
+                  We use our proprietary AI Marketing Engine to build long-term
+                  SEO frameworks, run compliant paid ads, and automate growth
+                  systems — for peptide companies, supplements, CBD, and
+                  restricted industries.
                 </p>
               </Reveal>
 
@@ -357,9 +394,9 @@ export default function Home() {
                   role="list"
                 >
                   {[
-                    "No long-term contracts",
+                    "Proprietary AI Marketing Robot",
+                    "Long-term SEO framework building",
                     "Done-for-you implementation",
-                    "Custom to your industry",
                   ].map((item, i) => (
                     <li key={item} className="flex items-center gap-2.5">
                       <span
@@ -442,26 +479,27 @@ export default function Home() {
             <div>
               <Reveal delay={0.25} variant="strong">
                 <h2 className="text-4xl font-bold leading-tight tracking-tight text-slate-900 md:text-5xl">
-                  Your Complete Growth{" "}
-                  <span className="text-gradient">Operating System</span>
+                  Your AI-Powered{" "}
+                  <span className="text-gradient">Growth Engine</span>
                 </h2>
               </Reveal>
 
               <Reveal delay={0.4} variant="soft">
                 <p className="mt-6 text-lg leading-8 text-slate-600">
-                  We don&apos;t just run ads or post content. We build
-                  end-to-end marketing infrastructure — automation, SEO, paid
-                  acquisition, and sales funnels — that works around the clock
-                  so your high-risk business can scale without limits.
+                  We don&apos;t just run ads or post content. Our AI Marketing
+                  Robot continuously analyzes your SEO framework, identifies
+                  ranking opportunities, and builds the infrastructure — automation,
+                  content, paid acquisition, and funnels — that compounds your
+                  growth month over month.
                 </p>
               </Reveal>
 
               <Reveal delay={0.5} variant="soft">
                 <ul className="mt-8 space-y-4" role="list">
                   {[
-                    "Custom automation that runs your marketing 24/7",
-                    "Industry-specific systems built for your niche",
-                    "Full integration of your sales and operations",
+                    "AI-powered SEO monitoring and optimization 24/7",
+                    "Long-term framework building — not quick fixes",
+                    "Industry-specific systems for your high-risk niche",
                     "Done-for-you implementation — not just consulting",
                   ].map((item) => (
                     <li
@@ -539,6 +577,265 @@ export default function Home() {
                 </Reveal>
               ))}
             </div>
+          </div>
+        </section>
+
+        <div className="section-divider mx-auto max-w-5xl" />
+
+        {/* ═══════════════════════════════════════
+            AI MARKETING ENGINE
+        ═══════════════════════════════════════ */}
+        <section
+          id="ai-engine"
+          aria-label="Our AI Marketing Engine"
+          className="relative overflow-hidden"
+        >
+          <div
+            className="glow-orb glow-orb--animated"
+            style={{
+              width: 500,
+              height: 500,
+              top: -100,
+              right: -100,
+              background:
+                "radial-gradient(circle, rgba(37,99,235,0.12) 0%, transparent 70%)",
+            }}
+            aria-hidden="true"
+          />
+
+          <div className="relative mx-auto max-w-7xl px-6 py-24 md:py-32">
+            <div className="grid items-center gap-14 md:grid-cols-2">
+              <div>
+                <Reveal delay={0.1} variant="strong">
+                  <p className="text-sm font-semibold uppercase tracking-widest text-blue-600">
+                    Our Technology
+                  </p>
+                  <h2 className="mt-3 text-4xl font-bold tracking-tight text-slate-900 md:text-5xl">
+                    Meet Our{" "}
+                    <span className="text-gradient">AI Marketing Engine</span>
+                  </h2>
+                </Reveal>
+
+                <Reveal delay={0.25} variant="soft">
+                  <p className="mt-6 text-lg leading-8 text-slate-600">
+                    Unlike traditional agencies that rely on manual processes, Harbor
+                    Point deploys a proprietary AI Marketing Robot that works around
+                    the clock to analyze, optimize, and grow your digital presence.
+                    It&apos;s like having a full marketing team that never sleeps.
+                  </p>
+                </Reveal>
+
+                <Reveal delay={0.4} variant="soft">
+                  <ul className="mt-8 space-y-4" role="list">
+                    {[
+                      {
+                        icon: BrainCircuit,
+                        text: "Continuously scans your site architecture and identifies SEO gaps",
+                      },
+                      {
+                        icon: LineChart,
+                        text: "Monitors keyword rankings and competitor movements in real-time",
+                      },
+                      {
+                        icon: Layers,
+                        text: "Generates content briefs and optimization recommendations automatically",
+                      },
+                      {
+                        icon: Shield,
+                        text: "Flags compliance issues before they become platform violations",
+                      },
+                      {
+                        icon: Clock,
+                        text: "Produces monthly insight reports with actionable next steps",
+                      },
+                    ].map((item) => (
+                      <li
+                        key={item.text}
+                        className="flex items-start gap-3 rounded-xl px-3 py-2.5 text-[16px] text-slate-700 transition hover:bg-white/70"
+                      >
+                        <item.icon
+                          size={20}
+                          className="mt-0.5 shrink-0 text-blue-500"
+                        />
+                        {item.text}
+                      </li>
+                    ))}
+                  </ul>
+                </Reveal>
+              </div>
+
+              <Reveal delay={0.2} variant="strong">
+                <div className="relative">
+                  {/* AI Engine visual card */}
+                  <div className="glass-card rounded-3xl p-10 text-center">
+                    <div className="mx-auto flex h-24 w-24 items-center justify-center rounded-3xl bg-gradient-to-br from-blue-500 to-sky-400 shadow-2xl shadow-blue-500/30">
+                      <Bot size={48} className="text-white" />
+                    </div>
+                    <h3 className="mt-6 text-2xl font-bold text-slate-900">
+                      Harbor Point AI Engine
+                    </h3>
+                    <p className="mt-3 text-slate-500">
+                      Proprietary marketing intelligence built for high-risk industries
+                    </p>
+
+                    <div className="mt-8 grid grid-cols-2 gap-4">
+                      {[
+                        { val: "24/7", label: "Always Monitoring" },
+                        { val: "100+", label: "SEO Signals Tracked" },
+                        { val: "Real-time", label: "Competitor Analysis" },
+                        { val: "Auto", label: "Content Recommendations" },
+                      ].map((m) => (
+                        <div
+                          key={m.label}
+                          className="rounded-xl bg-blue-50/80 px-4 py-4"
+                        >
+                          <p className="text-xl font-bold text-blue-600">{m.val}</p>
+                          <p className="mt-1 text-xs font-medium text-slate-500">
+                            {m.label}
+                          </p>
+                        </div>
+                      ))}
+                    </div>
+                  </div>
+                </div>
+              </Reveal>
+            </div>
+          </div>
+        </section>
+
+        <div className="section-divider mx-auto max-w-5xl" />
+
+        {/* ═══════════════════════════════════════
+            WHY SEO IS A LONG-TERM INVESTMENT
+        ═══════════════════════════════════════ */}
+        <section
+          id="why-seo"
+          aria-label="Why SEO is a long-term investment"
+          className="relative overflow-hidden bg-gradient-to-b from-[#eef4fb] via-white to-[#eef4fb]"
+        >
+          <div className="mx-auto max-w-7xl px-6 py-24 md:py-32">
+            <Reveal delay={0.1} variant="strong">
+              <div className="text-center">
+                <p className="text-sm font-semibold uppercase tracking-widest text-blue-600">
+                  The Long Game
+                </p>
+                <h2 className="mt-3 text-4xl font-bold tracking-tight text-slate-900 md:text-5xl">
+                  Why SEO Is Your Best{" "}
+                  <span className="text-gradient">Long-Term Investment</span>
+                </h2>
+                <p className="mx-auto mt-5 max-w-3xl text-lg text-slate-500">
+                  Paid ads deliver instant traffic — but the moment you stop paying,
+                  it vanishes. SEO is different. It&apos;s a compounding asset that
+                  builds equity in your brand and delivers increasing returns over time.
+                </p>
+              </div>
+            </Reveal>
+
+            <div className="mt-16 grid gap-8 md:grid-cols-2 lg:grid-cols-3">
+              {[
+                {
+                  icon: Sprout,
+                  title: "Compounding Growth",
+                  desc: "Every piece of optimized content, every backlink, every technical improvement builds on the last. Month 6 is stronger than month 1. Month 12 is exponentially stronger. Your organic traffic snowballs.",
+                },
+                {
+                  icon: TrendingUp,
+                  title: "Decreasing Cost Per Lead",
+                  desc: "As your rankings climb, your organic traffic increases — but your monthly investment stays flat. Over time, your effective cost per lead drops dramatically compared to paid channels.",
+                },
+                {
+                  icon: Shield,
+                  title: "Platform-Independent",
+                  desc: "High-risk businesses face constant risk of ad account bans and policy changes. SEO gives you a traffic source that no platform can shut off — it's your own digital asset.",
+                },
+                {
+                  icon: Target,
+                  title: "Buyer-Intent Traffic",
+                  desc: "People searching for your products on Google have high purchase intent. SEO captures demand at the exact moment someone is ready to buy — the highest-quality traffic you can get.",
+                },
+                {
+                  icon: Clock,
+                  title: "24/7 Lead Generation",
+                  desc: "Your optimized pages work around the clock. While you sleep, your content ranks, attracts visitors, and generates leads. No ad spend required — just consistent SEO investment.",
+                },
+                {
+                  icon: BarChart3,
+                  title: "Competitive Moat",
+                  desc: "Strong SEO authority is incredibly hard for competitors to replicate. The longer you invest, the deeper your moat becomes. First-mover advantage in SEO is real and lasting.",
+                },
+              ].map((item, i) => (
+                <Reveal key={item.title} delay={0.12 + i * 0.07} variant="soft">
+                  <div className="glass-card group rounded-2xl p-8">
+                    <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-gradient-to-br from-blue-500 to-sky-500 text-white shadow-lg shadow-blue-500/20 transition-transform group-hover:scale-110">
+                      <item.icon size={22} />
+                    </div>
+                    <h3 className="mt-5 text-lg font-bold text-slate-900">
+                      {item.title}
+                    </h3>
+                    <p className="mt-3 text-[15px] leading-7 text-slate-500">
+                      {item.desc}
+                    </p>
+                  </div>
+                </Reveal>
+              ))}
+            </div>
+
+            {/* SEO timeline visual */}
+            <Reveal delay={0.3} variant="soft">
+              <div className="mx-auto mt-20 max-w-4xl">
+                <div className="glass-card rounded-3xl p-8 md:p-12">
+                  <h3 className="text-center text-2xl font-bold text-slate-900">
+                    The SEO Growth Timeline
+                  </h3>
+                  <p className="mt-2 text-center text-slate-500">
+                    SEO is a marathon, not a sprint. Here&apos;s what to expect:
+                  </p>
+                  <div className="mt-10 grid gap-6 md:grid-cols-4">
+                    {[
+                      {
+                        period: "Month 1-2",
+                        title: "Foundation",
+                        desc: "Technical audit, keyword research, site architecture, and on-page fixes. Building the infrastructure.",
+                        color: "from-blue-400 to-blue-500",
+                      },
+                      {
+                        period: "Month 3-4",
+                        title: "Traction",
+                        desc: "Content production ramps up, internal linking matures, early keyword movements appear in search console.",
+                        color: "from-blue-500 to-sky-500",
+                      },
+                      {
+                        period: "Month 5-8",
+                        title: "Acceleration",
+                        desc: "Rankings climb, organic traffic grows noticeably. Content compounds. Competitors start falling behind.",
+                        color: "from-sky-500 to-cyan-500",
+                      },
+                      {
+                        period: "Month 9-12+",
+                        title: "Dominance",
+                        desc: "Top rankings for high-value terms. Organic traffic delivers consistent leads. SEO becomes your #1 channel.",
+                        color: "from-cyan-500 to-emerald-500",
+                      },
+                    ].map((phase) => (
+                      <div key={phase.period} className="text-center">
+                        <div
+                          className={`mx-auto h-2 w-full rounded-full bg-gradient-to-r ${phase.color}`}
+                        />
+                        <p className="mt-4 text-sm font-bold text-blue-600">
+                          {phase.period}
+                        </p>
+                        <p className="mt-1 text-base font-bold text-slate-900">
+                          {phase.title}
+                        </p>
+                        <p className="mt-2 text-sm leading-6 text-slate-500">
+                          {phase.desc}
+                        </p>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+              </div>
+            </Reveal>
           </div>
         </section>
 
@@ -640,6 +937,241 @@ export default function Home() {
                 </Reveal>
               ))}
             </div>
+          </div>
+        </section>
+
+        <div className="section-divider mx-auto max-w-5xl" />
+
+        {/* ═══════════════════════════════════════
+            CASE STUDY — BEFORE / AFTER
+        ═══════════════════════════════════════ */}
+        <section
+          id="case-study"
+          aria-label="Case study showing AI audit results"
+          className="relative overflow-hidden bg-gradient-to-b from-[#eef4fb] via-[#e8f0fe] to-[#eef4fb]"
+        >
+          <div className="mx-auto max-w-7xl px-6 py-24 md:py-32">
+            <Reveal delay={0.1} variant="strong">
+              <div className="text-center">
+                <p className="text-sm font-semibold uppercase tracking-widest text-blue-600">
+                  Real Results
+                </p>
+                <h2 className="mt-3 text-4xl font-bold tracking-tight text-slate-900 md:text-5xl">
+                  See What Our AI{" "}
+                  <span className="text-gradient">Audit Reveals</span>
+                </h2>
+                <p className="mx-auto mt-5 max-w-3xl text-lg text-slate-500">
+                  Every engagement starts with our AI Marketing Engine running a
+                  comprehensive audit. Here&apos;s a real example of what we deliver
+                  — and the transformation that follows.
+                </p>
+              </div>
+            </Reveal>
+
+            {/* Before / After cards */}
+            <div className="mt-16 grid gap-8 md:grid-cols-2">
+              {/* BEFORE card */}
+              <Reveal delay={0.2} variant="soft">
+                <div className="glass-card rounded-3xl p-8 md:p-10">
+                  <div className="flex items-center gap-3">
+                    <span className="rounded-full bg-red-100 px-4 py-1.5 text-sm font-bold text-red-600">
+                      Before
+                    </span>
+                    <span className="text-sm text-slate-400">Initial AI Audit</span>
+                  </div>
+
+                  {/* Score circle */}
+                  <div className="mt-8 flex items-center gap-8">
+                    <div className="relative flex h-32 w-32 shrink-0 items-center justify-center rounded-full border-[6px] border-red-200 bg-red-50">
+                      <div className="text-center">
+                        <p className="text-4xl font-extrabold text-red-500">31</p>
+                        <p className="text-sm text-red-400">/100</p>
+                      </div>
+                    </div>
+                    <div>
+                      <p className="text-xl font-bold text-red-600">Critical</p>
+                      <p className="mt-1 text-sm leading-6 text-slate-500">
+                        Overall Marketing Score — zero social proof, no structured
+                        data, single-page architecture, thin copy, mismatched email
+                        domain, and no SEO footprint.
+                      </p>
+                    </div>
+                  </div>
+
+                  {/* Score breakdown */}
+                  <div className="mt-8 space-y-3">
+                    <p className="text-xs font-bold uppercase tracking-wider text-slate-400">
+                      Score Breakdown
+                    </p>
+                    {[
+                      { cat: "Content & Messaging", score: 28, status: "Critical" },
+                      { cat: "Conversion Optimization", score: 28, status: "Critical" },
+                      { cat: "SEO & Discoverability", score: 32, status: "Critical" },
+                      { cat: "Competitive Positioning", score: 38, status: "Critical" },
+                      { cat: "Brand & Trust", score: 28, status: "Critical" },
+                      { cat: "Growth & Strategy", score: 31, status: "Critical" },
+                    ].map((row) => (
+                      <div key={row.cat} className="flex items-center gap-3">
+                        <div className="h-2.5 flex-1 overflow-hidden rounded-full bg-slate-100">
+                          <div
+                            className="h-full rounded-full bg-red-400"
+                            style={{ width: `${row.score}%` }}
+                          />
+                        </div>
+                        <span className="w-8 text-right text-sm font-bold text-red-500">
+                          {row.score}
+                        </span>
+                        <span className="w-36 truncate text-xs text-slate-500">
+                          {row.cat}
+                        </span>
+                      </div>
+                    ))}
+                  </div>
+
+                  {/* Key findings */}
+                  <div className="mt-8">
+                    <p className="text-xs font-bold uppercase tracking-wider text-slate-400">
+                      Key Findings
+                    </p>
+                    <ul className="mt-3 space-y-2 text-sm text-slate-600">
+                      {[
+                        "Zero social proof — no testimonials, case studies, or client logos",
+                        "No structured data (schema markup) implemented",
+                        "Single-page site architecture limiting Google indexing",
+                        "No team section — agency appears faceless",
+                        "Only one CTA on the entire page",
+                      ].map((f) => (
+                        <li key={f} className="flex items-start gap-2">
+                          <span className="mt-1 text-red-400">&#x2717;</span>
+                          {f}
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                </div>
+              </Reveal>
+
+              {/* AFTER card */}
+              <Reveal delay={0.3} variant="soft">
+                <div className="glass-card relative rounded-3xl border-blue-200/50 p-8 md:p-10">
+                  <div className="flex items-center gap-3">
+                    <span className="rounded-full bg-emerald-100 px-4 py-1.5 text-sm font-bold text-emerald-600">
+                      After
+                    </span>
+                    <span className="text-sm text-slate-400">
+                      Post AI-Driven Optimization
+                    </span>
+                  </div>
+
+                  {/* Score circle */}
+                  <div className="mt-8 flex items-center gap-8">
+                    <div className="relative flex h-32 w-32 shrink-0 items-center justify-center rounded-full border-[6px] border-emerald-200 bg-emerald-50">
+                      <div className="text-center">
+                        <p className="text-4xl font-extrabold text-emerald-500">
+                          85
+                        </p>
+                        <p className="text-sm text-emerald-400">/100</p>
+                      </div>
+                    </div>
+                    <div>
+                      <p className="text-xl font-bold text-emerald-600">
+                        Excellent
+                      </p>
+                      <p className="mt-1 text-sm leading-6 text-slate-500">
+                        After implementing our AI engine&apos;s recommendations —
+                        multi-page architecture, FAQ schema, structured data, new
+                        content sections, SEO framework, and conversion optimization.
+                      </p>
+                    </div>
+                  </div>
+
+                  {/* Score breakdown */}
+                  <div className="mt-8 space-y-3">
+                    <p className="text-xs font-bold uppercase tracking-wider text-slate-400">
+                      Score Breakdown
+                    </p>
+                    {[
+                      { cat: "Content & Messaging", score: 82 },
+                      { cat: "Conversion Optimization", score: 80 },
+                      { cat: "SEO & Discoverability", score: 90 },
+                      { cat: "Competitive Positioning", score: 85 },
+                      { cat: "Brand & Trust", score: 82 },
+                      { cat: "Growth & Strategy", score: 88 },
+                    ].map((row) => (
+                      <div key={row.cat} className="flex items-center gap-3">
+                        <div className="h-2.5 flex-1 overflow-hidden rounded-full bg-slate-100">
+                          <div
+                            className="h-full rounded-full bg-emerald-400"
+                            style={{ width: `${row.score}%` }}
+                          />
+                        </div>
+                        <span className="w-8 text-right text-sm font-bold text-emerald-500">
+                          {row.score}
+                        </span>
+                        <span className="w-36 truncate text-xs text-slate-500">
+                          {row.cat}
+                        </span>
+                      </div>
+                    ))}
+                  </div>
+
+                  {/* Improvements made */}
+                  <div className="mt-8">
+                    <p className="text-xs font-bold uppercase tracking-wider text-slate-400">
+                      What We Implemented
+                    </p>
+                    <ul className="mt-3 space-y-2 text-sm text-slate-600">
+                      {[
+                        "AI-powered SEO framework with JSON-LD structured data",
+                        "Multi-section architecture with stats, process, FAQ, case study",
+                        "7 FAQ items with schema markup for Google rich snippets",
+                        "AI Marketing Engine showcase building trust and credibility",
+                        "Multiple CTAs, conversion-optimized contact form",
+                      ].map((f) => (
+                        <li key={f} className="flex items-start gap-2">
+                          <CheckCircle2 size={16} className="mt-0.5 shrink-0 text-emerald-500" />
+                          {f}
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                </div>
+              </Reveal>
+            </div>
+
+            {/* Impact summary */}
+            <Reveal delay={0.4} variant="soft">
+              <div className="mx-auto mt-12 max-w-4xl">
+                <div className="glass-card rounded-3xl p-8 md:p-10">
+                  <div className="grid gap-8 text-center md:grid-cols-4">
+                    {[
+                      { before: "31", after: "85", label: "Overall Score", unit: "/100" },
+                      { before: "0", after: "7", label: "FAQ Rich Snippets", unit: " items" },
+                      { before: "1", after: "8+", label: "Indexed Pages", unit: " pages" },
+                      { before: "0", after: "3", label: "Schema Types", unit: " schemas" },
+                    ].map((m) => (
+                      <div key={m.label}>
+                        <div className="flex items-center justify-center gap-2">
+                          <span className="text-lg font-bold text-red-400 line-through">
+                            {m.before}
+                          </span>
+                          <ArrowRight size={16} className="text-slate-300" />
+                          <span className="text-2xl font-extrabold text-emerald-500">
+                            {m.after}
+                          </span>
+                        </div>
+                        <p className="mt-1 text-sm text-slate-500">{m.label}</p>
+                      </div>
+                    ))}
+                  </div>
+                  <p className="mt-8 text-center text-slate-500">
+                    This is the same report our AI Marketing Engine generates for every
+                    new client. We audit first, then build a prioritized action plan
+                    to maximize your marketing ROI — fast.
+                  </p>
+                </div>
+              </div>
+            </Reveal>
           </div>
         </section>
 
