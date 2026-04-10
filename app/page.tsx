@@ -959,7 +959,7 @@ export default function Home() {
                   Real Results
                 </p>
                 <h2 className="mt-3 text-4xl font-bold tracking-tight text-slate-900 md:text-5xl">
-                  See What Our AI{" "}
+                  See What Our{" "}
                   <span className="text-gradient">Audit Reveals</span>
                 </h2>
                 <p className="mx-auto mt-5 max-w-3xl text-lg text-slate-500">
@@ -977,9 +977,8 @@ export default function Home() {
                 <div className="glass-card rounded-3xl p-8 md:p-10">
                   <div className="flex items-center gap-3">
                     <span className="rounded-full bg-red-100 px-4 py-1.5 text-sm font-bold text-red-600">
-                      Before
+                      Initial Audit
                     </span>
-                    <span className="text-sm text-slate-400">Initial AI Audit</span>
                   </div>
 
                   {/* Score circle */}
@@ -1058,10 +1057,7 @@ export default function Home() {
                 <div className="glass-card relative rounded-3xl border-blue-200/50 p-8 md:p-10">
                   <div className="flex items-center gap-3">
                     <span className="rounded-full bg-emerald-100 px-4 py-1.5 text-sm font-bold text-emerald-600">
-                      After
-                    </span>
-                    <span className="text-sm text-slate-400">
-                      Post AI-Driven Optimization
+                      Post Optimization
                     </span>
                   </div>
 
