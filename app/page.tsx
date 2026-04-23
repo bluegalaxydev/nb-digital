@@ -1171,6 +1171,185 @@ export default function Home() {
         <div className="section-divider mx-auto max-w-5xl" />
 
         {/* ═══════════════════════════════════════
+            CLIENT CASE STUDY — PEPTIDE COMPANY
+        ═══════════════════════════════════════ */}
+        <section
+          id="client-results"
+          aria-label="Client case study — peptide company growth"
+          className="relative overflow-hidden"
+        >
+          <div
+            className="glow-orb glow-orb--animated"
+            style={{
+              width: 500,
+              height: 500,
+              bottom: -100,
+              left: -100,
+              background:
+                "radial-gradient(circle, rgba(16,185,129,0.1) 0%, transparent 70%)",
+            }}
+            aria-hidden="true"
+          />
+
+          <div className="relative mx-auto max-w-7xl px-6 py-24 md:py-32">
+            <Reveal delay={0.1} variant="strong">
+              <div className="text-center">
+                <p className="text-[12px] font-bold uppercase tracking-[0.2em] text-emerald-600">
+                  Client Case Study
+                </p>
+                <h2 className="mt-3 text-4xl font-extrabold tracking-tight text-slate-900 md:text-5xl">
+                  From 3 Visitors to 50/Day —{" "}
+                  <span className="text-gradient">In Under 90 Days</span>
+                </h2>
+                <p className="mx-auto mt-5 max-w-3xl text-lg text-slate-500">
+                  A peptide research company came to us with almost zero organic
+                  traffic. Our AI Marketing Engine built a complete SEO framework
+                  that transformed their digital presence.
+                </p>
+              </div>
+            </Reveal>
+
+            <div className="mt-16 grid gap-8 md:grid-cols-3">
+              {/* The Challenge */}
+              <Reveal delay={0.2} variant="soft">
+                <div className="glass-card rounded-2xl p-8">
+                  <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-red-100 text-red-500">
+                    <span className="text-lg font-bold">!</span>
+                  </div>
+                  <h3 className="mt-5 text-xl font-bold text-slate-900">
+                    The Challenge
+                  </h3>
+                  <ul className="mt-4 space-y-3 text-[15px] leading-7 text-slate-500">
+                    <li className="flex items-start gap-2">
+                      <span className="mt-1.5 text-red-400">&#x2717;</span>
+                      Only 3 website visitors per day
+                    </li>
+                    <li className="flex items-start gap-2">
+                      <span className="mt-1.5 text-red-400">&#x2717;</span>
+                      Zero Google rankings for target keywords
+                    </li>
+                    <li className="flex items-start gap-2">
+                      <span className="mt-1.5 text-red-400">&#x2717;</span>
+                      No SEO infrastructure or content strategy
+                    </li>
+                    <li className="flex items-start gap-2">
+                      <span className="mt-1.5 text-red-400">&#x2717;</span>
+                      Ad platforms rejecting campaigns due to industry restrictions
+                    </li>
+                  </ul>
+                </div>
+              </Reveal>
+
+              {/* What We Did */}
+              <Reveal delay={0.3} variant="soft">
+                <div className="glass-card rounded-2xl p-8">
+                  <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-blue-100 text-blue-600">
+                    <Zap size={20} />
+                  </div>
+                  <h3 className="mt-5 text-xl font-bold text-slate-900">
+                    Our Approach
+                  </h3>
+                  <ul className="mt-4 space-y-3 text-[15px] leading-7 text-slate-500">
+                    <li className="flex items-start gap-2">
+                      <CheckCircle2 size={16} className="mt-1 shrink-0 text-blue-500" />
+                      Deployed AI engine for full technical SEO audit
+                    </li>
+                    <li className="flex items-start gap-2">
+                      <CheckCircle2 size={16} className="mt-1 shrink-0 text-blue-500" />
+                      Built keyword architecture targeting buyer-intent terms
+                    </li>
+                    <li className="flex items-start gap-2">
+                      <CheckCircle2 size={16} className="mt-1 shrink-0 text-blue-500" />
+                      Created compliance-safe content strategy
+                    </li>
+                    <li className="flex items-start gap-2">
+                      <CheckCircle2 size={16} className="mt-1 shrink-0 text-blue-500" />
+                      Implemented structured data and internal linking framework
+                    </li>
+                  </ul>
+                </div>
+              </Reveal>
+
+              {/* The Results */}
+              <Reveal delay={0.4} variant="soft">
+                <div className="glass-card relative overflow-hidden rounded-2xl border-emerald-200/50 p-8">
+                  {/* Subtle green glow */}
+                  <div
+                    className="pointer-events-none absolute -right-10 -top-10 h-32 w-32 rounded-full bg-emerald-400/10 blur-3xl"
+                    aria-hidden="true"
+                  />
+                  <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-emerald-100 text-emerald-600">
+                    <TrendingUp size={20} />
+                  </div>
+                  <h3 className="mt-5 text-xl font-bold text-slate-900">
+                    The Results
+                  </h3>
+                  <div className="mt-5 space-y-4">
+                    <div className="rounded-xl bg-emerald-50/80 p-4">
+                      <p className="text-sm font-semibold uppercase tracking-wider text-emerald-600/70">
+                        Daily Visitors
+                      </p>
+                      <div className="mt-1 flex items-baseline gap-2">
+                        <span className="text-lg font-bold text-red-400 line-through">3</span>
+                        <ArrowRight size={14} className="text-slate-300" />
+                        <span className="text-3xl font-extrabold text-emerald-600">50</span>
+                        <span className="text-sm text-emerald-500">/day</span>
+                      </div>
+                    </div>
+                    <div className="rounded-xl bg-emerald-50/80 p-4">
+                      <p className="text-sm font-semibold uppercase tracking-wider text-emerald-600/70">
+                        Keyword Rankings
+                      </p>
+                      <div className="mt-1 flex items-baseline gap-2">
+                        <span className="text-lg font-bold text-red-400 line-through">0</span>
+                        <ArrowRight size={14} className="text-slate-300" />
+                        <span className="text-3xl font-extrabold text-emerald-600">35+</span>
+                        <span className="text-sm text-emerald-500">in top 50</span>
+                      </div>
+                    </div>
+                    <div className="rounded-xl bg-emerald-50/80 p-4">
+                      <p className="text-sm font-semibold uppercase tracking-wider text-emerald-600/70">
+                        Timeframe
+                      </p>
+                      <p className="mt-1 text-3xl font-extrabold text-emerald-600">
+                        90 <span className="text-lg font-semibold">days</span>
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </Reveal>
+            </div>
+
+            {/* Client quote */}
+            <Reveal delay={0.5} variant="soft">
+              <div className="mx-auto mt-12 max-w-3xl">
+                <div className="glass-card rounded-3xl p-8 text-center md:p-10">
+                  <p className="text-xs font-bold uppercase tracking-[0.15em] text-blue-500">
+                    Confidential Client — Peptide Research Industry
+                  </p>
+                  <p className="mt-5 text-xl leading-9 text-slate-700 italic">
+                    &quot;We went from being invisible online to getting consistent
+                    daily traffic and real inquiries. Their AI approach found
+                    opportunities we didn&apos;t even know existed. The best part —
+                    no platform has flagged our content because they built everything
+                    compliance-first.&quot;
+                  </p>
+                  <div className="mt-6 flex items-center justify-center gap-2">
+                    {[1, 2, 3, 4, 5].map((s) => (
+                      <svg key={s} className="h-5 w-5 text-yellow-400" fill="currentColor" viewBox="0 0 20 20">
+                        <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                      </svg>
+                    ))}
+                  </div>
+                </div>
+              </div>
+            </Reveal>
+          </div>
+        </section>
+
+        <div className="section-divider mx-auto max-w-5xl" />
+
+        {/* ═══════════════════════════════════════
             TEAM / FOUNDER
         ═══════════════════════════════════════ */}
         <section

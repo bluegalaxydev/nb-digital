@@ -1,307 +1,329 @@
 "use client";
 
-import { useEffect, useState, useRef } from "react";
+import { useEffect, useRef } from "react";
 
-/* ── Fake log lines the "AI engine" streams ── */
-const logLines = [
-  "▸ Initializing SEO framework analysis...",
-  "▸ Scanning site architecture — 247 pages indexed",
-  "▸ Running keyword gap analysis — 1,842 terms evaluated",
-  "▸ Competitor matrix: 12 domains mapped",
-  "▸ Technical audit: Core Web Vitals ✓ PASS",
-  "▸ Schema markup coverage: 38% → optimizing...",
-  "▸ Backlink profile: 94 referring domains detected",
-  "▸ Content velocity: 2.3x industry average — scaling",
-  "▸ Internal link graph: 17 orphan pages flagged",
-  "▸ Keyword cluster #4: +12 positions this week",
-  "▸ Compliance filter: all ad creatives PASS",
-  "▸ Generating monthly insight report...",
-  "▸ Deploying optimized meta descriptions — batch 3/5",
-  "▸ Indexation request sent: 14 new pages",
-  "▸ Rank tracker: 67% of target keywords in top 20",
-  "▸ Content brief generated — \"peptide purity guide\"",
-  "▸ A/B test #12 concluded — variant B +34% CTR",
-  "▸ Link prospect scoring: 23 opportunities queued",
-  "▸ Page speed audit: LCP 1.2s ✓ FID 18ms ✓",
-  "▸ Semantic enrichment: 8 topic clusters expanded",
-];
+/**
+ * Premium AI visualization — abstract, cinematic, 30s loop.
+ * Shows an animated neural-network / particle field with
+ * orbiting rings and data-flow arcs. Deliberately abstract
+ * so viewers see "powerful AI" without learning HOW it works.
+ *
+ * Pure canvas — zero text, zero metrics, zero secrets.
+ */
 
-/* ── Simulated traffic data for the mini chart ── */
-function generateTrafficData() {
-  const data = [];
-  let val = 3;
-  for (let i = 0; i < 30; i++) {
-    val = Math.max(1, val + (Math.random() - 0.35) * 4);
-    data.push(Math.round(val));
-  }
-  // Ensure it trends to ~50
-  for (let i = 20; i < 30; i++) {
-    data[i] = Math.round(30 + Math.random() * 20);
-  }
-  data[29] = 50;
-  return data;
+interface Particle {
+  x: number;
+  y: number;
+  vx: number;
+  vy: number;
+  r: number;
+  pulse: number;
+  speed: number;
+  hue: number;
 }
 
-function MiniChart({ data }: { data: number[] }) {
-  const max = Math.max(...data);
-  const w = 240;
-  const h = 60;
-  const points = data
-    .map((v, i) => {
-      const x = (i / (data.length - 1)) * w;
-      const y = h - (v / max) * h;
-      return `${x},${y}`;
-    })
-    .join(" ");
-
-  const areaPoints = `0,${h} ${points} ${w},${h}`;
-
-  return (
-    <svg viewBox={`0 0 ${w} ${h}`} className="w-full" preserveAspectRatio="none">
-      <defs>
-        <linearGradient id="chartGrad" x1="0" y1="0" x2="0" y2="1">
-          <stop offset="0%" stopColor="#3b82f6" stopOpacity="0.3" />
-          <stop offset="100%" stopColor="#3b82f6" stopOpacity="0" />
-        </linearGradient>
-      </defs>
-      <polygon points={areaPoints} fill="url(#chartGrad)" />
-      <polyline
-        points={points}
-        fill="none"
-        stroke="#3b82f6"
-        strokeWidth="2"
-        strokeLinecap="round"
-        strokeLinejoin="round"
-      />
-    </svg>
-  );
+interface DataArc {
+  from: number;
+  to: number;
+  progress: number;
+  speed: number;
+  width: number;
 }
 
-/* ── Animated counter ── */
-function AnimatedNumber({
-  target,
-  duration = 2000,
-}: {
-  target: number;
-  duration?: number;
-}) {
-  const [value, setValue] = useState(0);
-  const started = useRef(false);
+export default function AiDashboard() {
+  const canvasRef = useRef<HTMLCanvasElement>(null);
+  const frameRef = useRef(0);
 
   useEffect(() => {
-    if (started.current) return;
-    started.current = true;
+    const canvas = canvasRef.current;
+    if (!canvas) return;
+    const ctx = canvas.getContext("2d");
+    if (!ctx) return;
 
-    const start = Date.now();
-    const tick = () => {
-      const elapsed = Date.now() - start;
-      const progress = Math.min(elapsed / duration, 1);
-      // ease out cubic
-      const eased = 1 - Math.pow(1 - progress, 3);
-      setValue(Math.round(target * eased));
-      if (progress < 1) requestAnimationFrame(tick);
-    };
-    requestAnimationFrame(tick);
-  }, [target, duration]);
+    // HiDPI
+    const dpr = Math.min(window.devicePixelRatio || 1, 2);
+    const W = 640;
+    const H = 440;
+    canvas.width = W * dpr;
+    canvas.height = H * dpr;
+    canvas.style.width = `${W}px`;
+    canvas.style.height = `${H}px`;
+    ctx.scale(dpr, dpr);
 
-  return <>{value}</>;
-}
+    const cx = W / 2;
+    const cy = H / 2;
 
-/* ── Scanning line animation ── */
-function ScanLine() {
+    // ── Create particles ──
+    const particles: Particle[] = [];
+    for (let i = 0; i < 60; i++) {
+      const angle = Math.random() * Math.PI * 2;
+      const dist = 40 + Math.random() * 160;
+      particles.push({
+        x: cx + Math.cos(angle) * dist,
+        y: cy + Math.sin(angle) * dist,
+        vx: (Math.random() - 0.5) * 0.3,
+        vy: (Math.random() - 0.5) * 0.3,
+        r: 1.5 + Math.random() * 2.5,
+        pulse: Math.random() * Math.PI * 2,
+        speed: 0.02 + Math.random() * 0.03,
+        hue: 210 + Math.random() * 30, // blue range
+      });
+    }
+
+    // ── Data flow arcs ──
+    const arcs: DataArc[] = [];
+    for (let i = 0; i < 8; i++) {
+      arcs.push({
+        from: Math.floor(Math.random() * particles.length),
+        to: Math.floor(Math.random() * particles.length),
+        progress: Math.random(),
+        speed: 0.003 + Math.random() * 0.005,
+        width: 0.5 + Math.random() * 1.5,
+      });
+    }
+
+    // ── Orbit rings ──
+    const rings = [
+      { r: 80, speed: 0.0008, opacity: 0.08, dash: [4, 8] },
+      { r: 130, speed: -0.0005, opacity: 0.06, dash: [2, 12] },
+      { r: 185, speed: 0.0003, opacity: 0.04, dash: [6, 6] },
+    ];
+
+    let startTime = Date.now();
+
+    function draw() {
+      if (!ctx) return;
+      const t = (Date.now() - startTime) / 1000; // seconds
+
+      // ── Clear with fade trail ──
+      ctx.fillStyle = "rgba(11, 17, 32, 0.15)";
+      ctx.fillRect(0, 0, W, H);
+
+      // ── Background radial glow ──
+      const bgGrad = ctx.createRadialGradient(cx, cy, 0, cx, cy, 220);
+      bgGrad.addColorStop(0, "rgba(37, 99, 235, 0.06)");
+      bgGrad.addColorStop(0.5, "rgba(14, 165, 233, 0.03)");
+      bgGrad.addColorStop(1, "rgba(0, 0, 0, 0)");
+      ctx.fillStyle = bgGrad;
+      ctx.fillRect(0, 0, W, H);
+
+      // ── Center core ──
+      const coreSize = 18 + Math.sin(t * 1.5) * 4;
+      const coreGrad = ctx.createRadialGradient(cx, cy, 0, cx, cy, coreSize * 2.5);
+      coreGrad.addColorStop(0, "rgba(59, 130, 246, 0.5)");
+      coreGrad.addColorStop(0.4, "rgba(37, 99, 235, 0.2)");
+      coreGrad.addColorStop(1, "rgba(37, 99, 235, 0)");
+      ctx.fillStyle = coreGrad;
+      ctx.beginPath();
+      ctx.arc(cx, cy, coreSize * 2.5, 0, Math.PI * 2);
+      ctx.fill();
+
+      // Core solid
+      ctx.beginPath();
+      ctx.arc(cx, cy, coreSize, 0, Math.PI * 2);
+      const coreInner = ctx.createRadialGradient(cx, cy, 0, cx, cy, coreSize);
+      coreInner.addColorStop(0, "rgba(147, 197, 253, 0.9)");
+      coreInner.addColorStop(1, "rgba(59, 130, 246, 0.4)");
+      ctx.fillStyle = coreInner;
+      ctx.fill();
+
+      // ── Orbit rings ──
+      rings.forEach((ring) => {
+        ctx.save();
+        ctx.translate(cx, cy);
+        ctx.rotate(t * ring.speed * 60);
+        ctx.setLineDash(ring.dash);
+        ctx.strokeStyle = `rgba(96, 165, 250, ${ring.opacity})`;
+        ctx.lineWidth = 1;
+        ctx.beginPath();
+        ctx.arc(0, 0, ring.r, 0, Math.PI * 2);
+        ctx.stroke();
+        ctx.setLineDash([]);
+        ctx.restore();
+      });
+
+      // ── Move + draw particles ──
+      particles.forEach((p) => {
+        // gentle drift
+        p.x += p.vx;
+        p.y += p.vy;
+        p.pulse += p.speed;
+
+        // boundary bounce (soft)
+        if (p.x < 20 || p.x > W - 20) p.vx *= -1;
+        if (p.y < 20 || p.y > H - 20) p.vy *= -1;
+
+        // gentle gravity toward center
+        const dx = cx - p.x;
+        const dy = cy - p.y;
+        const dist = Math.sqrt(dx * dx + dy * dy);
+        if (dist > 190) {
+          p.vx += dx * 0.00005;
+          p.vy += dy * 0.00005;
+        }
+
+        const alpha = 0.3 + Math.sin(p.pulse) * 0.25;
+        const size = p.r + Math.sin(p.pulse * 1.3) * 0.8;
+
+        // glow
+        const glow = ctx.createRadialGradient(p.x, p.y, 0, p.x, p.y, size * 4);
+        glow.addColorStop(0, `hsla(${p.hue}, 80%, 70%, ${alpha * 0.3})`);
+        glow.addColorStop(1, "transparent");
+        ctx.fillStyle = glow;
+        ctx.beginPath();
+        ctx.arc(p.x, p.y, size * 4, 0, Math.PI * 2);
+        ctx.fill();
+
+        // dot
+        ctx.beginPath();
+        ctx.arc(p.x, p.y, size, 0, Math.PI * 2);
+        ctx.fillStyle = `hsla(${p.hue}, 80%, 75%, ${alpha + 0.2})`;
+        ctx.fill();
+      });
+
+      // ── Connection lines between close particles ──
+      for (let i = 0; i < particles.length; i++) {
+        for (let j = i + 1; j < particles.length; j++) {
+          const dx = particles[i].x - particles[j].x;
+          const dy = particles[i].y - particles[j].y;
+          const dist = Math.sqrt(dx * dx + dy * dy);
+          if (dist < 90) {
+            ctx.strokeStyle = `rgba(96, 165, 250, ${0.08 * (1 - dist / 90)})`;
+            ctx.lineWidth = 0.5;
+            ctx.beginPath();
+            ctx.moveTo(particles[i].x, particles[i].y);
+            ctx.lineTo(particles[j].x, particles[j].y);
+            ctx.stroke();
+          }
+        }
+      }
+
+      // ── Data flow arcs (traveling dots along connections) ──
+      arcs.forEach((arc) => {
+        arc.progress += arc.speed;
+        if (arc.progress > 1) {
+          arc.progress = 0;
+          arc.from = Math.floor(Math.random() * particles.length);
+          arc.to = Math.floor(Math.random() * particles.length);
+        }
+
+        const from = particles[arc.from];
+        const to = particles[arc.to];
+        const px = from.x + (to.x - from.x) * arc.progress;
+        const py = from.y + (to.y - from.y) * arc.progress;
+
+        // traveling dot
+        const dotGrad = ctx.createRadialGradient(px, py, 0, px, py, 6);
+        dotGrad.addColorStop(0, "rgba(147, 197, 253, 0.8)");
+        dotGrad.addColorStop(0.5, "rgba(59, 130, 246, 0.3)");
+        dotGrad.addColorStop(1, "transparent");
+        ctx.fillStyle = dotGrad;
+        ctx.beginPath();
+        ctx.arc(px, py, 6, 0, Math.PI * 2);
+        ctx.fill();
+
+        // trail
+        const trail = 0.15;
+        for (let s = 1; s <= 4; s++) {
+          const tp = Math.max(0, arc.progress - s * trail * 0.03);
+          const tx = from.x + (to.x - from.x) * tp;
+          const ty = from.y + (to.y - from.y) * tp;
+          ctx.beginPath();
+          ctx.arc(tx, ty, 2 - s * 0.3, 0, Math.PI * 2);
+          ctx.fillStyle = `rgba(96, 165, 250, ${0.15 - s * 0.03})`;
+          ctx.fill();
+        }
+      });
+
+      // ── Hex grid overlay (very subtle) ──
+      const hexR = 24;
+      const hexH = hexR * Math.sqrt(3);
+      ctx.strokeStyle = "rgba(59, 130, 246, 0.02)";
+      ctx.lineWidth = 0.5;
+      for (let row = -1; row < H / hexH + 1; row++) {
+        for (let col = -1; col < W / (hexR * 1.5) + 1; col++) {
+          const hx = col * hexR * 1.5;
+          const hy = row * hexH + (col % 2 ? hexH / 2 : 0);
+          ctx.beginPath();
+          for (let i = 0; i < 6; i++) {
+            const a = (Math.PI / 3) * i + Math.PI / 6;
+            const px = hx + hexR * Math.cos(a);
+            const py = hy + hexR * Math.sin(a);
+            if (i === 0) ctx.moveTo(px, py);
+            else ctx.lineTo(px, py);
+          }
+          ctx.closePath();
+          ctx.stroke();
+        }
+      }
+
+      // ── Outer vignette ──
+      const vignette = ctx.createRadialGradient(cx, cy, H * 0.3, cx, cy, H * 0.75);
+      vignette.addColorStop(0, "transparent");
+      vignette.addColorStop(1, "rgba(11, 17, 32, 0.7)");
+      ctx.fillStyle = vignette;
+      ctx.fillRect(0, 0, W, H);
+
+      frameRef.current = requestAnimationFrame(draw);
+    }
+
+    // Initial fill
+    ctx.fillStyle = "#0b1120";
+    ctx.fillRect(0, 0, W, H);
+
+    frameRef.current = requestAnimationFrame(draw);
+
+    return () => cancelAnimationFrame(frameRef.current);
+  }, []);
+
   return (
-    <div className="pointer-events-none absolute inset-0 overflow-hidden rounded-3xl">
-      <div
-        className="absolute left-0 right-0 h-px bg-gradient-to-r from-transparent via-blue-400/50 to-transparent"
-        style={{
-          animation: "scanDown 4s ease-in-out infinite",
-        }}
+    <div className="relative overflow-hidden rounded-3xl bg-[#0b1120] shadow-2xl shadow-blue-950/40 ring-1 ring-white/10">
+      {/* Scan line */}
+      <div className="pointer-events-none absolute inset-0 z-10 overflow-hidden rounded-3xl">
+        <div
+          className="absolute left-0 right-0 h-px bg-gradient-to-r from-transparent via-blue-400/40 to-transparent"
+          style={{ animation: "scanDown 6s ease-in-out infinite" }}
+        />
+      </div>
+
+      {/* Top bar */}
+      <div className="relative z-10 flex items-center justify-between border-b border-white/5 px-5 py-3">
+        <div className="flex items-center gap-2.5">
+          <div className="h-2.5 w-2.5 rounded-full bg-red-500/70" />
+          <div className="h-2.5 w-2.5 rounded-full bg-yellow-500/70" />
+          <div className="h-2.5 w-2.5 rounded-full bg-green-500/70" />
+        </div>
+        <div className="flex items-center gap-2">
+          <span className="h-1.5 w-1.5 animate-pulse rounded-full bg-emerald-400" />
+          <span className="text-[9px] font-semibold uppercase tracking-[0.2em] text-emerald-400/60">
+            AI Engine Active
+          </span>
+        </div>
+      </div>
+
+      {/* Canvas */}
+      <canvas
+        ref={canvasRef}
+        className="block w-full"
+        style={{ height: 440, imageRendering: "auto" }}
       />
+
+      {/* Bottom status */}
+      <div className="relative z-10 flex items-center justify-between border-t border-white/5 px-5 py-2.5">
+        <span className="text-[8px] font-medium tracking-[0.15em] text-slate-600">
+          HARBOR POINT AI ENGINE v3.2
+        </span>
+        <span className="text-[8px] tracking-wider text-blue-500/40">
+          ● ● ● PROCESSING
+        </span>
+      </div>
+
       <style>{`
         @keyframes scanDown {
           0% { top: 0%; opacity: 0; }
           10% { opacity: 1; }
           90% { opacity: 1; }
           100% { top: 100%; opacity: 0; }
-        }
-      `}</style>
-    </div>
-  );
-}
-
-/* ═══════════════════════════════════════════════
-   MAIN COMPONENT
-═══════════════════════════════════════════════ */
-export default function AiDashboard() {
-  const [visibleLines, setVisibleLines] = useState<string[]>([]);
-  const [lineIndex, setLineIndex] = useState(0);
-  const scrollRef = useRef<HTMLDivElement>(null);
-  const trafficData = useRef(generateTrafficData());
-
-  // Stream log lines
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setLineIndex((prev) => {
-        const next = (prev + 1) % logLines.length;
-        setVisibleLines((lines) => {
-          const updated = [...lines, logLines[next]];
-          return updated.slice(-8); // keep last 8 lines
-        });
-        return next;
-      });
-    }, 2200);
-
-    // Start with first line
-    setVisibleLines([logLines[0]]);
-
-    return () => clearInterval(interval);
-  }, []);
-
-  // Auto-scroll log
-  useEffect(() => {
-    if (scrollRef.current) {
-      scrollRef.current.scrollTop = scrollRef.current.scrollHeight;
-    }
-  }, [visibleLines]);
-
-  return (
-    <div className="relative select-none overflow-hidden rounded-3xl bg-[#0b1120] shadow-2xl shadow-blue-950/40 ring-1 ring-white/10">
-      <ScanLine />
-
-      {/* Top bar */}
-      <div className="flex items-center justify-between border-b border-white/5 px-5 py-3">
-        <div className="flex items-center gap-2.5">
-          <div className="h-3 w-3 rounded-full bg-red-500/80" />
-          <div className="h-3 w-3 rounded-full bg-yellow-500/80" />
-          <div className="h-3 w-3 rounded-full bg-green-500/80" />
-        </div>
-        <div className="flex items-center gap-2">
-          <span className="h-2 w-2 animate-pulse rounded-full bg-emerald-400" />
-          <span className="text-[10px] font-semibold uppercase tracking-wider text-emerald-400/80">
-            Engine Active
-          </span>
-        </div>
-      </div>
-
-      <div className="grid grid-cols-5 gap-px bg-white/[0.03]">
-        {/* ── Left panel: Metrics ── */}
-        <div className="col-span-2 space-y-4 p-5">
-          {/* KPI Cards */}
-          <div className="rounded-xl bg-white/[0.04] p-4 ring-1 ring-white/5">
-            <p className="text-[9px] font-bold uppercase tracking-widest text-blue-400/70">
-              Daily Visitors
-            </p>
-            <p className="mt-1.5 text-3xl font-extrabold text-white">
-              <AnimatedNumber target={50} duration={3000} />
-              <span className="ml-1 text-sm font-medium text-emerald-400">
-                /day
-              </span>
-            </p>
-            <p className="mt-0.5 text-[10px] text-emerald-400/80">
-              ↑ from 3/day at start
-            </p>
-            <div className="mt-3 h-[50px]">
-              <MiniChart data={trafficData.current} />
-            </div>
-          </div>
-
-          <div className="grid grid-cols-2 gap-3">
-            <div className="rounded-xl bg-white/[0.04] p-3 ring-1 ring-white/5">
-              <p className="text-[8px] font-bold uppercase tracking-widest text-blue-400/60">
-                Keywords
-              </p>
-              <p className="mt-1 text-xl font-extrabold text-white">
-                <AnimatedNumber target={247} duration={2500} />
-              </p>
-              <p className="text-[9px] text-slate-500">tracked</p>
-            </div>
-            <div className="rounded-xl bg-white/[0.04] p-3 ring-1 ring-white/5">
-              <p className="text-[8px] font-bold uppercase tracking-widest text-blue-400/60">
-                Pages
-              </p>
-              <p className="mt-1 text-xl font-extrabold text-white">
-                <AnimatedNumber target={89} duration={2000} />
-              </p>
-              <p className="text-[9px] text-slate-500">optimized</p>
-            </div>
-          </div>
-
-          <div className="rounded-xl bg-white/[0.04] p-3 ring-1 ring-white/5">
-            <p className="text-[8px] font-bold uppercase tracking-widest text-blue-400/60">
-              SEO Score
-            </p>
-            <div className="mt-2 flex items-center gap-3">
-              <div className="h-2 flex-1 overflow-hidden rounded-full bg-white/10">
-                <div
-                  className="h-full rounded-full bg-gradient-to-r from-blue-500 to-emerald-400"
-                  style={{
-                    width: "87%",
-                    animation: "growBar 2.5s ease-out both",
-                  }}
-                />
-              </div>
-              <span className="text-sm font-bold text-emerald-400">87</span>
-            </div>
-          </div>
-        </div>
-
-        {/* ── Right panel: AI Log Stream ── */}
-        <div className="col-span-3 flex flex-col border-l border-white/[0.04]">
-          <div className="border-b border-white/[0.04] px-4 py-2.5">
-            <p className="text-[9px] font-bold uppercase tracking-widest text-blue-400/60">
-              AI Engine Output — Live
-            </p>
-          </div>
-          <div
-            ref={scrollRef}
-            className="flex-1 overflow-hidden p-4 font-mono text-[11px] leading-[1.8]"
-            style={{ maxHeight: 260 }}
-          >
-            {visibleLines.map((line, i) => (
-              <div
-                key={`${lineIndex}-${i}`}
-                className="text-slate-400"
-                style={{
-                  animation: "fadeInLine 0.4s ease both",
-                  opacity: i === visibleLines.length - 1 ? 1 : 0.5,
-                }}
-              >
-                <span className="mr-2 text-blue-500/60">
-                  {String(i + 1).padStart(2, "0")}
-                </span>
-                {line}
-              </div>
-            ))}
-            {/* Blinking cursor */}
-            <span className="inline-block h-4 w-[2px] animate-pulse bg-blue-400" />
-          </div>
-        </div>
-      </div>
-
-      {/* Bottom status bar */}
-      <div className="flex items-center justify-between border-t border-white/[0.04] px-5 py-2.5">
-        <div className="flex items-center gap-4">
-          <span className="text-[9px] font-medium text-slate-600">
-            HARBOR POINT AI v3.2
-          </span>
-          <span className="text-[9px] text-slate-600">|</span>
-          <span className="text-[9px] text-slate-600">
-            Peptide Client — Website Traffic Module
-          </span>
-        </div>
-        <span className="text-[9px] font-medium text-slate-600">
-          Processing...
-        </span>
-      </div>
-
-      {/* CSS for animations */}
-      <style>{`
-        @keyframes fadeInLine {
-          from { opacity: 0; transform: translateY(6px); }
-          to { opacity: 1; transform: translateY(0); }
-        }
-        @keyframes growBar {
-          from { width: 0; }
         }
       `}</style>
     </div>
