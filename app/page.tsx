@@ -22,6 +22,7 @@ import {
 } from "lucide-react";
 import Reveal from "./components/reveal";
 import ScrollButton from "./components/scroll-button";
+import AiDashboard from "./components/ai-dashboard";
 import type { Metadata } from "next";
 
 /* ── SEO metadata ─────────────────────────────── */
@@ -417,16 +418,7 @@ export default function Home() {
             </div>
 
             <Reveal delay={0.35} variant="strong">
-              <div className="gradient-border image-shine overflow-hidden rounded-3xl bg-white shadow-2xl shadow-blue-900/10 ring-1 ring-white/60">
-                <img
-                  src="/peptides1.png"
-                  alt="Marketing analytics dashboard showing growth metrics for a high-risk peptide brand"
-                  className="w-full"
-                  width={600}
-                  height={400}
-                  loading="eager"
-                />
-              </div>
+              <AiDashboard />
             </Reveal>
           </div>
         </section>
