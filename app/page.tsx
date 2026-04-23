@@ -1198,7 +1198,7 @@ export default function Home() {
                   Client Case Study
                 </p>
                 <h2 className="mt-3 text-4xl font-extrabold tracking-tight text-slate-900 md:text-5xl">
-                  From 3 Visitors to 50/Day —{" "}
+                  From 3 Visitors to 50+/Day —{" "}
                   <span className="text-gradient">In Under 90 Days</span>
                 </h2>
                 <p className="mx-auto mt-5 max-w-3xl text-lg text-slate-500">
@@ -1256,15 +1256,19 @@ export default function Home() {
                     </li>
                     <li className="flex items-start gap-2">
                       <CheckCircle2 size={16} className="mt-1 shrink-0 text-blue-500" />
-                      Built keyword architecture targeting buyer-intent terms
+                      Designed detailed product-level SEO keyword architecture with buyer-intent mapping
                     </li>
                     <li className="flex items-start gap-2">
                       <CheckCircle2 size={16} className="mt-1 shrink-0 text-blue-500" />
-                      Created compliance-safe content strategy
+                      Published content across 10+ external blogs to build high-quality backlinks
                     </li>
                     <li className="flex items-start gap-2">
                       <CheckCircle2 size={16} className="mt-1 shrink-0 text-blue-500" />
-                      Implemented structured data and internal linking framework
+                      Created compliance-safe content strategy for restricted product pages
+                    </li>
+                    <li className="flex items-start gap-2">
+                      <CheckCircle2 size={16} className="mt-1 shrink-0 text-blue-500" />
+                      Implemented structured data, internal linking framework, and on-page optimization
                     </li>
                   </ul>
                 </div>
@@ -1292,7 +1296,7 @@ export default function Home() {
                       <div className="mt-1 flex items-baseline gap-2">
                         <span className="text-lg font-bold text-red-400 line-through">3</span>
                         <ArrowRight size={14} className="text-slate-300" />
-                        <span className="text-3xl font-extrabold text-emerald-600">50</span>
+                        <span className="text-3xl font-extrabold text-emerald-600">50+</span>
                         <span className="text-sm text-emerald-500">/day</span>
                       </div>
                     </div>
@@ -1305,6 +1309,17 @@ export default function Home() {
                         <ArrowRight size={14} className="text-slate-300" />
                         <span className="text-3xl font-extrabold text-emerald-600">35+</span>
                         <span className="text-sm text-emerald-500">in top 50</span>
+                      </div>
+                    </div>
+                    <div className="rounded-xl bg-emerald-50/80 p-4">
+                      <p className="text-sm font-semibold uppercase tracking-wider text-emerald-600/70">
+                        Backlinks Built
+                      </p>
+                      <div className="mt-1 flex items-baseline gap-2">
+                        <span className="text-lg font-bold text-red-400 line-through">0</span>
+                        <ArrowRight size={14} className="text-slate-300" />
+                        <span className="text-3xl font-extrabold text-emerald-600">10+</span>
+                        <span className="text-sm text-emerald-500">external blogs</span>
                       </div>
                     </div>
                     <div className="rounded-xl bg-emerald-50/80 p-4">
