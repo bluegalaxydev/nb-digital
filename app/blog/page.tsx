@@ -22,59 +22,59 @@ export const metadata: Metadata = {
 
 const posts = [
   {
-    slug: "#",
+    slug: "/blog/why-seo-is-the-number-one-growth-channel",
     title: "Why SEO Is the #1 Growth Channel for High-Risk Businesses in 2026",
     excerpt:
       "Paid ads can be shut off overnight. SEO compounds. Here's why every peptide, supplement, and CBD brand should prioritize organic search as their primary acquisition channel.",
     category: "SEO Strategy",
     readTime: "8 min read",
-    date: "Coming Soon",
+    date: "Apr 20, 2026",
     featured: true,
   },
   {
-    slug: "#",
+    slug: "/blog/how-to-advertise-peptides-without-getting-banned",
     title: "How to Advertise Peptides Without Getting Banned: A Platform-by-Platform Guide",
     excerpt:
       "From TikTok to Reddit to Google — a detailed breakdown of what's allowed, what's restricted, and how to stay compliant while driving real revenue.",
     category: "Paid Ads",
     readTime: "12 min read",
-    date: "Coming Soon",
+    date: "Apr 20, 2026",
   },
   {
-    slug: "#",
+    slug: "/blog/complete-seo-framework-supplement-brands",
     title: "The Complete SEO Framework for Supplement Brands: From 0 to 10K Organic Visitors",
     excerpt:
       "A step-by-step guide to building a compliant SEO architecture that ranks for high-intent buyer keywords in the supplement space.",
     category: "SEO Framework",
     readTime: "15 min read",
-    date: "Coming Soon",
+    date: "Apr 20, 2026",
   },
   {
-    slug: "#",
+    slug: "/blog/ai-marketing-engine-identifies-seo-gaps",
     title: "AI in Marketing: How Our Engine Identifies SEO Gaps Your Team Misses",
     excerpt:
       "A behind-the-scenes look at how Harbor Point's AI Marketing Engine analyzes 100+ SEO signals to find compounding growth opportunities.",
     category: "AI & Technology",
     readTime: "6 min read",
-    date: "Coming Soon",
+    date: "Apr 22, 2026",
   },
   {
-    slug: "#",
+    slug: "/blog/cbd-marketing-compliance-guide",
     title: "CBD Marketing Compliance: FTC, FDA, and Platform Policies Explained",
     excerpt:
       "Navigate the regulatory maze of CBD marketing with clear guidance on what you can say, where you can advertise, and how to stay compliant.",
     category: "Compliance",
     readTime: "10 min read",
-    date: "Coming Soon",
+    date: "Apr 22, 2026",
   },
   {
-    slug: "#",
+    slug: "/blog/long-term-seo-vs-paid-ads-cost-analysis",
     title: "Long-Term SEO vs. Paid Ads: A Cost Analysis for High-Risk Brands",
     excerpt:
       "We break down the true cost per lead of SEO vs. paid advertising over 12 months — and show why SEO delivers 5-10x better ROI long-term.",
     category: "SEO Strategy",
     readTime: "7 min read",
-    date: "Coming Soon",
+    date: "Apr 22, 2026",
   },
 ];
 
@@ -106,46 +106,19 @@ export default function BlogPage() {
         {/* Featured post */}
         {posts.filter((p) => p.featured).map((post) => (
           <Reveal key={post.title} delay={0.1} variant="strong">
-            <article className="glass-card mb-12 rounded-3xl p-8 md:p-12">
-              <span className="inline-flex items-center gap-1.5 rounded-full bg-blue-50 px-3 py-1 text-xs font-bold text-blue-600">
-                <Tag size={12} />
-                {post.category}
-              </span>
-              <h2 className="mt-4 text-2xl font-bold text-slate-900 md:text-3xl">
-                {post.title}
-              </h2>
-              <p className="mt-4 max-w-3xl text-lg leading-8 text-slate-500">
-                {post.excerpt}
-              </p>
-              <div className="mt-6 flex items-center gap-4 text-sm text-slate-400">
-                <span className="flex items-center gap-1.5">
-                  <Clock size={14} />
-                  {post.readTime}
-                </span>
-                <span className="rounded-full bg-amber-50 px-3 py-1 text-xs font-semibold text-amber-600">
-                  {post.date}
-                </span>
-              </div>
-            </article>
-          </Reveal>
-        ))}
-
-        {/* Grid */}
-        <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
-          {posts.filter((p) => !p.featured).map((post, i) => (
-            <Reveal key={post.title} delay={0.1 + i * 0.07} variant="soft">
-              <article className="glass-card flex h-full flex-col rounded-2xl p-7">
-                <span className="inline-flex w-fit items-center gap-1.5 rounded-full bg-blue-50 px-3 py-1 text-xs font-bold text-blue-600">
+            <Link href={post.slug} className="block">
+              <article className="glass-card mb-12 rounded-3xl p-8 md:p-12 transition hover:shadow-lg">
+                <span className="inline-flex items-center gap-1.5 rounded-full bg-blue-50 px-3 py-1 text-xs font-bold text-blue-600">
                   <Tag size={12} />
                   {post.category}
                 </span>
-                <h3 className="mt-4 flex-1 text-lg font-bold leading-tight text-slate-900">
+                <h2 className="mt-4 text-2xl font-bold text-slate-900 md:text-3xl">
                   {post.title}
-                </h3>
-                <p className="mt-3 text-sm leading-6 text-slate-500">
+                </h2>
+                <p className="mt-4 max-w-3xl text-lg leading-8 text-slate-500">
                   {post.excerpt}
                 </p>
-                <div className="mt-5 flex items-center justify-between text-sm text-slate-400">
+                <div className="mt-6 flex items-center gap-4 text-sm text-slate-400">
                   <span className="flex items-center gap-1.5">
                     <Clock size={14} />
                     {post.readTime}
@@ -155,6 +128,37 @@ export default function BlogPage() {
                   </span>
                 </div>
               </article>
+            </Link>
+          </Reveal>
+        ))}
+
+        {/* Grid */}
+        <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
+          {posts.filter((p) => !p.featured).map((post, i) => (
+            <Reveal key={post.title} delay={0.1 + i * 0.07} variant="soft">
+              <Link href={post.slug} className="block">
+                <article className="glass-card flex h-full flex-col rounded-2xl p-7 transition hover:shadow-lg">
+                  <span className="inline-flex w-fit items-center gap-1.5 rounded-full bg-blue-50 px-3 py-1 text-xs font-bold text-blue-600">
+                    <Tag size={12} />
+                    {post.category}
+                  </span>
+                  <h3 className="mt-4 flex-1 text-lg font-bold leading-tight text-slate-900">
+                    {post.title}
+                  </h3>
+                  <p className="mt-3 text-sm leading-6 text-slate-500">
+                    {post.excerpt}
+                  </p>
+                  <div className="mt-5 flex items-center justify-between text-sm text-slate-400">
+                    <span className="flex items-center gap-1.5">
+                      <Clock size={14} />
+                      {post.readTime}
+                    </span>
+                    <span className="rounded-full bg-amber-50 px-3 py-1 text-xs font-semibold text-amber-600">
+                      {post.date}
+                    </span>
+                  </div>
+                </article>
+              </Link>
             </Reveal>
           ))}
         </div>
