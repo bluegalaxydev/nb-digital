@@ -447,6 +447,21 @@ export default function AIMarketingEngineArticle() {
 
         {/* CTA Section */}
         <Reveal delay={0.5} variant="soft">
+          {/* Related Articles */}
+          <div className="mt-16">
+            <h3 className="text-xl font-bold text-slate-900">Related Articles</h3>
+            <div className="mt-4 grid gap-4 sm:grid-cols-2">
+              <Link href="/blog/why-seo-is-the-number-one-growth-channel" className="group rounded-xl bg-white/60 p-5 ring-1 ring-blue-100/40 transition hover:bg-white hover:shadow-md">
+                <p className="font-semibold text-slate-900 group-hover:text-blue-600">Why SEO Is the #1 Growth Channel for High-Risk Businesses</p>
+                <p className="mt-1 text-sm text-slate-500">Learn why organic search outperforms paid ads for restricted industries.</p>
+              </Link>
+              <Link href="/blog/long-term-seo-vs-paid-ads-cost-analysis" className="group rounded-xl bg-white/60 p-5 ring-1 ring-blue-100/40 transition hover:bg-white hover:shadow-md">
+                <p className="font-semibold text-slate-900 group-hover:text-blue-600">SEO vs Paid Ads: A Cost Analysis for High-Risk Brands</p>
+                <p className="mt-1 text-sm text-slate-500">See the month-by-month ROI comparison between SEO and paid advertising.</p>
+              </Link>
+            </div>
+          </div>
+
           <div className="mt-16 rounded-2xl bg-gradient-to-br from-blue-50 to-sky-50 p-8 md:p-12">
             <h3 className="text-2xl font-bold text-[#0c1222]">
               Ready to Identify Your SEO Gaps?

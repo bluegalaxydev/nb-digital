@@ -567,6 +567,21 @@ export default function CBDComplianceGuideArticle() {
           </section>
         </Reveal>
 
+        {/* Related Articles */}
+        <div className="mt-16">
+          <h3 className="text-xl font-bold text-slate-900">Related Articles</h3>
+          <div className="mt-4 grid gap-4 sm:grid-cols-2">
+            <Link href="/blog/how-to-advertise-peptides-without-getting-banned" className="group rounded-xl bg-white/60 p-5 ring-1 ring-blue-100/40 transition hover:bg-white hover:shadow-md">
+              <p className="font-semibold text-slate-900 group-hover:text-blue-600">How to Advertise Peptides Without Getting Banned</p>
+              <p className="mt-1 text-sm text-slate-500">A platform-by-platform compliance guide for peptide advertising.</p>
+            </Link>
+            <Link href="/blog/complete-seo-framework-supplement-brands" className="group rounded-xl bg-white/60 p-5 ring-1 ring-blue-100/40 transition hover:bg-white hover:shadow-md">
+              <p className="font-semibold text-slate-900 group-hover:text-blue-600">The Complete SEO Framework for Supplement Brands</p>
+              <p className="mt-1 text-sm text-slate-500">From 0 to 10K organic visitors — a step-by-step guide.</p>
+            </Link>
+          </div>
+        </div>
+
         {/* CTA Section */}
         <Reveal delay={0.55} variant="soft">
           <div className="mt-16 rounded-2xl bg-gradient-to-br from-blue-50 to-sky-50 p-8 md:p-12">

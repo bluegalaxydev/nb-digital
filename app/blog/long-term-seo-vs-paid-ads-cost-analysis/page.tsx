@@ -643,6 +643,21 @@ export default function SEOVsPaidAdsArticle() {
           </section>
         </Reveal>
 
+        {/* Related Articles */}
+        <div className="mt-16">
+          <h3 className="text-xl font-bold text-slate-900">Related Articles</h3>
+          <div className="mt-4 grid gap-4 sm:grid-cols-2">
+            <Link href="/blog/why-seo-is-the-number-one-growth-channel" className="group rounded-xl bg-white/60 p-5 ring-1 ring-blue-100/40 transition hover:bg-white hover:shadow-md">
+              <p className="font-semibold text-slate-900 group-hover:text-blue-600">Why SEO Is the #1 Growth Channel for High-Risk Businesses</p>
+              <p className="mt-1 text-sm text-slate-500">Deep dive into why organic search beats paid ads for restricted industries.</p>
+            </Link>
+            <Link href="/blog/ai-marketing-engine-identifies-seo-gaps" className="group rounded-xl bg-white/60 p-5 ring-1 ring-blue-100/40 transition hover:bg-white hover:shadow-md">
+              <p className="font-semibold text-slate-900 group-hover:text-blue-600">How Our AI Engine Identifies SEO Gaps Your Team Misses</p>
+              <p className="mt-1 text-sm text-slate-500">See how AI-powered analysis finds hidden growth opportunities.</p>
+            </Link>
+          </div>
+        </div>
+
         {/* CTA Section */}
         <Reveal delay={0.45} variant="soft">
           <div className="mt-16 rounded-2xl bg-gradient-to-br from-blue-50 to-sky-50 p-8 md:p-12">
