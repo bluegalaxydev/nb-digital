@@ -106,6 +106,18 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
+      <head>
+        {/* ── Google Analytics (GA4) ── */}
+        <script
+          async
+          src="https://www.googletagmanager.com/gtag/js?id=G-H6L176DVXK"
+        />
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-H6L176DVXK');`,
+          }}
+        />
+      </head>
       <body
         className={`${geistSans.variable} ${geistMono.variable} bg-[#f0f4fa] text-[#0c1222]`}
       >
