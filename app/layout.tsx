@@ -284,9 +284,7 @@ export default function RootLayout({
                     </a>
                   </p>
                   <p className="leading-6">
-                    6013 Warner Ave
-                    <br />
-                    Huntington Beach, CA 92647
+                    Orange County, California
                   </p>
                 </address>
               </div>

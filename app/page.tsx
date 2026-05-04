@@ -89,16 +89,9 @@ const orgJsonLd = {
     "AI-powered marketing agency specializing in high-risk industries including peptides, supplements, CBD, and restricted verticals. We use proprietary AI marketing technology to build long-term SEO frameworks, deliver compliant paid advertising, marketing automation, and conversion optimization.",
   address: {
     "@type": "PostalAddress",
-    streetAddress: "6013 Warner Ave",
-    addressLocality: "Huntington Beach",
+    addressLocality: "Orange County",
     addressRegion: "CA",
-    postalCode: "92647",
     addressCountry: "US",
-  },
-  geo: {
-    "@type": "GeoCoordinates",
-    latitude: 33.7366,
-    longitude: -117.9897,
   },
   telephone: "+16575774455",
   email: "info@notbadcapital.com",
@@ -1405,7 +1398,7 @@ export default function Home() {
                         Harbor Point Marketing Team
                       </h3>
                       <p className="mt-1 text-sm font-medium text-blue-600">
-                        Huntington Beach, CA
+                        Orange County, California
                       </p>
                       <p className="mt-4 text-[15px] leading-7 text-slate-600">
                         We&apos;re a team of senior digital marketers, SEO
@@ -1810,12 +1803,10 @@ export default function Home() {
                     },
                     {
                       icon: MapPin,
-                      title: "Visit Us",
+                      title: "Location",
                       content: (
                         <p className="text-slate-500">
-                          6013 Warner Ave
-                          <br />
-                          Huntington Beach, CA 92647
+                          Orange County, California
                         </p>
                       ),
                     },
