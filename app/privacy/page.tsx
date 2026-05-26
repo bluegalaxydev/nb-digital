@@ -107,8 +107,8 @@ export default function PrivacyPage() {
       </ul>
       <p className="text-gray-700 mt-3">
         To exercise your rights, contact us at:{" "}
-        <a href="mailto:info@notbadcapital.com" className="underline">
-          info@notbadcapital.com
+        <a href="mailto:contact@harborpointcorp.com" className="underline">
+          contact@harborpointcorp.com
         </a>
       </p>
 
@@ -148,8 +148,8 @@ export default function PrivacyPage() {
       <p className="mt-3 text-gray-800">
         Harbor Point Marketing Services<br />
         Email:{" "}
-        <a href="mailto:info@notbadcapital.com" className="underline">
-          info@notbadcapital.com
+        <a href="mailto:contact@harborpointcorp.com" className="underline">
+          contact@harborpointcorp.com
         </a>
       </p>
     </main>

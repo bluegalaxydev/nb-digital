@@ -94,7 +94,7 @@ const orgJsonLd = {
     addressCountry: "US",
   },
   telephone: "+16575774455",
-  email: "info@notbadcapital.com",
+  email: "contact@harborpointcorp.com",
   areaServed: {
     "@type": "Country",
     name: "US",
@@ -1782,10 +1782,10 @@ export default function Home() {
                       title: "Email Us",
                       content: (
                         <a
-                          href="mailto:info@notbadcapital.com"
+                          href="mailto:contact@harborpointcorp.com"
                           className="text-slate-500 transition hover:text-blue-600"
                         >
-                          info@notbadcapital.com
+                          contact@harborpointcorp.com
                         </a>
                       ),
                     },

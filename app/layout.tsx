@@ -269,10 +269,10 @@ export default function RootLayout({
                 <address className="mt-5 space-y-3 text-[13.5px] not-italic text-slate-500">
                   <p>
                     <a
-                      href="mailto:info@notbadcapital.com"
+                      href="mailto:contact@harborpointcorp.com"
                       className="transition-colors hover:text-blue-600"
                     >
-                      info@notbadcapital.com
+                      contact@harborpointcorp.com
                     </a>
                   </p>
                   <p>
